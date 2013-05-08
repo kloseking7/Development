@@ -1,0 +1,55 @@
+/* 
+    Document   : index.css
+    Created on : 23/07/2011, 7:56:51 PM
+    Author     : mon2
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.paathrowdiv {
+    border-bottom:solid 1px cyan; 
+    border-right:solid 1px transparent; 
+    padding:10px;
+    width:600px;
+    height: 60px;
+}
+
+.paathiconimagediv {
+    float:left; 
+    padding: 10px;
+}
+
+.paathiconimage {
+    border:solid 1px gray;
+}
+
+.paathrowtextdiv {
+    text-align: justify;
+    width: 500px;
+    height: 60px;
+}
+
+#main {
+    width: 900px; 
+    margin: auto 0px;
+}
+
+#rightpane {
+    position: relative;
+    float: left;
+    background-color: #A9E2F3;
+    border-top: solid 1px #81BEF7; 
+    border-right: solid 1px #81BEF7; 
+    margin-left: 15px; 
+    width:260px; 
+    height:350px;
+    display: none;
+    padding: 10px;
+    text-align: justify;
+}
+

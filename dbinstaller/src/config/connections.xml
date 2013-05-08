@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Connections</comment>
+    <entry key="ConnectionString">jdbc:mysql://localhost?user=root&password;=2c4ukb11</entry>
+</properties>
