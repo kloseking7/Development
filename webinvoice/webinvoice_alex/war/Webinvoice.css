@@ -1,0 +1,16 @@
+.word-breaker {
+	word-break: break-all;
+}
+
+.wrapped-box {
+	border: 1px solid;
+	padding: 20px;
+}
+
+.centered {
+	margin: 0 auto;
+}
+
+.font-black {
+	color: black;
+}
