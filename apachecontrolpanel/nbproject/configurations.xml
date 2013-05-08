@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="88">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>apachecommands.h</itemPath>
+      <itemPath>command.h</itemPath>
+      <itemPath>constants.h</itemPath>
+      <itemPath>indicator.h</itemPath>
+      <itemPath>menu.h</itemPath>
+      <itemPath>notify.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>checkapache.sh</itemPath>
+      <itemPath>default.png</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>apachecommands.c</itemPath>
+      <itemPath>command.c</itemPath>
+      <itemPath>indicator.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>menu.c</itemPath>
+      <itemPath>notify.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>/usr/include/gtk-3.0</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+            <pElem>/usr/include/pango-1.0</pElem>
+            <pElem>/usr/include/cairo</pElem>
+            <pElem>/usr/include/gdk-pixbuf-2.0</pElem>
+            <pElem>/usr/include/atk-1.0</pElem>
+            <pElem>/usr/include/libappindicator3-0.1/libappindicator</pElem>
+            <pElem>/usr/include/gtk-3.0/gtk</pElem>
+            <pElem>/usr/include/libnotify</pElem>
+          </incDir>
+          <commandLine>-v</commandLine>
+        </cTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs gtk+-3.0`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libnotify`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs appindicator3-0.1`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="apachecommands.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="apachecommands.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="checkapache.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="command.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="command.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="constants.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="default.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="indicator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="indicator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="notify.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="notify.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>/usr/include/gtk-3.0</pElem>
+            <pElem>/usr/include/glib-2.0</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
+            <pElem>/usr/include/pango-1.0</pElem>
+            <pElem>/usr/include/cairo</pElem>
+            <pElem>/usr/include/gdk-pixbuf-2.0</pElem>
+            <pElem>/usr/include/atk-1.0</pElem>
+            <pElem>/usr/include/libappindicator3-0.1/libappindicator</pElem>
+            <pElem>/usr/include/gtk-3.0/gtk</pElem>
+            <pElem>/usr/include/libnotify</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs gtk+-3.0`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libnotify`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs appindicator3-0.1`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="apachecommands.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="apachecommands.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="checkapache.sh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="command.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="command.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="constants.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="default.png" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="indicator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="indicator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="notify.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="notify.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

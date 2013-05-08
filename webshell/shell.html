@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+	FWTSlide by Adonis Ronquillo for Free Web Templates
+	www.freewebtemplates.com / www.doni.us
+	Images by Unprofound http://www.unprofound.com/
+	Released under the Creative Commons Attribution 3.0 License.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title>Web Shell</title>
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/jquery.terminal-min.js"></script>
+        <link href="css/jquery.terminal.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />		
+	</head>
+	<body>
+		<div id="outer">
+			<div id="header">
+				<div id="logo">
+					<h1><a href="#">WEB<span>Shell</span></a></h1>
+				</div>
+				<div id="nav">
+					<ul>
+						<li class="first active">
+							<a href="#">Login</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="main">
+				<input type="text" /><input type="text">
+				<div id="box1" style="height:600px;width:100%;">
+				</div>
+				<br class="clear" />
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright Glassbox 2013.
+		</div>
+	</body>
+	<script>
+		jQuery(document).ready(function($) {
+			$('#box1').terminal("php/json-rpc-service-demo.php", {
+				login: true,
+				greetings: "You are authenticated",
+				onBlur: function() {
+					// the height of the body is only 2 lines initialy
+					return false;
+				}
+			});
+		});
+</script>
+</html>

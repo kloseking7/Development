@@ -1,0 +1,6 @@
+﻿DROP TABLE IF EXISTS `a8471551_naam`.`section`;
+CREATE  TABLE `a8471551_naam`.`section` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `sectionname` VARCHAR(512) NOT NULL ,
+  PRIMARY KEY (`id`) )
+DEFAULT CHARACTER SET = utf8;

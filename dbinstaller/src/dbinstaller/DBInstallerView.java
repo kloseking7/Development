@@ -1,0 +1,701 @@
+/*
+ * DBInstallerView.java
+ */
+
+package dbinstaller;
+
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
+import org.jdesktop.application.Action;
+import org.jdesktop.application.ResourceMap;
+import org.jdesktop.application.SingleFrameApplication;
+import org.jdesktop.application.FrameView;
+import org.jdesktop.application.TaskMonitor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.Icon;
+import javax.swing.JDialog;
+import javax.swing.Timer;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
+
+/**
+ * The application's main frame.
+ */
+public class DBInstallerView extends FrameView {
+
+    public DBInstallerView(SingleFrameApplication app) {
+        super(app);
+
+        initComponents();
+        setupFrame();
+
+        // status bar initialization - message timeout, idle icon and busy animation, etc
+        ResourceMap resourceMap = getResourceMap();
+        int messageTimeout = resourceMap.getInteger("StatusBar.messageTimeout");
+        messageTimer = new Timer(messageTimeout, new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                statusMessageLabel.setText("");
+            }
+        });
+        messageTimer.setRepeats(false);
+        int busyAnimationRate = resourceMap.getInteger("StatusBar.busyAnimationRate");
+        for (int i = 0; i < busyIcons.length; i++) {
+            busyIcons[i] = resourceMap.getIcon("StatusBar.busyIcons[" + i + "]");
+        }
+        busyIconTimer = new Timer(busyAnimationRate, new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                busyIconIndex = (busyIconIndex + 1) % busyIcons.length;
+                statusAnimationLabel.setIcon(busyIcons[busyIconIndex]);
+            }
+        });
+        idleIcon = resourceMap.getIcon("StatusBar.idleIcon");
+        statusAnimationLabel.setIcon(idleIcon);
+        progressBar.setVisible(false);
+
+        // connecting action tasks to status bar via TaskMonitor
+        TaskMonitor taskMonitor = new TaskMonitor(getApplication().getContext());
+        taskMonitor.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                String propertyName = evt.getPropertyName();
+                if ("started".equals(propertyName)) {
+                    if (!busyIconTimer.isRunning()) {
+                        statusAnimationLabel.setIcon(busyIcons[0]);
+                        busyIconIndex = 0;
+                        busyIconTimer.start();
+                    }
+                    progressBar.setVisible(true);
+                    progressBar.setIndeterminate(true);
+                } else if ("done".equals(propertyName)) {
+                    busyIconTimer.stop();
+                    statusAnimationLabel.setIcon(idleIcon);
+                    progressBar.setVisible(false);
+                    progressBar.setValue(0);
+                } else if ("message".equals(propertyName)) {
+                    String text = (String)(evt.getNewValue());
+                    statusMessageLabel.setText((text == null) ? "" : text);
+                    messageTimer.restart();
+                } else if ("progress".equals(propertyName)) {
+                    int value = (Integer)(evt.getNewValue());
+                    progressBar.setVisible(true);
+                    progressBar.setIndeterminate(false);
+                    progressBar.setValue(value);
+                }
+            }
+        });
+    }
+
+
+    private void setupFrame() {
+        String path = System.getProperty("user.dir");
+        Image icon = Toolkit.getDefaultToolkit().getImage(path + "\\src\\dbinstaller\\resources\\m.png");              
+        //set size
+        this.getFrame().setResizable(false);
+        this.getFrame().setSize(1024, 768);
+        
+        //set icon
+        this.getFrame().setIconImage(icon);
+        
+        /* TODO - attempt to load connection string from a config file.
+        try
+        {
+            this.txtConnectionString.setText(ConfigLoader.getProperty("ConnectionString", "connections.xml"));
+        }
+        catch(IOException ioex)
+        {
+            txaOutput.append(ioex.getMessage() + "\n");
+        }
+         * 
+         */
+    }
+    
+    @Action
+    public void showAboutBox() {
+        if (aboutBox == null) {
+            JFrame mainFrame = DBInstallerApp.getApplication().getMainFrame();
+            aboutBox = new DBInstallerAboutBox(mainFrame);
+            aboutBox.setLocationRelativeTo(mainFrame);
+        }
+        DBInstallerApp.getApplication().show(aboutBox);
+    }
+
+    /** This method is called from within the constructor to
+     * initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is
+     * always regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        mainPanel = new javax.swing.JPanel();
+        pnlScripts = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txaPreview = new javax.swing.JTextArea();
+        lblScripts = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        lblPreview = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btnDown = new javax.swing.JButton();
+        btnUp = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblScripts = new javax.swing.JTable();
+        pnlOutput = new javax.swing.JPanel();
+        panOutput = new javax.swing.JScrollPane();
+        txaOutput = new javax.swing.JTextArea();
+        lblOutput = new javax.swing.JLabel();
+        btnExit = new javax.swing.JButton();
+        btnExecute = new javax.swing.JButton();
+        btnClearLogs = new javax.swing.JButton();
+        pnlDatabase = new javax.swing.JPanel();
+        txtUsername = new javax.swing.JTextField();
+        lblDatabase = new javax.swing.JLabel();
+        lblConnectionString = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JTextField();
+        menuBar = new javax.swing.JMenuBar();
+        javax.swing.JMenu fileMenu = new javax.swing.JMenu();
+        javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
+        javax.swing.JMenu helpMenu = new javax.swing.JMenu();
+        javax.swing.JMenuItem aboutMenuItem = new javax.swing.JMenuItem();
+        statusPanel = new javax.swing.JPanel();
+        javax.swing.JSeparator statusPanelSeparator = new javax.swing.JSeparator();
+        statusMessageLabel = new javax.swing.JLabel();
+        statusAnimationLabel = new javax.swing.JLabel();
+        progressBar = new javax.swing.JProgressBar();
+
+        mainPanel.setMaximumSize(new java.awt.Dimension(1024, 750));
+        mainPanel.setMinimumSize(new java.awt.Dimension(1024, 750));
+        mainPanel.setName("mainPanel"); // NOI18N
+        mainPanel.setPreferredSize(new java.awt.Dimension(1024, 750));
+
+        pnlScripts.setName("pnlScripts"); // NOI18N
+
+        jScrollPane2.setName("jScrollPane2"); // NOI18N
+
+        txaPreview.setColumns(20);
+        txaPreview.setRows(5);
+        txaPreview.setEnabled(false);
+        txaPreview.setName("txaPreview"); // NOI18N
+        jScrollPane2.setViewportView(txaPreview);
+
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(dbinstaller.DBInstallerApp.class).getContext().getResourceMap(DBInstallerView.class);
+        lblScripts.setText(resourceMap.getString("lblScripts.text")); // NOI18N
+        lblScripts.setName("lblScripts"); // NOI18N
+
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(dbinstaller.DBInstallerApp.class).getContext().getActionMap(DBInstallerView.class, this);
+        jButton2.setAction(actionMap.get("btnRemove_Click")); // NOI18N
+        jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
+        jButton2.setName("jButton2"); // NOI18N
+
+        btnAdd.setAction(actionMap.get("btnAdd_Click")); // NOI18N
+        btnAdd.setText(resourceMap.getString("btnAdd.text")); // NOI18N
+        btnAdd.setName("btnAdd"); // NOI18N
+
+        lblPreview.setText(resourceMap.getString("lblPreview.text")); // NOI18N
+        lblPreview.setName("lblPreview"); // NOI18N
+
+        jPanel1.setName("jPanel1"); // NOI18N
+
+        btnDown.setAction(actionMap.get("btnDown_Click")); // NOI18N
+        btnDown.setText(resourceMap.getString("btnDown.text")); // NOI18N
+        btnDown.setName("btnDown"); // NOI18N
+
+        btnUp.setAction(actionMap.get("btnUp_Click")); // NOI18N
+        btnUp.setText(resourceMap.getString("btnUp.text")); // NOI18N
+        btnUp.setName("btnUp"); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnUp, javax.swing.GroupLayout.PREFERRED_SIZE, 55, Short.MAX_VALUE)
+                    .addComponent(btnDown, javax.swing.GroupLayout.PREFERRED_SIZE, 55, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnUp)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDown)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jScrollPane1.setName("jScrollPane1"); // NOI18N
+
+        tblScripts.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Script File", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblScripts.setColumnSelectionAllowed(true);
+        tblScripts.setName("tblScripts"); // NOI18N
+        tblScripts.setShowHorizontalLines(false);
+        tblScripts.setShowVerticalLines(false);
+        tblScripts.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblScriptsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tblScriptsMouseEntered(evt);
+            }
+        });
+        tblScripts.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tblScriptsKeyReleased(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblScripts);
+        tblScripts.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        tblScripts.getColumnModel().getColumn(0).setResizable(false);
+        tblScripts.getColumnModel().getColumn(0).setPreferredWidth(320);
+        tblScripts.getColumnModel().getColumn(0).setHeaderValue(resourceMap.getString("tblScripts.columnModel.title0")); // NOI18N
+        tblScripts.getColumnModel().getColumn(1).setResizable(false);
+        tblScripts.getColumnModel().getColumn(1).setHeaderValue(resourceMap.getString("tblScripts.columnModel.title1")); // NOI18N
+
+        javax.swing.GroupLayout pnlScriptsLayout = new javax.swing.GroupLayout(pnlScripts);
+        pnlScripts.setLayout(pnlScriptsLayout);
+        pnlScriptsLayout.setHorizontalGroup(
+            pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlScriptsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlScriptsLayout.createSequentialGroup()
+                        .addGroup(pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblScripts)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblPreview)))
+                    .addGroup(pnlScriptsLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2)))
+                .addGap(479, 479, 479))
+        );
+        pnlScriptsLayout.setVerticalGroup(
+            pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlScriptsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblScripts)
+                    .addComponent(lblPreview))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlScriptsLayout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlScriptsLayout.createSequentialGroup()
+                        .addGroup(pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlScriptsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+
+        pnlOutput.setName("pnlOutput"); // NOI18N
+
+        panOutput.setName("panOutput"); // NOI18N
+
+        txaOutput.setColumns(20);
+        txaOutput.setRows(5);
+        txaOutput.setName("txaOutput"); // NOI18N
+        panOutput.setViewportView(txaOutput);
+
+        lblOutput.setText(resourceMap.getString("lblOutput.text")); // NOI18N
+        lblOutput.setName("lblOutput"); // NOI18N
+
+        btnExit.setAction(actionMap.get("quit")); // NOI18N
+        btnExit.setLabel(resourceMap.getString("btnExit.label")); // NOI18N
+        btnExit.setName("btnExit"); // NOI18N
+
+        btnExecute.setAction(actionMap.get("btnExecute_Click")); // NOI18N
+        btnExecute.setText(resourceMap.getString("btnExecute.text")); // NOI18N
+        btnExecute.setName("btnExecute"); // NOI18N
+
+        btnClearLogs.setAction(actionMap.get("btnClearLogs_Click")); // NOI18N
+        btnClearLogs.setText(resourceMap.getString("btnClearLogs.text")); // NOI18N
+        btnClearLogs.setName("btnClearLogs"); // NOI18N
+
+        javax.swing.GroupLayout pnlOutputLayout = new javax.swing.GroupLayout(pnlOutput);
+        pnlOutput.setLayout(pnlOutputLayout);
+        pnlOutputLayout.setHorizontalGroup(
+            pnlOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOutputLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlOutputLayout.createSequentialGroup()
+                        .addComponent(btnExecute, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnClearLogs, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+        pnlOutputLayout.setVerticalGroup(
+            pnlOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlOutputLayout.createSequentialGroup()
+                .addComponent(lblOutput)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addGroup(pnlOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnExecute, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(btnClearLogs, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        pnlDatabase.setName("pnlDatabase"); // NOI18N
+
+        txtUsername.setText(resourceMap.getString("txtUsername.text")); // NOI18N
+        txtUsername.setName("txtUsername"); // NOI18N
+
+        lblDatabase.setText(resourceMap.getString("lblDatabase.text")); // NOI18N
+        lblDatabase.setName("lblDatabase"); // NOI18N
+
+        lblConnectionString.setText(resourceMap.getString("lblConnectionString.text")); // NOI18N
+        lblConnectionString.setName("lblConnectionString"); // NOI18N
+
+        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
+        jLabel1.setName("jLabel1"); // NOI18N
+
+        txtPassword.setText(resourceMap.getString("txtPassword.text")); // NOI18N
+        txtPassword.setName("txtPassword"); // NOI18N
+
+        javax.swing.GroupLayout pnlDatabaseLayout = new javax.swing.GroupLayout(pnlDatabase);
+        pnlDatabase.setLayout(pnlDatabaseLayout);
+        pnlDatabaseLayout.setHorizontalGroup(
+            pnlDatabaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDatabaseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlDatabaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDatabaseLayout.createSequentialGroup()
+                        .addComponent(lblConnectionString)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblDatabase))
+                .addContainerGap(431, Short.MAX_VALUE))
+        );
+        pnlDatabaseLayout.setVerticalGroup(
+            pnlDatabaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDatabaseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDatabase)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlDatabaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblConnectionString)
+                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
+        mainPanel.setLayout(mainPanelLayout);
+        mainPanelLayout.setHorizontalGroup(
+            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnlOutput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlScripts, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlDatabase, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        mainPanelLayout.setVerticalGroup(
+            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlScripts, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(11, 11, 11)
+                .addComponent(pnlDatabase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pnlOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        menuBar.setName("menuBar"); // NOI18N
+
+        fileMenu.setText(resourceMap.getString("fileMenu.text")); // NOI18N
+        fileMenu.setName("fileMenu"); // NOI18N
+
+        exitMenuItem.setAction(actionMap.get("quit")); // NOI18N
+        exitMenuItem.setName("exitMenuItem"); // NOI18N
+        fileMenu.add(exitMenuItem);
+
+        menuBar.add(fileMenu);
+
+        helpMenu.setText(resourceMap.getString("helpMenu.text")); // NOI18N
+        helpMenu.setName("helpMenu"); // NOI18N
+
+        aboutMenuItem.setAction(actionMap.get("showAboutBox")); // NOI18N
+        aboutMenuItem.setName("aboutMenuItem"); // NOI18N
+        helpMenu.add(aboutMenuItem);
+
+        menuBar.add(helpMenu);
+
+        statusPanel.setName("statusPanel"); // NOI18N
+
+        statusPanelSeparator.setName("statusPanelSeparator"); // NOI18N
+
+        statusMessageLabel.setName("statusMessageLabel"); // NOI18N
+
+        statusAnimationLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        statusAnimationLabel.setName("statusAnimationLabel"); // NOI18N
+
+        progressBar.setName("progressBar"); // NOI18N
+
+        javax.swing.GroupLayout statusPanelLayout = new javax.swing.GroupLayout(statusPanel);
+        statusPanel.setLayout(statusPanelLayout);
+        statusPanelLayout.setHorizontalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(statusPanelSeparator, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+            .addGroup(statusPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusMessageLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 840, Short.MAX_VALUE)
+                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(statusAnimationLabel)
+                .addContainerGap())
+        );
+        statusPanelLayout.setVerticalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPanelLayout.createSequentialGroup()
+                .addComponent(statusPanelSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(statusMessageLabel)
+                    .addComponent(statusAnimationLabel)
+                    .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3))
+        );
+
+        setComponent(mainPanel);
+        setMenuBar(menuBar);
+        setStatusBar(statusPanel);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void tblScriptsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblScriptsMouseClicked
+        tblScriptsSelectionChanged();
+    }//GEN-LAST:event_tblScriptsMouseClicked
+
+    private void tblScriptsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblScriptsKeyReleased
+        tblScriptsSelectionChanged();
+    }//GEN-LAST:event_tblScriptsKeyReleased
+
+    private void tblScriptsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblScriptsMouseEntered
+        Point p = evt.getPoint();
+        int row = tblScripts.rowAtPoint(p);
+        int col = tblScripts.columnAtPoint(p);
+        tblScripts.setToolTipText(String.valueOf(tblScripts.getValueAt(row,col)));
+    }//GEN-LAST:event_tblScriptsMouseEntered
+
+    @Action
+    public void btnAdd_Click() {
+        selectFiles(getBasePath());
+    }
+    
+    @Action
+    public void btnRemove_Click() {
+        removeFiles(tblScripts.getSelectedRows());        
+    }
+    
+    @Action
+    public void btnExecute_Click() {
+        if (doValidation().equals("OK")){      
+            executeScripts();    
+        }
+    }
+    
+    private void tblScriptsSelectionChanged() {
+        String previewText = "";
+        int selectedRow;
+        String selectedValue;
+        
+        selectedRow = tblScripts.getSelectedRow();
+        selectedValue = tblScripts.getValueAt(selectedRow, 0).toString();
+        try
+        {
+            previewText = FileLoader.getStringWithLineFeeds(selectedValue);
+        }
+        catch (IOException ioex)
+        {
+            txaOutput.setText(ioex.getMessage());
+        }
+        
+        txaPreview.setText(previewText);
+        
+        if (tblScripts.getSelectedRowCount() == 1) {
+            btnUp.setEnabled(true);
+            btnDown.setEnabled(true);
+        }
+        else {
+            btnUp.setEnabled(false);
+            btnDown.setEnabled(false);        
+        }
+    }
+    
+    private void removeFiles(int[] values) {
+        DefaultTableModel tblModel = (DefaultTableModel)tblScripts.getModel();
+        
+        for (int i=0;i<values.length;i++) {
+            tblModel.removeRow(values[i]-i);
+        }
+    }
+    
+    private String getBasePath() {
+        String basePath = "";
+        
+        try
+        {
+            basePath = ConfigLoader.getProperty("BasePath", "settings.xml");
+        }
+        catch(IOException ioex)
+        {
+            basePath = "";
+            txaOutput.append(ioex.getMessage());
+        }
+        
+        return basePath;
+    }
+    
+
+    private void selectFiles(String basePath) {
+        JFileChooser browse = new JFileChooser(basePath);
+        ExtensionFileFilter filter = new ExtensionFileFilter(null, new String[] { "sql" });
+        DefaultTableModel tblModel = (DefaultTableModel)tblScripts.getModel();
+    
+        browse.setMultiSelectionEnabled(true);
+        browse.addChoosableFileFilter(filter);
+        browse.showOpenDialog(null);
+        
+        for (File item : browse.getSelectedFiles()){
+            tblModel.addRow(new Object[]{item.toString()});
+        }   
+    }  
+      
+    private String doValidation() {
+        return "OK";
+    }
+    
+    private void executeScripts() {
+        DBConnectionInfo dbInfo = new DBConnectionInfo();
+                
+        dbInfo.setUsername(txtUsername.getText());
+        dbInfo.setPassword(txtPassword.getText());      
+        
+        DBInstaller.ExecuteScripts(tblScripts, dbInfo, txaOutput);                
+    }
+
+    @Action
+    public void btnClearLogs_Click() {
+        txaOutput.setText("");
+    }
+
+    @Action
+    public void btnUp_Click() {
+        int selectedIdx;
+        DefaultTableModel tblModel = (DefaultTableModel)tblScripts.getModel();
+        
+        selectedIdx = tblScripts.getSelectedRow();
+        if (selectedIdx != -1) {
+            tblModel.moveRow(selectedIdx, selectedIdx, selectedIdx - 1);
+            tblScripts.changeSelection(selectedIdx - 1, 0, false, false);
+        }
+    }
+
+    @Action
+    public void btnDown_Click() {
+        int selectedIdx;
+        DefaultTableModel tblModel = (DefaultTableModel)tblScripts.getModel();
+        
+        selectedIdx = tblScripts.getSelectedRow();
+        if (selectedIdx != -1) {
+            tblModel.moveRow(selectedIdx, selectedIdx, selectedIdx + 1);
+            tblScripts.changeSelection(selectedIdx + 1, 0, false, false);
+        }
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnClearLogs;
+    private javax.swing.JButton btnDown;
+    private javax.swing.JButton btnExecute;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnUp;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblConnectionString;
+    private javax.swing.JLabel lblDatabase;
+    private javax.swing.JLabel lblOutput;
+    private javax.swing.JLabel lblPreview;
+    private javax.swing.JLabel lblScripts;
+    private javax.swing.JPanel mainPanel;
+    private javax.swing.JMenuBar menuBar;
+    private javax.swing.JScrollPane panOutput;
+    private javax.swing.JPanel pnlDatabase;
+    private javax.swing.JPanel pnlOutput;
+    private javax.swing.JPanel pnlScripts;
+    private javax.swing.JProgressBar progressBar;
+    private javax.swing.JLabel statusAnimationLabel;
+    private javax.swing.JLabel statusMessageLabel;
+    private javax.swing.JPanel statusPanel;
+    private javax.swing.JTable tblScripts;
+    private javax.swing.JTextArea txaOutput;
+    private javax.swing.JTextArea txaPreview;
+    private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtUsername;
+    // End of variables declaration//GEN-END:variables
+
+    private final Timer messageTimer;
+    private final Timer busyIconTimer;
+    private final Icon idleIcon;
+    private final Icon[] busyIcons = new Icon[15];
+    private int busyIconIndex = 0;
+    private JDialog aboutBox;
+}
