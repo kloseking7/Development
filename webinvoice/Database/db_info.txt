@@ -1,0 +1,6 @@
+This folder hosts the webinvoice database.
+the file prefix represents.
+
+sch = schema
+tb = table
+sp = stored procedure
