@@ -11,7 +11,7 @@ public class Webinvoice implements EntryPoint {
 
 	public void onModuleLoad() {
 
-		ViewController.showView(Views.SignIn);
+		ViewController.showView(Views.Home);
 	}
 
 }

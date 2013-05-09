@@ -8,7 +8,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 public class ViewController {
-
+	
 	// Initialize the nav bar
 	static {
 		for (final Views v : Views.values()) {
@@ -50,16 +50,25 @@ public class ViewController {
 	}
 
 	public static void showView(Views v) {
+		validateUser();
 		switch (v) {
 		case SignIn:
-			showView(new SignInView().load());
+			showView(new SignIn());
 			break;
 		case SignUp:
-			showView(new SignUpView().load());
+			showView(new SignUp());
 			break;
 		default:
-			showView(new SignInView().load());
+			showView(new SignIn());
 
 		}
+	}
+
+	/**
+	 * client side check if the user are eligible to access the url
+	 */
+	private static void validateUser() {
+		// TODO Auto-generated method stub
+		
 	}
 }

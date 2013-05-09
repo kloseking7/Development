@@ -8,7 +8,7 @@ public class StateDTO implements IsSerializable {
 
 	private AuState id;
 
-	private AuState name;
+	private String name;
 
 	public AuState getId() {
 		return id;
@@ -18,11 +18,11 @@ public class StateDTO implements IsSerializable {
 		this.id = id;
 	}
 
-	public AuState getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(AuState name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 

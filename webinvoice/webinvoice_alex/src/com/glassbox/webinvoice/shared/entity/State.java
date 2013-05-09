@@ -20,8 +20,7 @@ public class State implements IsSerializable {
 	@Enumerated(value = EnumType.ORDINAL)
 	private AuState id;
 
-	@Enumerated(value = EnumType.STRING)
-	private AuState name;
+	private String name;
 
 	// bi-directional many-to-one association to Address
 	@OneToMany(mappedBy = "state", fetch = FetchType.EAGER)
@@ -38,11 +37,11 @@ public class State implements IsSerializable {
 		this.id = id;
 	}
 
-	public AuState getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(AuState name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 

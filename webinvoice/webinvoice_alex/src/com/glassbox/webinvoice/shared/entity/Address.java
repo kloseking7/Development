@@ -23,12 +23,12 @@ public class Address implements IsSerializable {
 	private Person person;
 
 	// bi-directional many-to-one association to State
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "state")
 	private State state;
 
 	// bi-directional many-to-one association to Suburb
-	@ManyToOne(fetch = FetchType.LAZY, cascade = { CascadeType.ALL })
+	@ManyToOne(fetch = FetchType.EAGER, cascade = { CascadeType.ALL })
 	@JoinColumn(name = "suburb")
 	private Suburb suburb;
 

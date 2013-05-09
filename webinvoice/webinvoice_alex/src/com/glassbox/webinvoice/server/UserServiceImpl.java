@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +28,9 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @Service("userService")
 public class UserServiceImpl extends RemoteServiceServlet implements
 		UserService {
+
+	private static Logger logger = Logger.getLogger(UserServiceImpl.class);
+
 	@Autowired
 	private UserDAO userDAO;
 
@@ -62,7 +66,6 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 		p.setLogintime(new Date());
 
 		state.setId(auState);
-		state.setName(auState);
 		suburb.setPostcode(postCode);
 		suburb.setSuburb(suburbName);
 		address.setState(state);
@@ -82,10 +85,8 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 			throw new NullPointerException("Unable to find user");
 
 		else if (!person.getPassword().equals(password))
-			throw new IllegalArgumentException("Incorrect Password");
 
 		person.setLogintime(new Date());
-
 		request.getSession().setAttribute("currentUser", person);
 
 		return dtf.toDTO(person);
