@@ -1,0 +1,174 @@
+09-五月-2013 01:00 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happening in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:00 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happening in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:00 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happening in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:08 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:08 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:09 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:10 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:11 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:12 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:13 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Incorrect Password happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:14 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Incorrect Password happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:16 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Incorrect Password happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:18 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Incorrect Password happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:20 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Incorrect Password happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:23 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Incorrect Password happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:24 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Incorrect Password happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:25 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:25 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:27 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:27 ERROR SystemSupervisor:48 - Exception isorg.hibernate.ObjectNotFoundException: No row with the given identifier exists: [com.glassbox.webinvoice.shared.entity.State#NEW] happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:29 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:29 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:29 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:29 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:30 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:30 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:33 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:33 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:34 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:34 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:36 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:36 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:41 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:41 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:42 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:42 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:43 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(Person)
+parameter passed in are:
+class com.glassbox.webinvoice.shared.entity.Person
+09-五月-2013 01:43 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:44 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:46 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:47 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 01:56 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:00 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: testing happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:01 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: testing happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:02 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: testing happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:02 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: testing happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:02 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: testing happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:04 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: testing happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:07 ERROR SystemSupervisor:48 - Exception isjava.lang.IllegalArgumentException: Unknown name value for enum class com.glassbox.webinvoice.shared.entity.AuState: NSW happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:09 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:09 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:17 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:17 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:33 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:33 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:34 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 02:35 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
+09-五月-2013 14:16 ERROR SystemSupervisor:48 - Exception isjava.lang.NullPointerException: Unable to find user happened in  PersonDTO com.glassbox.webinvoice.client.UserService.findUser(String,String)
+parameter passed in are:
+class java.lang.Stringclass java.lang.String
