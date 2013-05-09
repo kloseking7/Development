@@ -1,2 +1,0 @@
-serviceClass: com.glassbox.webinvoice.client.UserService
-path: E9A27C0DD7C478B0CF17D727D7D170DA.gwt.rpc
