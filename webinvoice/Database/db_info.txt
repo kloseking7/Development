@@ -1,5 +1,6 @@
 This folder hosts the webinvoice database.
 the file prefix represents.
+this file is for information only.
 
 sch = schema
 tb = table
