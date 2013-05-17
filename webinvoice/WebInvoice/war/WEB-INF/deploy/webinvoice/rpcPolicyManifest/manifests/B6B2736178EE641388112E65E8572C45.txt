@@ -1,2 +1,0 @@
-serviceClass: com.glassbox.webinvoice.client.GreetingService
-path: 1EABEB28DF0AC618542FB35026FF2C1D.gwt.rpc
