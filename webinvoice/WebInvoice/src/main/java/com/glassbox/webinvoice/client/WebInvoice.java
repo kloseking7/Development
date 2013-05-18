@@ -17,6 +17,7 @@ public class WebInvoice implements EntryPoint {
 	    Window.enableScrolling(true);
 	    Window.setMargin("0px");
 	    RootPanel.get().add(main);
+            login.show();
 	}
 
 }
