@@ -14,7 +14,6 @@
 		}
 
 		/* Header */
-
 		#header-wrapper {
 		overflow:
 		hidden;
@@ -30,35 +29,23 @@
 		}
 
 		/* Banner */
-
 		#banner {
-		overflow:
-		hidden;
-		height:
-		400px;
-		background: url(images/img04.jpg)
-		no-repeat
-		center bottom;
+		overflow: hidden;
+		height:	400px;
+		background: url(images/img04.jpg) no-repeat center bottom;
 		}
 
 		#banner .image-style {
-		border: 15px solid
-		#F4F4F4;
+		border: 15px solid #F4F4F4;
 		}
 
-
-		/*
-		Splash */
-
+		/* Splash */
 		#splash {
 		overflow: hidden;
-		padding: 0px 0px 50px
-		0px;
-		border-bottom: 1px dashed
-		#E7E2DC;
+		padding: 0px 0px 50px 0px;
+		border-bottom: 1px dashed #E7E2DC;
 		letter-spacing: -3px;
-		text-align:
-		center;
+		text-align: center;
 		font-size: 48px;
 		}
 
@@ -67,13 +54,11 @@
 		}
 
 		/* Search */
-
 		#search {
 		float: right;
 		width: 280px;
 		height: 60px;
-		padding: 20px 0px 0px
-		0px;
+		padding: 20px 0px 0px 0px;
 		}
 
 		#search form {
@@ -92,12 +77,9 @@
 		width: 170px;
 		padding: 6px 5px 2px 5px;
 		border: 1px solid #DEDEDE;
-		background:
-		#FFFFFF;
+		background: #FFFFFF;
 		text-transform: lowercase;
-		font: normal 11px Arial,
-		Helvetica,
-		sans-serif;
+		font: normal 11px Arial, Helvetica, sans-serif;
 		color: #5D781D;
 		}
 
@@ -110,16 +92,13 @@
 		}
 
 
-		/* Page
-		*/
-
+		/* Page */
 		#page {
 		overflow: hidden;
 		padding: 20px 20px 40px 20px;
 		}
 
 		/* Content */
-
 		#content {
 		float: left;
 		width: 700px;
@@ -133,27 +112,22 @@
 
 		.post .title {
 		margin: 0px 0px 30px 0px;
-		padding: 0px
-		0px 10px
-		0px;
+		padding: 0px 0px 10px 0px;
 		border-bottom: 3px solid #E0E1D6;
-		text-shadow: 1px 1px 0px
-		#FFFFFF;
+		text-shadow: 1px 1px 0px #FFFFFF;
 		font-size: 26px;
 		color: #373737;
 		}
 
 		.post .title a {
 		border: none;
-		color:
-		#373737;
+		color: #373737;
 		}
 
 		.post .meta {
 		margin-bottom: 30px;
 		padding: 0px;
-		text-align:
-		left;
+		text-align: left;
 		font-size: 16px;
 		}
 
@@ -161,8 +135,7 @@
 		float: left;
 		}
 
-		.post .meta
-		.posted {
+		.post .meta .posted {
 		float: right;
 		}
 
@@ -170,8 +143,7 @@
 		}
 
 		.post .entry {
-		padding: 0px 0px
-		20px 0px;
+		padding: 0px 0px 20px 0px;
 		padding-bottom: 20px;
 		text-align: justify;
 		}
@@ -183,41 +155,31 @@
 
 		.more {
 		display: block;
-		float:
-		left;
+		float: left;
 		width: 88px;
 		height: 25px;
 		padding: 2px 0px 0px 0px;
-		margin-right:
-		10px;
-		background: url(images/img08.jpg) no-repeat left
-		top;
-		text-align:
-		center;
+		margin-right: 10px;
+		background: url(images/img08.jpg) no-repeat left top;
+		text-align: center;
 		color: #FFFFFF;
 		}
 
 		.comments {
 		display: block;
 		float: left;
-		width:
-		88px;
+		width: 88px;
 		height: 25px;
 		padding: 2px 0px 0px 0px;
-		background:
-		url(images/img08.jpg) no-repeat left top;
-		text-align:
-		center;
-		color:
-		#FFFFFF;
+		background: url(images/img08.jpg) no-repeat left top;
+		text-align: center;
+		color: #FFFFFF;
 		}
 
 		/* Sidebar */
-
 		#sidebar {
 		float: right;
-		width:
-		384px;
+		width: 384px;
 		margin: 0px;
 		padding: 0px 0px 0px 0px;
 		color: #787878;
@@ -225,15 +187,12 @@
 
 		#sidebar h2
 		{
-		margin: 0px 0px
-		30px 0px;
+		margin: 0px 0px	30px 0px;
 		padding: 0px 0px 10px 0px;
-		border-bottom: 3px
-		solid #E0E1D6;
+		border-bottom: 3px solid #E0E1D6;
 		text-shadow: 1px 1px 0px #FFFFFF;
 		font-size: 26px;
-		color:
-		#373737;
+		color: #373737;
 		}
 
 		#sidebar a {
@@ -241,12 +200,10 @@
 		}
 
 		#sidebar a:hover {
-		text-decoration:
-		underline;
+		text-decoration: underline;
 		}
 
 		/* Calendar */
-
 		#calendar {
 		}
 
@@ -267,7 +224,6 @@
 		}
 
 		/* Three Column Footer Content */
-
 		#footer-bg {
 		overflow: hidden;
 		padding: 70px 0px;

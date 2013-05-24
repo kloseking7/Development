@@ -11,13 +11,11 @@ import com.google.gwt.user.client.Window;
  */
 public class WebInvoice implements EntryPoint {
     	private Main main = new Main();
-	private LoginBox login = new LoginBox();
 
 	public void onModuleLoad() {
 	    Window.enableScrolling(true);
 	    Window.setMargin("0px");
 	    RootPanel.get().add(main);
-            login.show();
 	}
 
 }

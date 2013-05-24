@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 jarsExcludedFromWebInfLib=
-lastWarOutDir=/home/mon2/Projects/Development/webinvoice/WebInvoice/target/webinvoice-0.0.1-SNAPSHOT
+lastWarOutDir=/webinvoice/target/m2e-wtp/web-resources
 warSrcDir=src/main/webapp
 warSrcDirIsOutput=false

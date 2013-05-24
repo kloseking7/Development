@@ -15,7 +15,7 @@ public class Main extends Composite {
 
 	private static MainUiBinder uiBinder = GWT.create(MainUiBinder.class);
 	private Header hdr = new Header(); 
-	private Menu mnu = new Menu();
+	private Menu mnu = new Menu(this);
 	private Container container = new Container(this);
 	private Footer footer = new Footer();
 	
