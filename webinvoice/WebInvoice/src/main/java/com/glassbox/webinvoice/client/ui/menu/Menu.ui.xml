@@ -55,19 +55,19 @@
 			<div id="menu" class="container">
 				<ul>
 					<li class="current_page_item">
-						<a href="#">Home</a>
+                                            <g:HTMLPanel ui:field="Home"></g:HTMLPanel>
 					</li>
 					<li>
-						<a href="#">Services</a>
+                                            <g:HTMLPanel ui:field="Services"></g:HTMLPanel>
 					</li>
 					<li>
-						<a href="#">About Us</a>
+                                            <g:HTMLPanel ui:field="AboutUs"></g:HTMLPanel>
 					</li>
 					<li>
-						<a href="#">Contact Us</a>
+                                            <g:HTMLPanel ui:field="ContactUs"></g:HTMLPanel>
 					</li>
 					<li>
-                                                <a ui:field="Login">Login</a>
+                                            <g:HTMLPanel ui:field="Login"></g:HTMLPanel>
 					</li>
 				</ul>
 			</div>

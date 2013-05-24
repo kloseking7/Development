@@ -3,17 +3,15 @@ package com.glassbox.webinvoice.client.ui.menu;
 import com.glassbox.webinvoice.client.ui.Main;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.AnchorElement;
-import com.google.gwt.dom.client.Element;
+import com.google.gwt.dom.client.SpanElement;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Event;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 public class Menu extends Composite {
@@ -24,22 +22,77 @@ public class Menu extends Composite {
     interface MenuUiBinder extends UiBinder<Widget, Menu> {
     }
     
-    @UiField AnchorElement Login;
-  
+    @UiField HTMLPanel Home;
+    @UiField HTMLPanel Services;
+    @UiField HTMLPanel AboutUs;
+    @UiField HTMLPanel ContactUs;
+    @UiField HTMLPanel Login;
+    
     
     public Menu(Object panel) {
         initWidget(uiBinder.createAndBindUi(this));
         this.mainPanel = panel;
-        Anchor a = Anchor.wrap(Login);
-        a.addClickHandler(new LoginClickHandler());
+        CreateMenu();      
+    }
+    
+    private void CreateMenu() {
+        Anchor AnchorHome = new Anchor();
+        Anchor AnchorServices = new Anchor();
+        Anchor AnchorAboutUs = new Anchor();
+        Anchor AnchorContactUs = new Anchor();
+        Anchor AnchorLogin = new Anchor();
+
+        AnchorHome.setHTML("<a href=\"#\">Home</a>");
+        AnchorServices.setHTML("<a href=\"#\">Services</a>");
+        AnchorAboutUs.setHTML("<a href=\"#\">About Us</a>");
+        AnchorContactUs.setHTML("<a href=\"#\">Contact Us</a>");
+        AnchorLogin.setHTML("<a href=\"#\">Login</a>");
+        
+        Home.add(AnchorHome);
+        Services.add(AnchorServices);
+        AboutUs.add(AnchorAboutUs);
+        ContactUs.add(AnchorContactUs);
+        Login.add(AnchorLogin);
+        
+        AnchorHome.addClickHandler(new HomeClickHandler());        
+        AnchorServices.addClickHandler(new ServicesClickHandler());    
+        AnchorAboutUs.addClickHandler(new AboutUsClickHandler());    
+        AnchorContactUs.addClickHandler(new ContactUsClickHandler());    
+        AnchorLogin.addClickHandler(new LoginClickHandler());    
     }
     
     
-    private class LoginClickHandler implements ClickHandler {
+    
+    
+    private class HomeClickHandler implements ClickHandler {     
+        public void onClick(ClickEvent event) {
+            ((Main)mainPanel).ShowHome();
+        }
+    }
 
+    private class ServicesClickHandler implements ClickHandler {     
+        public void onClick(ClickEvent event) {
+            ((Main)mainPanel).ShowServices();
+        }
+    }
+    
+    private class AboutUsClickHandler implements ClickHandler {     
+        public void onClick(ClickEvent event) {
+            ((Main)mainPanel).ShowAboutUs();
+        }
+    }
+    
+    private class ContactUsClickHandler implements ClickHandler {     
+        public void onClick(ClickEvent event) {
+            ((Main)mainPanel).ShowContactUs();
+        }
+    }
+    
+    private class LoginClickHandler implements ClickHandler {     
         public void onClick(ClickEvent event) {
             ((Main)mainPanel).ShowLoginDialog();
         }
-    }
+    }    
+    
 }
 

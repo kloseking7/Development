@@ -38,4 +38,20 @@ public class Main extends Composite {
             LoginBox login = new LoginBox();
             login.show();            
         }
+
+        public void ShowHome() {
+            this.container.ShowHome();
+        }
+
+        public void ShowAboutUs() {
+            this.container.ShowAboutUs();
+        }
+                
+        public void ShowContactUs() {
+            this.container.ShowContactUs();
+        }
+                        
+        public void ShowServices() {
+            this.container.ShowServices();
+        }
 }

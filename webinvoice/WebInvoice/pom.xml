@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <!-- POM file generated with GWT webAppCreator -->
     <modelVersion>4.0.0</modelVersion>
-    <groupId>webinvoice</groupId>
+    <groupId>com.glassbox</groupId>
     <artifactId>webinvoice</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>GWT Maven Archetype</name>
+    <name>WebInvoice</name>
     <repositories>
         <repository>
             <id>java.net</id>
