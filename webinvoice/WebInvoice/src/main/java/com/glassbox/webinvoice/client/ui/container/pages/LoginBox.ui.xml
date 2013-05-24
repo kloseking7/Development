@@ -222,8 +222,7 @@ Uncomment this for XHTML entities
                         <input type="password" name="password" placeholder="Password" class="showpassword"></input>
                     </p>
                     <p class="clearfix"> 
-                        <a href="#" class="log-twitter">Log in with Twitter</a>    
-                        <input type="submit" name="submit" value="Log in"></input>
+                        <input type="button" name="submit" value="Click Log in"></input>
                     </p>
                 </form>​​
             </section>

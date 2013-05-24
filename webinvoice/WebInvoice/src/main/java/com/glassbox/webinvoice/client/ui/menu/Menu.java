@@ -1,5 +1,6 @@
 package com.glassbox.webinvoice.client.ui.menu;
 
+import com.glassbox.webinvoice.client.ui.Main;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.AnchorElement;
 import com.google.gwt.dom.client.Element;
@@ -18,6 +19,7 @@ import com.google.gwt.user.client.ui.Widget;
 public class Menu extends Composite {
     
     private static MenuUiBinder uiBinder = GWT.create(MenuUiBinder.class);
+    private Object mainPanel;
     
     interface MenuUiBinder extends UiBinder<Widget, Menu> {
     }
@@ -27,6 +29,7 @@ public class Menu extends Composite {
     
     public Menu(Object panel) {
         initWidget(uiBinder.createAndBindUi(this));
+        this.mainPanel = panel;
         Anchor a = Anchor.wrap(Login);
         a.addClickHandler(new LoginClickHandler());
     }
@@ -35,7 +38,7 @@ public class Menu extends Composite {
     private class LoginClickHandler implements ClickHandler {
 
         public void onClick(ClickEvent event) {
-
+            ((Main)mainPanel).ShowLoginDialog();
         }
     }
 }

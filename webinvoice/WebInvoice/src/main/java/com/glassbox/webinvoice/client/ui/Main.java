@@ -1,6 +1,7 @@
 package com.glassbox.webinvoice.client.ui;
 
 import com.glassbox.webinvoice.client.ui.container.Container;
+import com.glassbox.webinvoice.client.ui.container.pages.LoginBox;
 import com.glassbox.webinvoice.client.ui.footer.Footer;
 import com.glassbox.webinvoice.client.ui.header.Header;
 import com.glassbox.webinvoice.client.ui.menu.Menu;
@@ -32,4 +33,9 @@ public class Main extends Composite {
 		this.MainPanel.add(container);
 		this.MainPanel.add(footer);
 	}
+        
+        public void ShowLoginDialog() {
+            LoginBox login = new LoginBox();
+            login.show();            
+        }
 }
