@@ -150,7 +150,7 @@
                 <!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
                 documentation at codehaus.org -->
                 <configuration>
-                    <runTarget>webinvoice.html</runTarget>
+                    <runTarget>WebInvoice.html</runTarget>
                     <hostedWebapp>${webappDirectory}</hostedWebapp>
                     <i18nMessagesBundle>com.glassbox.webinvoice.client.Messages</i18nMessagesBundle>
                 </configuration>

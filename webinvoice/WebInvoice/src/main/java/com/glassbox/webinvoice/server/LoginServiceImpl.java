@@ -1,6 +1,7 @@
 package com.glassbox.webinvoice.server;
 
-import com.glassbox.webinvoice.client.GreetingService;
+import com.glassbox.webinvoice.client.service.LoginService;
+import com.glassbox.webinvoice.server.authentication.AuthenticationResult;
 import com.glassbox.webinvoice.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -8,8 +9,8 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class GreetingServiceImpl extends RemoteServiceServlet implements
-		GreetingService {
+public class LoginServiceImpl extends RemoteServiceServlet implements
+		LoginService {
 
 	public String greetServer(String input) throws IllegalArgumentException {
 		// Verify that the input is valid. 
@@ -45,4 +46,14 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 		return html.replaceAll("&", "&amp;").replaceAll("<", "&lt;")
 				.replaceAll(">", "&gt;");
 	}
+
+    public AuthenticationResult authenticateUser(String name, String password) throws IllegalArgumentException {
+        //dummy authentication.
+        AuthenticationResult result = new AuthenticationResult();
+        result.setAuthenticated(true);
+        result.setMessage("");
+        result.setUsername("manssster");
+        result.setEmail("manssster@gmail.com");
+        return result;
+    }
 }

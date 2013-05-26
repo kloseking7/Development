@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.glassbox.webinvoice.client.AccessDeniedException;
 import com.glassbox.webinvoice.client.UserService;
 import com.glassbox.webinvoice.dataaccess.UserDAO;
 import com.glassbox.webinvoice.shared.DTOentity.PersonDTO;
