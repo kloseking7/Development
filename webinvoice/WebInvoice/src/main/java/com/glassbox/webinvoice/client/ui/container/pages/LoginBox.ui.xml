@@ -239,11 +239,13 @@ Uncomment this for XHTML entities
             <form id="loginform">
                 <p>
                     <label for="login">Login:</label>
-                    <input ui:field="username" type="text" name="login" id="login" value=""></input>
+                    <g:TextBox ui:field="login"></g:TextBox>
+<!--                    <input ui:field="login" type="text" name="login" value=""></input>-->
                 </p>
                 <p>
                     <label for="password">Password:</label>
-                    <input ui:field="password" type="password" name="password" id="password" value=""></input>
+                    <g:TextBox ui:field="password"></g:TextBox>
+<!--                    <input ui:field="password" type="password" name="password" value=""></input>-->
                 </p>
                 <p id="loginsubmit">
                     <g:Button ui:field="LoginButton">Login</g:Button>

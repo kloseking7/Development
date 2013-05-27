@@ -1,7 +1,7 @@
 package com.glassbox.webinvoice.client.ui.container.pages;
 
 import com.glassbox.webinvoice.client.service.LoginService;
-import com.glassbox.webinvoice.server.authentication.AuthenticationResult;
+import com.glassbox.webinvoice.client.model.AuthenticationResult;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -22,9 +22,9 @@ public class LoginBox extends DialogBox {
         
         @UiField Button LoginButton;
         @UiField Button CancelButton;
-        @UiField TextBox username;
+        @UiField TextBox login;
         @UiField TextBox password;
-        LoginService login;
+        LoginService loginservice;
         AuthenticationUpdate update;
         
 	public LoginBox(){
@@ -33,6 +33,8 @@ public class LoginBox extends DialogBox {
             this.setModal(true);
             this.setGlassEnabled(true);
             this.center();
+            login.getElement().setId("login");
+            password.getElement().setId("password");
             LoginButton.getElement().setId("loginbutton");
             LoginButton.addClickHandler(new LoginClickHandler(update));
             CancelButton.getElement().setId("cancelbutton");
@@ -47,7 +49,13 @@ public class LoginBox extends DialogBox {
         }
         
         public void onClick(ClickEvent event) {
-            update.setAuthenticationResult(login.authenticateUser(username.getText(), password.getText())); 
+            AuthenticationResult result;
+            Window.alert("Test");
+            Window.alert(login.getText());
+            Window.alert(password.getText());
+            result = loginservice.authenticateUser(login.getText(), password.getText());
+            Window.alert("test2");
+            update.setAuthenticationResult(result); 
         }
     }
 

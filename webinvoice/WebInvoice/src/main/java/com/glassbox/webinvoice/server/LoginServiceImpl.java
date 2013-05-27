@@ -1,7 +1,7 @@
 package com.glassbox.webinvoice.server;
 
 import com.glassbox.webinvoice.client.service.LoginService;
-import com.glassbox.webinvoice.server.authentication.AuthenticationResult;
+import com.glassbox.webinvoice.client.model.AuthenticationResult;
 import com.glassbox.webinvoice.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
