@@ -9,5 +9,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  */
 @RemoteServiceRelativePath("services/login")
 public interface LoginService extends RemoteService {
-	AuthenticationResult authenticateUser(String name, String password) throws IllegalArgumentException;
+	public AuthenticationResult authenticateUser(String name, String password);
 }

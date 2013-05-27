@@ -1,7 +1,7 @@
 package com.glassbox.webinvoice.client.ui.container.pages;
 
-import com.glassbox.webinvoice.client.service.LoginService;
 import com.glassbox.webinvoice.client.model.AuthenticationResult;
+import com.glassbox.webinvoice.client.service.LoginServiceClientImpl;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -24,10 +24,10 @@ public class LoginBox extends DialogBox {
         @UiField Button CancelButton;
         @UiField TextBox login;
         @UiField TextBox password;
-        LoginService loginservice;
-        AuthenticationUpdate update;
+        private LoginServiceClientImpl loginservice;
         
 	public LoginBox(){
+            this.loginservice = new LoginServiceClientImpl("services/login");
             this.setSize("500px", "300px");
             this.add(uiBinder.createAndBindUi(this));
             this.setModal(true);
@@ -36,26 +36,15 @@ public class LoginBox extends DialogBox {
             login.getElement().setId("login");
             password.getElement().setId("password");
             LoginButton.getElement().setId("loginbutton");
-            LoginButton.addClickHandler(new LoginClickHandler(update));
+            LoginButton.addClickHandler(new LoginClickHandler());
             CancelButton.getElement().setId("cancelbutton");
             CancelButton.addClickHandler(new CancelClickHandler(this));
         }
         
-    private class LoginClickHandler implements ClickHandler {     
-        private AuthenticationUpdate update;
-        
-        public LoginClickHandler(AuthenticationUpdate update) {
-            this.update = update;            
-        }
-        
-        public void onClick(ClickEvent event) {
-            AuthenticationResult result;
+    private class LoginClickHandler implements ClickHandler {            
+        public void onClick(ClickEvent event) {    
             Window.alert("Test");
-            Window.alert(login.getText());
-            Window.alert(password.getText());
-            result = loginservice.authenticateUser(login.getText(), password.getText());
-            Window.alert("test2");
-            update.setAuthenticationResult(result); 
+            loginservice.authenticateUser(login.getText(), password.getText());
         }
     }
 
