@@ -7,7 +7,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 /**
  * The client side stub for the RPC service.
  */
-@RemoteServiceRelativePath("services/login")
+@RemoteServiceRelativePath("/webinvoice/services/login")
 public interface LoginService extends RemoteService {
 	public AuthenticationResult authenticateUser(String name, String password);
 }

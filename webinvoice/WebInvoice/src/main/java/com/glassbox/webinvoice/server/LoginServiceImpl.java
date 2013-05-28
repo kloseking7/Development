@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 /**
  * The server side implementation of the RPC service.
  */
-@SuppressWarnings("serial")
 @Service("services/login")
 public class LoginServiceImpl extends RemoteServiceServlet implements
 		LoginService {

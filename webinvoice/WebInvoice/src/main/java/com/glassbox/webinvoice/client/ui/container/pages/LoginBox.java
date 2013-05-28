@@ -27,7 +27,7 @@ public class LoginBox extends DialogBox {
         private LoginServiceClientImpl loginservice;
         
 	public LoginBox(){
-            this.loginservice = new LoginServiceClientImpl("services/login");
+            this.loginservice = new LoginServiceClientImpl(GWT.getModuleBaseURL() + "services/login", this);
             this.setSize("500px", "300px");
             this.add(uiBinder.createAndBindUi(this));
             this.setModal(true);
@@ -41,33 +41,25 @@ public class LoginBox extends DialogBox {
             CancelButton.addClickHandler(new CancelClickHandler(this));
         }
         
+    public void UpdateLoginDialog (AuthenticationResult result) {
+        Window.alert(result.getUsername());                        
+    }
+     
+    ///handle login click
     private class LoginClickHandler implements ClickHandler {            
         public void onClick(ClickEvent event) {    
-            Window.alert("Test");
             loginservice.authenticateUser(login.getText(), password.getText());
         }
     }
 
+    ///handle cancel click
     private class CancelClickHandler implements ClickHandler {
         private LoginBox LoginBoxReference;
-        
         public CancelClickHandler(LoginBox LoginReference) {
             this.LoginBoxReference = LoginReference;            
         }
-        
         public void onClick(ClickEvent event) {
             this.LoginBoxReference.hide();
         }
-    }
-    
-    private class AuthenticationUpdate {
-        private void setAuthenticationResult(AuthenticationResult result) {
-            if (result.isAuthenticated()) {
-                Window.alert("logged in ok");
-            }
-            else {
-                Window.alert("failed");
-            }        
-        }        
     }
 }

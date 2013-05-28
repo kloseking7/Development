@@ -10,7 +10,6 @@ import com.glassbox.webinvoice.shared.DTOentity.RoleDTO;
 import com.glassbox.webinvoice.shared.DTOentity.StateDTO;
 import com.glassbox.webinvoice.shared.DTOentity.SuburbDTO;
 import com.glassbox.webinvoice.shared.entity.Address;
-import com.glassbox.webinvoice.shared.entity.AuState;
 import com.glassbox.webinvoice.shared.entity.Autonum;
 import com.glassbox.webinvoice.shared.entity.Email;
 import com.glassbox.webinvoice.shared.entity.Person;
