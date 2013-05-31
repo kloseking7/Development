@@ -52,4 +52,4 @@ public class Role implements IsSerializable {
 		this.persons = persons;
 	}
 
-}
+    }

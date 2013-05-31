@@ -1,5 +1,6 @@
-package com.glassbox.webinvoice.dataaccess;
+package com.glassbox.webinvoice.server.dataaccess;
 
+import com.glassbox.webinvoice.client.model.AuthenticationResult;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -22,4 +23,8 @@ public class UserDAOImpl extends BaseDAO implements UserDAO  {
 		List result = sf.getCurrentSession().createQuery("from Email e where e.emailAddress=:ea").setString("ea", email).list();
 		return  result.isEmpty() ? null : ((Email) result.get(0)).getPerson();
 	}
+
+    public AuthenticationResult authenticateUser(String username, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

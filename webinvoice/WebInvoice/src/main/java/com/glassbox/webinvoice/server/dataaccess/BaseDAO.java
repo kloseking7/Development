@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.dataaccess;
+package com.glassbox.webinvoice.server.dataaccess;
 
 import java.io.Serializable;
 import java.util.List;

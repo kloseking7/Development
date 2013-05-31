@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.server;
+package com.glassbox.webinvoice.server.service;
 
 import com.glassbox.webinvoice.client.service.LoginService;
 import com.glassbox.webinvoice.client.model.AuthenticationResult;

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.glassbox.webinvoice.client.UserService;
-import com.glassbox.webinvoice.dataaccess.UserDAO;
+import com.glassbox.webinvoice.server.dataaccess.UserDAO;
 import com.glassbox.webinvoice.shared.DTOentity.PersonDTO;
 import com.glassbox.webinvoice.shared.entity.Address;
 import com.glassbox.webinvoice.shared.entity.AuState;

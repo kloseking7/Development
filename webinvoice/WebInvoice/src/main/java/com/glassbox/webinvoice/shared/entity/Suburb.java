@@ -62,4 +62,4 @@ public class Suburb implements IsSerializable {
 		this.addresses = addresses;
 	}
 
-}
+    }

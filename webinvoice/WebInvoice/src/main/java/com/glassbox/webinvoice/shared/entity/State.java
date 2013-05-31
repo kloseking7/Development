@@ -53,4 +53,4 @@ public class State implements IsSerializable {
 		this.addresses = addresses;
 	}
 
-}
+    }
