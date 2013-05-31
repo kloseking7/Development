@@ -144,6 +144,11 @@
             <version>2.3.2</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1.4</version>
+        </dependency>
     </dependencies>
     <build>
         <!-- Generate compiled stuff in the folder used for developing mode -->

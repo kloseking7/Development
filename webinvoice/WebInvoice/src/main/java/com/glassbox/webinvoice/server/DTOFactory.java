@@ -12,6 +12,7 @@ import com.glassbox.webinvoice.shared.DTOentity.SuburbDTO;
 import com.glassbox.webinvoice.shared.entity.Address;
 import com.glassbox.webinvoice.shared.entity.Autonum;
 import com.glassbox.webinvoice.shared.entity.Email;
+import com.glassbox.webinvoice.shared.entity.User;
 import com.glassbox.webinvoice.shared.entity.Person;
 import com.glassbox.webinvoice.shared.entity.Role;
 import com.glassbox.webinvoice.shared.entity.State;
