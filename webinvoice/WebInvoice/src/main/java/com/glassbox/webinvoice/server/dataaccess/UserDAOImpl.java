@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import com.glassbox.webinvoice.shared.entity.Email;
 import com.glassbox.webinvoice.shared.entity.Person;
 import com.glassbox.webinvoice.shared.entity.User;
-import java.util.HashSet;
 import org.hibernate.SQLQuery;
 
 @Repository
@@ -34,7 +33,7 @@ public class UserDAOImpl extends BaseDAO implements UserDAO  {
      * @return
      */
     public AuthenticationResult authenticateUser(String username, String password) {
-        AuthenticationResult auth = null;
+        AuthenticationResult auth = new AuthenticationResult();
         User user = null;
         
         SQLQuery query = sf.getCurrentSession().createSQLQuery("CALL " +
