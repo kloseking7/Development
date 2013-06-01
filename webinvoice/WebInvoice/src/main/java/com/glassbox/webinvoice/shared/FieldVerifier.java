@@ -49,4 +49,25 @@ public class FieldVerifier {
                 }
 		return isValid;
 	}
+
+        public static boolean isBlankUserName(String username) {
+            boolean isBlank = false;
+                
+                if (username.equals(Constants.EMPTY_STRING)) {
+                    isBlank = true;
+                }
+
+		return isBlank;
+	}
+
+        public static boolean isBlankPassword(String password) {
+            boolean isBlank = false;
+                
+                if (password.equals(Constants.EMPTY_STRING)) {
+                    isBlank = true;
+                }
+
+		return isBlank;
+	}
+        
 }

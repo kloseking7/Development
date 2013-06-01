@@ -15,6 +15,7 @@ public class AuthenticationResult implements Serializable {
     private String username;
     private String email;
     private String message;
+    private String tagname;
 
     public boolean isAuthenticated() {
         return authenticated;
@@ -47,4 +48,12 @@ public class AuthenticationResult implements Serializable {
     public void setMessage(String message) {
         this.message = message;
     }    
+
+    public String getTagname() {
+        return tagname;
+    }
+
+    public void setTagname(String tagname) {
+        this.tagname = tagname;
+    }
 }

@@ -7,9 +7,10 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -24,6 +25,7 @@ public class LoginBox extends DialogBox {
         @UiField Button CancelButton;
         @UiField TextBox login;
         @UiField TextBox password;
+        @UiField Label message;
         private LoginServiceClientImpl loginservice;
         
 	public LoginBox(){
@@ -39,10 +41,14 @@ public class LoginBox extends DialogBox {
             LoginButton.addClickHandler(new LoginClickHandler());
             CancelButton.getElement().setId("cancelbutton");
             CancelButton.addClickHandler(new CancelClickHandler(this));
+            message.getElement().setId("message");
         }
         
     public void UpdateLoginDialog (AuthenticationResult result) {
-        Window.alert(result.getUsername());                        
+        if (!result.isAuthenticated()) {
+            message.setText(result.getMessage());
+            DOM.getElementById(result.getTagname()).focus();
+        }
     }
      
     ///handle login click

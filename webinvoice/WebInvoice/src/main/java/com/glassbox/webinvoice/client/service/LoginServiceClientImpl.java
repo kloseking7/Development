@@ -6,6 +6,7 @@ package com.glassbox.webinvoice.client.service;
 
 import com.glassbox.webinvoice.client.model.AuthenticationResult;
 import com.glassbox.webinvoice.client.ui.container.pages.LoginBox;
+import com.glassbox.webinvoice.shared.FieldVerifier;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -26,14 +27,47 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
         endpoint.setServiceEntryPoint(url);
         this.loginui = loginui;
     }
-
+    
     public void authenticateUser(String name, String password) {
-        this.service.authenticateUser(name, password, new LoginCallback());
+        //validation
+        AuthenticationResult result = new AuthenticationResult();
+        
+        if (FieldVerifier.isBlankUserName(name)) {
+            result.setAuthenticated(false);
+            result.setEmail(null);
+            result.setUsername(null);
+            result.setMessage("Username cannot be blank.");
+            result.setTagname("login");
+            loginui.UpdateLoginDialog((AuthenticationResult)result);
+            return;
+        }
+                
+       if (FieldVerifier.isBlankPassword(password)) {
+            result.setAuthenticated(false);
+            result.setEmail(null);
+            result.setUsername(null);
+            result.setMessage("Password cannot be blank.");
+            result.setTagname("password");
+            loginui.UpdateLoginDialog((AuthenticationResult)result);
+            return;
+        }
+       
+        if (!FieldVerifier.isValidUserName(name)) {
+            result.setAuthenticated(false);
+            result.setEmail(null);
+            result.setUsername(null);
+            result.setMessage("Username should be atleast 3 characters.");
+            result.setTagname("login");
+            loginui.UpdateLoginDialog((AuthenticationResult)result);
+            return;
+        }
+       
+       this.service.authenticateUser(name, password, new LoginCallback());
     }
     
     private class LoginCallback implements AsyncCallback {
         public void onFailure(Throwable caught) {
-            Window.alert("failure");  
+            Window.alert("failure");
         }
         public void onSuccess(Object result) {
             loginui.UpdateLoginDialog((AuthenticationResult)result);

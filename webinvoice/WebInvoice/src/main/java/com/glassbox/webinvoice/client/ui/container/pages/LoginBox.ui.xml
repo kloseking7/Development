@@ -240,18 +240,19 @@ Uncomment this for XHTML entities
                 <p>
                     <label for="login">Login:</label>
                     <g:TextBox ui:field="login"></g:TextBox>
-<!--                    <input ui:field="login" type="text" name="login" value=""></input>-->
                 </p>
                 <p>
                     <label for="password">Password:</label>
                     <g:TextBox ui:field="password"></g:TextBox>
-<!--                    <input ui:field="password" type="password" name="password" value=""></input>-->
                 </p>
                 <p id="loginsubmit">
                     <g:Button ui:field="LoginButton">Login</g:Button>
                 </p>
                 <p id="forgotpassword">
                     <a href="#">Forgot your password?</a>
+                </p>
+                <p id="messagearea">
+                    <g:Label ui:field="message"></g:Label>
                 </p>
             </form>
         </div>

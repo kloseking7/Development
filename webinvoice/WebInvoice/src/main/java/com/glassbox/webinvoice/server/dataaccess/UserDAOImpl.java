@@ -21,8 +21,7 @@ public class UserDAOImpl extends BaseDAO implements UserDAO  {
     
     @SuppressWarnings("rawtypes")
     public Person findUser(String email) {
-        System.out.println(sf);
-        List result = sf.getCurrentSession().createQuery("from Email e where e.emailAddress=:ea").setString("ea", email).list();
+        List result = SessionFactoryManager.getSessionFactory().getCurrentSession().createQuery("from Email e where e.emailAddress=:ea").setString("ea", email).list();
         return  result.isEmpty() ? null : ((Email) result.get(0)).getPerson();
     }
     
@@ -35,9 +34,10 @@ public class UserDAOImpl extends BaseDAO implements UserDAO  {
     public AuthenticationResult authenticateUser(String username, String password) {
         AuthenticationResult auth = new AuthenticationResult();
         User user = null;
+        String sql;
         
-        SQLQuery query = sf.getCurrentSession().createSQLQuery("CALL " +
-                "get_authenticateUser(:username,:password)");
+        sql = "CALL get_authenticateUser(:username,:password)";
+        SQLQuery query = SessionFactoryManager.getSessionFactory().getCurrentSession().createSQLQuery(sql);
         
         query.addEntity(AuthenticationResult.class);
         query.setParameter("username", username);
