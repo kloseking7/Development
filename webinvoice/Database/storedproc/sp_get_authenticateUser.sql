@@ -1,8 +1,8 @@
-﻿DROP procedure IF EXISTS `webinvoice`.`get_authenticate`;
+﻿DROP procedure IF EXISTS `webinvoice`.`get_authenticateUser`;
 
 DELIMITER $$
 
-CREATE PROCEDURE `webinvoice`.`get_authenticate` (
+CREATE PROCEDURE `webinvoice`.`get_authenticateUser` (
 	IN in_login VARCHAR(64),
 	IN in_password VARCHAR(45),
 	OUT out_username VARCHAR(32),
@@ -26,9 +26,11 @@ MAIN: BEGIN
 
 	-- Authenticate using email
 	SET @count = (SELECT count(*)
-		FROM `webinvoice`.`user`
-		WHERE username =  in_login
-		AND password = in_password);
+		FROM `webinvoice`.`user`, `webinvoice`.`email`
+		WHERE `webinvoice`.`user`.id = `webinvoice`.`email`.userID
+		AND `webinvoice`.`email`.`emailAddress` =  in_login
+		AND `webinvoice`.`email`.`isPrimary` = 1
+		AND `webinvoice`.`user`.password = in_password);
 
 	IF (@count = 1) THEN 
 		SET out_username = in_login;
