@@ -1,8 +1,7 @@
 package com.glassbox.webinvoice.shared.entity;
 
+import java.io.Serializable;
 import javax.persistence.*;
-
-import com.google.gwt.user.client.rpc.IsSerializable;
 
 /**
  * The persistent class for the email database table.
@@ -10,29 +9,40 @@ import com.google.gwt.user.client.rpc.IsSerializable;
  */
 @Entity
 @Table(name = "email")
-public class Email implements IsSerializable {
+public class Email implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
+	private long id;
 
 	private String emailAddress;
 
-	// bi-directional many-to-one association to Person
+	// bi-directional many-to-one association to Staff
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "personID")
-	private Person person;
+	@JoinColumn(name = "staffID")
+	private Staff staff;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "customerID")
+	private Customer customer;
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 
 	public Email() {
 	}
 
-
-	public String getId() {
-		return this.id;
+	public long getId() {
+		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -44,12 +54,12 @@ public class Email implements IsSerializable {
 		this.emailAddress = emailAddress;
 	}
 
-	public Person getPerson() {
-		return this.person;
+	public Staff getStaff() {
+		return this.staff;
 	}
 
-	public void setPerson(Person person) {
-		this.person = person;
+	public void setStaff(Staff staff) {
+		this.staff = staff;
 	}
 
 }

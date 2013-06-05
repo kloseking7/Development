@@ -1,20 +1,21 @@
 package com.glassbox.webinvoice.shared.DTOentity;
 
-import com.glassbox.webinvoice.shared.entity.AuState;
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.io.Serializable;
 
-public class StateDTO implements IsSerializable {
+import com.glassbox.webinvoice.shared.entity.State;
+
+public class StateDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private AuState id;
+	private State id;
 
 	private String name;
 
-	public AuState getId() {
+	public State getId() {
 		return id;
 	}
 
-	public void setId(AuState id) {
+	public void setId(State id) {
 		this.id = id;
 	}
 

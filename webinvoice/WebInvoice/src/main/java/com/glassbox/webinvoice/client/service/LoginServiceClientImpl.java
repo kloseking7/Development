@@ -4,9 +4,11 @@
  */
 package com.glassbox.webinvoice.client.service;
 
-import com.glassbox.webinvoice.client.model.AuthenticationResult;
+import com.glassbox.webinvoice.client.ui.Alert;
+import com.glassbox.webinvoice.client.ui.AlertLevel;
 import com.glassbox.webinvoice.client.ui.container.pages.LoginBox;
 import com.glassbox.webinvoice.shared.FieldVerifier;
+import com.glassbox.webinvoice.shared.model.AuthenticationResult;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -21,7 +23,6 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
     private LoginBox loginui;
     
     public LoginServiceClientImpl(String url, LoginBox loginui) {
-        System.out.print(url);
         this.service = GWT.create(LoginService.class);
         ServiceDefTarget endpoint = (ServiceDefTarget) this.service;
         endpoint.setServiceEntryPoint(url);
@@ -56,7 +57,7 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
             result.setAuthenticated(false);
             result.setEmail(null);
             result.setUsername(null);
-            result.setMessage("Username should be atleast 3 characters.");
+            result.setMessage("Username should be at least 3 characters.");
             result.setTagname("login");
             loginui.UpdateLoginDialog((AuthenticationResult)result);
             return;
@@ -67,7 +68,7 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
     
     private class LoginCallback implements AsyncCallback {
         public void onFailure(Throwable caught) {
-            Window.alert("failure");
+            	Window.alert(caught.getMessage());
         }
         public void onSuccess(Object result) {
             loginui.UpdateLoginDialog((AuthenticationResult)result);

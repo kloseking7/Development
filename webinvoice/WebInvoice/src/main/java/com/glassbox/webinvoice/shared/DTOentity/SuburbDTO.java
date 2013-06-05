@@ -1,10 +1,6 @@
 package com.glassbox.webinvoice.shared.DTOentity;
 
-import javax.persistence.*;
-
-import com.google.gwt.user.client.rpc.IsSerializable;
-
-import java.util.List;
+import java.io.Serializable;
 
 
 /**
@@ -12,7 +8,7 @@ import java.util.List;
  * 
  */
 
-public class SuburbDTO implements IsSerializable {
+public class SuburbDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String id;

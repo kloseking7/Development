@@ -1,8 +1,8 @@
 package com.glassbox.webinvoice.shared.DTOentity;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.io.Serializable;
 
-public class EmailDTO implements IsSerializable {
+public class EmailDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String id;

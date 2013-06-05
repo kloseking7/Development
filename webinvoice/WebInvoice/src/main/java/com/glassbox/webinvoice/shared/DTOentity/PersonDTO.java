@@ -1,7 +1,6 @@
 package com.glassbox.webinvoice.shared.DTOentity;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
-
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.List;
  * 
  */
 
-public class PersonDTO implements IsSerializable {
+public class PersonDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String id;

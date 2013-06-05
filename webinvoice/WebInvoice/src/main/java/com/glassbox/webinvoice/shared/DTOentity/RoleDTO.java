@@ -1,14 +1,9 @@
 package com.glassbox.webinvoice.shared.DTOentity;
 
 import java.io.Serializable;
-import javax.persistence.*;
-
 import com.glassbox.webinvoice.shared.entity.RoleType;
-import com.google.gwt.user.client.rpc.IsSerializable;
 
-import java.util.List;
-
-public class RoleDTO implements IsSerializable {
+public class RoleDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	
