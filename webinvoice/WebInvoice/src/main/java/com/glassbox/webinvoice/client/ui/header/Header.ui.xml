@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.container {
+	width: 1200px;
+	margin: 0px auto;
+	}
+
+	#logo {
+	overflow: hidden;
+	height: 200px;
+	}
+
+	#logo h1, #logo p {
+	text-align: center;
+	}
+
+	#logo h1 {
+	padding: 50px 0px 0px 0px;
+	letter-spacing: -6px;
+	text-transform: lowercase;
+	font-size: 100px;
+	}
+
+	#logo p {
+	margin-top: -20px;
+	padding: 0px 0px 0px 5px;
+	font-size: 20px;
+	font-weight: 300;
+	color: #696969;
+	}
+
+	#logo p a {
+	color: #696969;
+	}
+
+	#logo a {
+	border: none;
+	background: none;
+	text-decoration: none;
+	color: #3C342E;
+	}
+
+	</ui:style>
+	<g:HTMLPanel>
+		<div id="logo" class="container">
+			<h1>
+				<a href="#">Web Invoice</a>
+			</h1>
+			<p>Open source web based invoicing solution for businesses.</p>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 
