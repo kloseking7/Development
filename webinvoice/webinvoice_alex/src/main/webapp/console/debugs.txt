@@ -1,0 +1,934 @@
+2013-05-22 17:32:53,461 INFO ContextLoader:272 - Root WebApplicationContext: initialization started
+2013-05-22 17:32:53,569 DEBUG StandardServletEnvironment:112 - Initializing new StandardServletEnvironment
+2013-05-22 17:32:53,571 DEBUG StandardServletEnvironment:107 - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+2013-05-22 17:32:53,571 DEBUG StandardServletEnvironment:107 - Adding [servletContextInitParams] PropertySource with lowest search precedence
+2013-05-22 17:32:53,577 DEBUG StandardServletEnvironment:107 - Adding [jndiProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:53,578 DEBUG StandardServletEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:53,578 DEBUG StandardServletEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:53,579 DEBUG StandardServletEnvironment:116 - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+2013-05-22 17:32:53,584 INFO XmlWebApplicationContext:510 - Refreshing Root WebApplicationContext: startup date [Wed May 22 17:32:53 EST 2013]; root of context hierarchy
+2013-05-22 17:32:53,590 DEBUG StandardServletEnvironment:172 - Replacing [servletContextInitParams] PropertySource with [servletContextInitParams]
+2013-05-22 17:32:53,648 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:53,648 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:53,649 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:53,649 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:53,651 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:53,651 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:53,654 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:53,655 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:53,667 INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2013-05-22 17:32:53,675 DEBUG DefaultDocumentLoader:72 - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2013-05-22 17:32:53,719 DEBUG PluggableSchemaResolver:140 - Loading schema mappings from [META-INF/spring.schemas]
+2013-05-22 17:32:53,722 DEBUG PluggableSchemaResolver:146 - Loaded schema mappings: {http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2013-05-22 17:32:53,724 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+2013-05-22 17:32:53,784 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/tx/spring-tx-3.0.xsd] in classpath: org/springframework/transaction/config/spring-tx-3.0.xsd
+2013-05-22 17:32:53,790 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+2013-05-22 17:32:53,800 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/aop/spring-aop-3.0.xsd] in classpath: org/springframework/aop/config/spring-aop-3.0.xsd
+2013-05-22 17:32:53,819 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+2013-05-22 17:32:53,843 DEBUG DefaultBeanDefinitionDocumentReader:108 - Loading bean definitions
+2013-05-22 17:32:53,880 DEBUG DefaultNamespaceHandlerResolver:156 - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2013-05-22 17:32:53,934 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:53,934 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:53,935 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:53,936 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:53,950 DEBUG PathMatchingResourcePatternResolver:550 - Looking for matching resources in directory tree [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice]
+2013-05-22 17:32:53,951 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,954 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,955 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\components] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,956 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,960 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,962 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,964 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,965 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,966 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,969 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\test] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:53,973 DEBUG PathMatchingResourcePatternResolver:351 - Resolved location pattern [classpath*:com/glassbox/webinvoice/**/*.class] to resources [file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\components\MyTextBox.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\UserService.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\UserServiceAsync.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\Alert$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\Alert.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\AlertLevel.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignIn$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignIn$SignInUiBinder.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignIn.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignUp$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignUp$SignUpUiBinder.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignUp.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController$2.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController$3.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\Views.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\Webinvoice.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\BaseDAO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\DAO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\UserDAO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\UserDAOImpl.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\DTOFactory.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\SystemSupervisor.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\UserServiceImpl.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\AccessDeniedException.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\AddressDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\AutonumDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\EmailDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\PersonDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\RoleDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\StateDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\SuburbDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Address.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\AuState.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Autonum.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Email.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Person.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Role.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\RoleType.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\State.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Suburb.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\FieldVerifier$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\FieldVerifier.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\WidgetMessage.class]]
+2013-05-22 17:32:54,032 DEBUG ClassPathBeanDefinitionScanner:264 - Identified candidate component class: file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\UserDAOImpl.class]
+2013-05-22 17:32:54,036 DEBUG ClassPathBeanDefinitionScanner:264 - Identified candidate component class: file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\DTOFactory.class]
+2013-05-22 17:32:54,040 DEBUG ClassPathBeanDefinitionScanner:264 - Identified candidate component class: file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\SystemSupervisor.class]
+2013-05-22 17:32:54,044 DEBUG ClassPathBeanDefinitionScanner:264 - Identified candidate component class: file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\UserServiceImpl.class]
+2013-05-22 17:32:54,077 DEBUG XmlBeanDefinitionReader:216 - Loaded 17 bean definitions from location pattern [/WEB-INF/applicationContext.xml]
+2013-05-22 17:32:54,078 DEBUG XmlWebApplicationContext:540 - Bean factory for Root WebApplicationContext: org.springframework.beans.factory.support.DefaultListableBeanFactory@60c25cf7: defining beans [dataSource,sessionFactory,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,userDAOImpl,DTOFactory,systemSupervisor,userService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,propertyConfigurer]; root of factory hierarchy
+2013-05-22 17:32:54,115 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-05-22 17:32:54,115 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-05-22 17:32:54,141 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2013-05-22 17:32:54,145 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-05-22 17:32:54,219 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'propertyConfigurer'
+2013-05-22 17:32:54,219 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'propertyConfigurer'
+2013-05-22 17:32:54,253 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
+2013-05-22 17:32:54,356 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'propertyConfigurer'
+2013-05-22 17:32:54,356 INFO PropertyPlaceholderConfigurer:177 - Loading properties file from ServletContext resource [/WEB-INF/setting.properties]
+2013-05-22 17:32:54,364 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-05-22 17:32:54,365 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-05-22 17:32:54,366 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2013-05-22 17:32:54,366 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-05-22 17:32:54,367 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-05-22 17:32:54,367 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-05-22 17:32:54,368 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2013-05-22 17:32:54,369 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-05-22 17:32:54,369 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-05-22 17:32:54,369 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-05-22 17:32:54,373 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2013-05-22 17:32:54,374 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-05-22 17:32:54,374 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2013-05-22 17:32:54,374 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2013-05-22 17:32:54,375 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor' to allow for resolving potential circular references
+2013-05-22 17:32:54,375 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2013-05-22 17:32:54,376 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2013-05-22 17:32:54,376 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2013-05-22 17:32:54,376 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+2013-05-22 17:32:54,377 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2013-05-22 17:32:54,377 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2013-05-22 17:32:54,378 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2013-05-22 17:32:54,417 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+2013-05-22 17:32:54,444 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2013-05-22 17:32:54,448 DEBUG XmlWebApplicationContext:807 - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@5a72d659]
+2013-05-22 17:32:54,451 DEBUG XmlWebApplicationContext:831 - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@19ad5b3d]
+2013-05-22 17:32:54,454 DEBUG UiApplicationContextUtils:85 - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@4d924214]
+2013-05-22 17:32:54,459 INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@60c25cf7: defining beans [dataSource,sessionFactory,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,userDAOImpl,DTOFactory,systemSupervisor,userService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,propertyConfigurer,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-22 17:32:54,460 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'dataSource'
+2013-05-22 17:32:54,460 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'dataSource'
+2013-05-22 17:32:54,463 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:54,464 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:54,466 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+2013-05-22 17:32:54,481 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2013-05-22 17:32:54,481 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2013-05-22 17:32:54,678 DEBUG ReflectiveAspectJAdvisorFactory:215 - Found AspectJ method: public void com.glassbox.webinvoice.server.SystemSupervisor.checkUser(org.aspectj.lang.JoinPoint) throws com.glassbox.webinvoice.shared.AccessDeniedException
+2013-05-22 17:32:54,682 DEBUG ReflectiveAspectJAdvisorFactory:215 - Found AspectJ method: public void com.glassbox.webinvoice.server.SystemSupervisor.logAfterTrowing(org.aspectj.lang.JoinPoint,java.lang.Exception)
+2013-05-22 17:32:54,728 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' to allow for resolving potential circular references
+2013-05-22 17:32:54,973 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2013-05-22 17:32:54,974 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:54,977 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+2013-05-22 17:32:54,997 INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2013-05-22 17:32:54,997 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:54,998 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:55,019 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'dataSource'
+2013-05-22 17:32:55,019 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'sessionFactory'
+2013-05-22 17:32:55,019 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'sessionFactory'
+2013-05-22 17:32:55,020 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:55,038 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'sessionFactory' to allow for resolving potential circular references
+2013-05-22 17:32:55,051 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'dataSource'
+2013-05-22 17:32:55,053 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:55,054 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:55,054 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:55,055 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:55,056 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:55,056 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:55,056 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:55,057 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:55,058 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:55,058 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:55,059 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:55,059 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:55,062 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:55,062 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:55,063 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:55,063 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:55,064 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2013-05-22 17:32:55,065 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:55,065 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:55,066 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2013-05-22 17:32:55,077 DEBUG DefaultListableBeanFactory:1529 - Invoking afterPropertiesSet() on bean with name 'sessionFactory'
+2013-05-22 17:32:55,125 DEBUG logging:177 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2013-05-22 17:32:55,154 DEBUG BasicTypeRegistry:148 - Adding type registration boolean -> org.hibernate.type.BooleanType@772fc392
+2013-05-22 17:32:55,155 DEBUG BasicTypeRegistry:148 - Adding type registration boolean -> org.hibernate.type.BooleanType@772fc392
+2013-05-22 17:32:55,155 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@772fc392
+2013-05-22 17:32:55,157 DEBUG BasicTypeRegistry:148 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6cf36fc6
+2013-05-22 17:32:55,159 DEBUG BasicTypeRegistry:148 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@134a68cc
+2013-05-22 17:32:55,160 DEBUG BasicTypeRegistry:148 - Adding type registration yes_no -> org.hibernate.type.YesNoType@46061168
+2013-05-22 17:32:55,164 DEBUG BasicTypeRegistry:148 - Adding type registration byte -> org.hibernate.type.ByteType@5341870e
+2013-05-22 17:32:55,164 DEBUG BasicTypeRegistry:148 - Adding type registration byte -> org.hibernate.type.ByteType@5341870e
+2013-05-22 17:32:55,165 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5341870e
+2013-05-22 17:32:55,166 DEBUG BasicTypeRegistry:148 - Adding type registration character -> org.hibernate.type.CharacterType@6057f36c
+2013-05-22 17:32:55,167 DEBUG BasicTypeRegistry:148 - Adding type registration char -> org.hibernate.type.CharacterType@6057f36c
+2013-05-22 17:32:55,167 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@6057f36c
+2013-05-22 17:32:55,170 DEBUG BasicTypeRegistry:148 - Adding type registration short -> org.hibernate.type.ShortType@7c88b56c
+2013-05-22 17:32:55,171 DEBUG BasicTypeRegistry:148 - Adding type registration short -> org.hibernate.type.ShortType@7c88b56c
+2013-05-22 17:32:55,171 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7c88b56c
+2013-05-22 17:32:55,173 DEBUG BasicTypeRegistry:148 - Adding type registration integer -> org.hibernate.type.IntegerType@66208c2a
+2013-05-22 17:32:55,173 DEBUG BasicTypeRegistry:148 - Adding type registration int -> org.hibernate.type.IntegerType@66208c2a
+2013-05-22 17:32:55,174 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@66208c2a
+2013-05-22 17:32:55,176 DEBUG BasicTypeRegistry:148 - Adding type registration long -> org.hibernate.type.LongType@37515772
+2013-05-22 17:32:55,176 DEBUG BasicTypeRegistry:148 - Adding type registration long -> org.hibernate.type.LongType@37515772
+2013-05-22 17:32:55,177 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@37515772
+2013-05-22 17:32:55,179 DEBUG BasicTypeRegistry:148 - Adding type registration float -> org.hibernate.type.FloatType@68ed8e76
+2013-05-22 17:32:55,180 DEBUG BasicTypeRegistry:148 - Adding type registration float -> org.hibernate.type.FloatType@68ed8e76
+2013-05-22 17:32:55,180 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@68ed8e76
+2013-05-22 17:32:55,182 DEBUG BasicTypeRegistry:148 - Adding type registration double -> org.hibernate.type.DoubleType@1faed341
+2013-05-22 17:32:55,182 DEBUG BasicTypeRegistry:148 - Adding type registration double -> org.hibernate.type.DoubleType@1faed341
+2013-05-22 17:32:55,182 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@1faed341
+2013-05-22 17:32:55,185 DEBUG BasicTypeRegistry:148 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@b9e19da
+2013-05-22 17:32:55,185 DEBUG BasicTypeRegistry:148 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@b9e19da
+2013-05-22 17:32:55,186 DEBUG BasicTypeRegistry:148 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7d32b88d
+2013-05-22 17:32:55,186 DEBUG BasicTypeRegistry:148 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7d32b88d
+2013-05-22 17:32:55,188 DEBUG BasicTypeRegistry:148 - Adding type registration string -> org.hibernate.type.StringType@5ed53f6b
+2013-05-22 17:32:55,188 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.String -> org.hibernate.type.StringType@5ed53f6b
+2013-05-22 17:32:55,190 DEBUG BasicTypeRegistry:148 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1c0c1b7
+2013-05-22 17:32:55,191 DEBUG BasicTypeRegistry:148 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@35e0932a
+2013-05-22 17:32:55,193 DEBUG BasicTypeRegistry:148 - Adding type registration url -> org.hibernate.type.UrlType@77099d4e
+2013-05-22 17:32:55,194 DEBUG BasicTypeRegistry:148 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@77099d4e
+2013-05-22 17:32:55,197 DEBUG BasicTypeRegistry:148 - Adding type registration date -> org.hibernate.type.DateType@135e8485
+2013-05-22 17:32:55,197 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@135e8485
+2013-05-22 17:32:55,200 DEBUG BasicTypeRegistry:148 - Adding type registration time -> org.hibernate.type.TimeType@3bfebdc2
+2013-05-22 17:32:55,200 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3bfebdc2
+2013-05-22 17:32:55,205 DEBUG BasicTypeRegistry:148 - Adding type registration timestamp -> org.hibernate.type.TimestampType@11c9c1bc
+2013-05-22 17:32:55,205 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@11c9c1bc
+2013-05-22 17:32:55,205 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@11c9c1bc
+2013-05-22 17:32:55,208 DEBUG BasicTypeRegistry:148 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@71c20878
+2013-05-22 17:32:55,210 DEBUG BasicTypeRegistry:148 - Adding type registration calendar -> org.hibernate.type.CalendarType@107b8627
+2013-05-22 17:32:55,211 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@107b8627
+2013-05-22 17:32:55,211 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@107b8627
+2013-05-22 17:32:55,212 DEBUG BasicTypeRegistry:148 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@35b01f6c
+2013-05-22 17:32:55,214 DEBUG BasicTypeRegistry:148 - Adding type registration locale -> org.hibernate.type.LocaleType@283ecb8b
+2013-05-22 17:32:55,214 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@283ecb8b
+2013-05-22 17:32:55,216 DEBUG BasicTypeRegistry:148 - Adding type registration currency -> org.hibernate.type.CurrencyType@50f0f36b
+2013-05-22 17:32:55,216 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@50f0f36b
+2013-05-22 17:32:55,218 DEBUG BasicTypeRegistry:148 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@6f949f78
+2013-05-22 17:32:55,218 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@6f949f78
+2013-05-22 17:32:55,219 DEBUG BasicTypeRegistry:148 - Adding type registration class -> org.hibernate.type.ClassType@36adb1f8
+2013-05-22 17:32:55,220 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@36adb1f8
+2013-05-22 17:32:55,222 DEBUG BasicTypeRegistry:148 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@460326fd
+2013-05-22 17:32:55,222 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@460326fd
+2013-05-22 17:32:55,223 DEBUG BasicTypeRegistry:148 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6856b8d
+2013-05-22 17:32:55,225 DEBUG BasicTypeRegistry:148 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@6c2af60e
+2013-05-22 17:32:55,227 DEBUG BasicTypeRegistry:148 - Adding type registration binary -> org.hibernate.type.BinaryType@18623976
+2013-05-22 17:32:55,227 DEBUG BasicTypeRegistry:148 - Adding type registration byte[] -> org.hibernate.type.BinaryType@18623976
+2013-05-22 17:32:55,227 DEBUG BasicTypeRegistry:148 - Adding type registration [B -> org.hibernate.type.BinaryType@18623976
+2013-05-22 17:32:55,229 DEBUG BasicTypeRegistry:148 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2fedc3fd
+2013-05-22 17:32:55,229 DEBUG BasicTypeRegistry:148 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2fedc3fd
+2013-05-22 17:32:55,230 DEBUG BasicTypeRegistry:148 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2fedc3fd
+2013-05-22 17:32:55,231 DEBUG BasicTypeRegistry:148 - Adding type registration image -> org.hibernate.type.ImageType@77745d8d
+2013-05-22 17:32:55,232 DEBUG BasicTypeRegistry:148 - Adding type registration characters -> org.hibernate.type.CharArrayType@d3ccafc
+2013-05-22 17:32:55,233 DEBUG BasicTypeRegistry:148 - Adding type registration char[] -> org.hibernate.type.CharArrayType@d3ccafc
+2013-05-22 17:32:55,233 DEBUG BasicTypeRegistry:148 - Adding type registration [C -> org.hibernate.type.CharArrayType@d3ccafc
+2013-05-22 17:32:55,235 DEBUG BasicTypeRegistry:148 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@6b827a9e
+2013-05-22 17:32:55,235 DEBUG BasicTypeRegistry:148 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@6b827a9e
+2013-05-22 17:32:55,235 DEBUG BasicTypeRegistry:148 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@6b827a9e
+2013-05-22 17:32:55,237 DEBUG BasicTypeRegistry:148 - Adding type registration text -> org.hibernate.type.TextType@43de6a4f
+2013-05-22 17:32:55,238 DEBUG BasicTypeRegistry:148 - Adding type registration ntext -> org.hibernate.type.NTextType@769af3d8
+2013-05-22 17:32:55,244 DEBUG BasicTypeRegistry:148 - Adding type registration blob -> org.hibernate.type.BlobType@31d5b955
+2013-05-22 17:32:55,245 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@31d5b955
+2013-05-22 17:32:55,246 DEBUG BasicTypeRegistry:148 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@3dd5c5e2
+2013-05-22 17:32:55,254 DEBUG BasicTypeRegistry:148 - Adding type registration clob -> org.hibernate.type.ClobType@1a6f3919
+2013-05-22 17:32:55,254 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1a6f3919
+2013-05-22 17:32:55,260 DEBUG BasicTypeRegistry:148 - Adding type registration nclob -> org.hibernate.type.NClobType@bedff2b
+2013-05-22 17:32:55,261 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@bedff2b
+2013-05-22 17:32:55,261 DEBUG BasicTypeRegistry:148 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@79d9629a
+2013-05-22 17:32:55,262 DEBUG BasicTypeRegistry:148 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@4e44f87e
+2013-05-22 17:32:55,264 DEBUG BasicTypeRegistry:148 - Adding type registration serializable -> org.hibernate.type.SerializableType@30ffcdae
+2013-05-22 17:32:55,269 DEBUG BasicTypeRegistry:148 - Adding type registration object -> org.hibernate.type.ObjectType@60248dc5
+2013-05-22 17:32:55,270 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@60248dc5
+2013-05-22 17:32:55,271 DEBUG BasicTypeRegistry:148 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3c46e61f
+2013-05-22 17:32:55,271 DEBUG BasicTypeRegistry:148 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@52ae1c23
+2013-05-22 17:32:55,272 DEBUG BasicTypeRegistry:148 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@24b9683d
+2013-05-22 17:32:55,272 DEBUG BasicTypeRegistry:148 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@86a8fa1
+2013-05-22 17:32:55,273 DEBUG BasicTypeRegistry:148 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@bfb9758
+2013-05-22 17:32:55,273 DEBUG BasicTypeRegistry:148 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@328d188d
+2013-05-22 17:32:55,274 DEBUG BasicTypeRegistry:148 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4d46eae8
+2013-05-22 17:32:55,274 DEBUG BasicTypeRegistry:148 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6ae84cfa
+2013-05-22 17:32:55,308 INFO Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2013-05-22 17:32:55,318 INFO Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2013-05-22 17:32:55,322 INFO Environment:239 - HHH000206: hibernate.properties not found
+2013-05-22 17:32:55,325 INFO Environment:342 - HHH000021: Bytecode provider name : javassist
+2013-05-22 17:32:55,345 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2013-05-22 17:32:55,346 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2013-05-22 17:32:55,347 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2013-05-22 17:32:55,347 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2013-05-22 17:32:55,349 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [hilo] -> [org.hibernate.id.TableHiLoGenerator]
+2013-05-22 17:32:55,350 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2013-05-22 17:32:55,351 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2013-05-22 17:32:55,352 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2013-05-22 17:32:55,353 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator]
+2013-05-22 17:32:55,354 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2013-05-22 17:32:55,355 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2013-05-22 17:32:55,356 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2013-05-22 17:32:55,356 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2013-05-22 17:32:55,358 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2013-05-22 17:32:55,359 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2013-05-22 17:32:55,365 DEBUG PathMatchingResourcePatternResolver:550 - Looking for matching resources in directory tree [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice]
+2013-05-22 17:32:55,366 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,367 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,368 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\components] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,370 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,374 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,375 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,376 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,377 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,379 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,381 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\test] for files matching pattern [D:/eclipse-projects/Test/webinvoice/target/webinvoice-0.0.1-SNAPSHOT/WEB-INF/classes/com/glassbox/webinvoice/**/*.class]
+2013-05-22 17:32:55,385 DEBUG PathMatchingResourcePatternResolver:351 - Resolved location pattern [classpath*:com/glassbox/webinvoice/**/*.class] to resources [file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\components\MyTextBox.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\UserService.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\UserServiceAsync.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\Alert$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\Alert.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\AlertLevel.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignIn$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignIn$SignInUiBinder.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignIn.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignUp$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignUp$SignUpUiBinder.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\SignUp.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController$2.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController$3.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\ViewController.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\view\Views.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\client\Webinvoice.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\BaseDAO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\DAO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\UserDAO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\dataaccess\UserDAOImpl.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\DTOFactory.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\SystemSupervisor.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\server\UserServiceImpl.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\AccessDeniedException.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\AddressDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\AutonumDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\EmailDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\PersonDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\RoleDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\StateDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\DTOentity\SuburbDTO.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Address.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\AuState.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Autonum.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Email.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Person.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Role.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\RoleType.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\State.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\entity\Suburb.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\FieldVerifier$1.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\FieldVerifier.class], file [D:\eclipse-projects\Test\webinvoice\target\webinvoice-0.0.1-SNAPSHOT\WEB-INF\classes\com\glassbox\webinvoice\shared\WidgetMessage.class]]
+2013-05-22 17:32:55,432 DEBUG IntegratorServiceImpl:59 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2013-05-22 17:32:55,464 DEBUG Configuration:1735 - Preparing to build session factory with filters : {}
+2013-05-22 17:32:55,501 DEBUG Configuration:3416 - Processing hbm.xml files
+2013-05-22 17:32:55,502 DEBUG Configuration:3446 - Process annotated classes
+2013-05-22 17:32:55,509 DEBUG AnnotationBinder:531 - Binding entity from annotated class: com.glassbox.webinvoice.shared.entity.Address
+2013-05-22 17:32:55,552 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2013-05-22 17:32:55,555 DEBUG AnnotationBinder:989 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2013-05-22 17:32:55,564 DEBUG EntityBinder:394 - Import with entity name Address
+2013-05-22 17:32:55,568 DEBUG EntityBinder:564 - Bind entity com.glassbox.webinvoice.shared.entity.Address on table address
+2013-05-22 17:32:55,621 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(address), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,628 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2013-05-22 17:32:55,635 DEBUG SimpleValueBinder:331 - building SimpleValue for id
+2013-05-22 17:32:55,637 DEBUG PropertyBinder:260 - Building property id
+2013-05-22 17:32:55,644 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='personID', referencedColumn='', mappedBy=''}
+2013-05-22 17:32:55,644 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(address), mappingColumn=person, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,649 DEBUG PropertyBinder:260 - Building property person
+2013-05-22 17:32:55,650 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='state', referencedColumn='', mappedBy=''}
+2013-05-22 17:32:55,651 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(address), mappingColumn=state, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,651 DEBUG PropertyBinder:260 - Building property state
+2013-05-22 17:32:55,652 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='suburb', referencedColumn='', mappedBy=''}
+2013-05-22 17:32:55,652 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(address), mappingColumn=suburb, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,653 DEBUG PropertyBinder:260 - Building property suburb
+2013-05-22 17:32:55,656 DEBUG AnnotationBinder:531 - Binding entity from annotated class: com.glassbox.webinvoice.shared.entity.Autonum
+2013-05-22 17:32:55,656 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2013-05-22 17:32:55,657 DEBUG AnnotationBinder:989 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2013-05-22 17:32:55,657 DEBUG EntityBinder:394 - Import with entity name Autonum
+2013-05-22 17:32:55,658 DEBUG EntityBinder:564 - Bind entity com.glassbox.webinvoice.shared.entity.Autonum on table autonum
+2013-05-22 17:32:55,660 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(autonum), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,661 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2013-05-22 17:32:55,662 DEBUG SimpleValueBinder:331 - building SimpleValue for id
+2013-05-22 17:32:55,662 DEBUG PropertyBinder:260 - Building property id
+2013-05-22 17:32:55,663 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='clientID', referencedColumn='', mappedBy=''}
+2013-05-22 17:32:55,663 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(autonum), mappingColumn=client, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,664 DEBUG PropertyBinder:260 - Building property client
+2013-05-22 17:32:55,664 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(autonum), mappingColumn=number, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,665 DEBUG PropertyBinder:179 - MetadataSourceProcessor property number with lazy=false
+2013-05-22 17:32:55,665 DEBUG SimpleValueBinder:331 - building SimpleValue for number
+2013-05-22 17:32:55,666 DEBUG PropertyBinder:260 - Building property number
+2013-05-22 17:32:55,666 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(autonum), mappingColumn=prefix, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,667 DEBUG PropertyBinder:179 - MetadataSourceProcessor property prefix with lazy=false
+2013-05-22 17:32:55,667 DEBUG SimpleValueBinder:331 - building SimpleValue for prefix
+2013-05-22 17:32:55,668 DEBUG PropertyBinder:260 - Building property prefix
+2013-05-22 17:32:55,669 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(autonum), mappingColumn=suffix, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,669 DEBUG PropertyBinder:179 - MetadataSourceProcessor property suffix with lazy=false
+2013-05-22 17:32:55,670 DEBUG SimpleValueBinder:331 - building SimpleValue for suffix
+2013-05-22 17:32:55,670 DEBUG PropertyBinder:260 - Building property suffix
+2013-05-22 17:32:55,670 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='userID', referencedColumn='', mappedBy=''}
+2013-05-22 17:32:55,671 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(autonum), mappingColumn=user, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,672 DEBUG PropertyBinder:260 - Building property user
+2013-05-22 17:32:55,672 DEBUG AnnotationBinder:531 - Binding entity from annotated class: com.glassbox.webinvoice.shared.entity.Email
+2013-05-22 17:32:55,673 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2013-05-22 17:32:55,673 DEBUG AnnotationBinder:989 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2013-05-22 17:32:55,674 DEBUG EntityBinder:394 - Import with entity name Email
+2013-05-22 17:32:55,674 DEBUG EntityBinder:564 - Bind entity com.glassbox.webinvoice.shared.entity.Email on table email
+2013-05-22 17:32:55,676 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(email), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,677 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2013-05-22 17:32:55,677 DEBUG SimpleValueBinder:331 - building SimpleValue for id
+2013-05-22 17:32:55,678 DEBUG PropertyBinder:260 - Building property id
+2013-05-22 17:32:55,678 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(email), mappingColumn=emailAddress, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,679 DEBUG PropertyBinder:179 - MetadataSourceProcessor property emailAddress with lazy=false
+2013-05-22 17:32:55,679 DEBUG SimpleValueBinder:331 - building SimpleValue for emailAddress
+2013-05-22 17:32:55,680 DEBUG PropertyBinder:260 - Building property emailAddress
+2013-05-22 17:32:55,680 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='personID', referencedColumn='', mappedBy=''}
+2013-05-22 17:32:55,681 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(email), mappingColumn=person, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,682 DEBUG PropertyBinder:260 - Building property person
+2013-05-22 17:32:55,682 DEBUG AnnotationBinder:531 - Binding entity from annotated class: com.glassbox.webinvoice.shared.entity.Person
+2013-05-22 17:32:55,683 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2013-05-22 17:32:55,683 DEBUG AnnotationBinder:989 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2013-05-22 17:32:55,684 DEBUG EntityBinder:394 - Import with entity name Person
+2013-05-22 17:32:55,684 DEBUG EntityBinder:564 - Bind entity com.glassbox.webinvoice.shared.entity.Person on table person
+2013-05-22 17:32:55,704 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,705 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2013-05-22 17:32:55,706 DEBUG SimpleValueBinder:331 - building SimpleValue for id
+2013-05-22 17:32:55,706 DEBUG PropertyBinder:260 - Building property id
+2013-05-22 17:32:55,707 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='person'}
+2013-05-22 17:32:55,707 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=addresses, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,710 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,727 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,728 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=addresses_KEY, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,730 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='addresses_KEY', referencedColumn='null', mappedBy='null'}
+2013-05-22 17:32:55,731 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='person'}
+2013-05-22 17:32:55,732 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='person'}
+2013-05-22 17:32:55,733 DEBUG CollectionBinder:400 - Collection role: com.glassbox.webinvoice.shared.entity.Person.addresses
+2013-05-22 17:32:55,738 DEBUG PropertyBinder:260 - Building property addresses
+2013-05-22 17:32:55,739 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='person'}
+2013-05-22 17:32:55,740 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=emails, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,740 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,741 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,742 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=emails_KEY, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,742 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='emails_KEY', referencedColumn='null', mappedBy='null'}
+2013-05-22 17:32:55,743 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='person'}
+2013-05-22 17:32:55,743 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='person'}
+2013-05-22 17:32:55,744 DEBUG CollectionBinder:400 - Collection role: com.glassbox.webinvoice.shared.entity.Person.emails
+2013-05-22 17:32:55,745 DEBUG PropertyBinder:260 - Building property emails
+2013-05-22 17:32:55,745 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=firstname, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,746 DEBUG PropertyBinder:179 - MetadataSourceProcessor property firstname with lazy=false
+2013-05-22 17:32:55,746 DEBUG SimpleValueBinder:331 - building SimpleValue for firstname
+2013-05-22 17:32:55,747 DEBUG PropertyBinder:260 - Building property firstname
+2013-05-22 17:32:55,747 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=lastname, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,748 DEBUG PropertyBinder:179 - MetadataSourceProcessor property lastname with lazy=false
+2013-05-22 17:32:55,749 DEBUG SimpleValueBinder:331 - building SimpleValue for lastname
+2013-05-22 17:32:55,749 DEBUG PropertyBinder:260 - Building property lastname
+2013-05-22 17:32:55,750 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=LOGINTIMESTAMP, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,751 DEBUG PropertyBinder:179 - MetadataSourceProcessor property logintime with lazy=false
+2013-05-22 17:32:55,752 DEBUG SimpleValueBinder:331 - building SimpleValue for logintime
+2013-05-22 17:32:55,753 DEBUG PropertyBinder:260 - Building property logintime
+2013-05-22 17:32:55,753 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=password, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,754 DEBUG PropertyBinder:179 - MetadataSourceProcessor property password with lazy=false
+2013-05-22 17:32:55,754 DEBUG SimpleValueBinder:331 - building SimpleValue for password
+2013-05-22 17:32:55,755 DEBUG PropertyBinder:260 - Building property password
+2013-05-22 17:32:55,756 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='roleID', referencedColumn='', mappedBy=''}
+2013-05-22 17:32:55,756 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=role, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,757 DEBUG PropertyBinder:260 - Building property role
+2013-05-22 17:32:55,758 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+2013-05-22 17:32:55,758 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=userAutonums, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,759 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,760 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,760 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(person), mappingColumn=userAutonums_KEY, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,761 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='userAutonums_KEY', referencedColumn='null', mappedBy='null'}
+2013-05-22 17:32:55,761 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+2013-05-22 17:32:55,762 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='user'}
+2013-05-22 17:32:55,762 DEBUG CollectionBinder:400 - Collection role: com.glassbox.webinvoice.shared.entity.Person.userAutonums
+2013-05-22 17:32:55,763 DEBUG PropertyBinder:260 - Building property userAutonums
+2013-05-22 17:32:55,763 DEBUG AnnotationBinder:531 - Binding entity from annotated class: com.glassbox.webinvoice.shared.entity.Role
+2013-05-22 17:32:55,764 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2013-05-22 17:32:55,764 DEBUG AnnotationBinder:989 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2013-05-22 17:32:55,765 DEBUG EntityBinder:394 - Import with entity name Role
+2013-05-22 17:32:55,766 DEBUG EntityBinder:564 - Bind entity com.glassbox.webinvoice.shared.entity.Role on table role
+2013-05-22 17:32:55,771 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,772 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2013-05-22 17:32:55,775 DEBUG SimpleValueBinder:331 - building SimpleValue for id
+2013-05-22 17:32:55,776 DEBUG PropertyBinder:260 - Building property id
+2013-05-22 17:32:55,777 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,777 DEBUG PropertyBinder:179 - MetadataSourceProcessor property name with lazy=false
+2013-05-22 17:32:55,778 DEBUG SimpleValueBinder:331 - building SimpleValue for name
+2013-05-22 17:32:55,778 DEBUG PropertyBinder:260 - Building property name
+2013-05-22 17:32:55,779 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2013-05-22 17:32:55,779 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=persons, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,780 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,781 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,781 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=persons_KEY, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,782 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='persons_KEY', referencedColumn='null', mappedBy='null'}
+2013-05-22 17:32:55,782 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2013-05-22 17:32:55,783 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='role'}
+2013-05-22 17:32:55,783 DEBUG CollectionBinder:400 - Collection role: com.glassbox.webinvoice.shared.entity.Role.persons
+2013-05-22 17:32:55,784 DEBUG PropertyBinder:260 - Building property persons
+2013-05-22 17:32:55,784 DEBUG AnnotationBinder:531 - Binding entity from annotated class: com.glassbox.webinvoice.shared.entity.State
+2013-05-22 17:32:55,785 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2013-05-22 17:32:55,785 DEBUG AnnotationBinder:989 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2013-05-22 17:32:55,786 DEBUG EntityBinder:394 - Import with entity name State
+2013-05-22 17:32:55,786 DEBUG EntityBinder:564 - Bind entity com.glassbox.webinvoice.shared.entity.State on table state
+2013-05-22 17:32:55,789 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(state), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,790 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2013-05-22 17:32:55,790 DEBUG SimpleValueBinder:331 - building SimpleValue for id
+2013-05-22 17:32:55,791 DEBUG PropertyBinder:260 - Building property id
+2013-05-22 17:32:55,791 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='state'}
+2013-05-22 17:32:55,792 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(state), mappingColumn=addresses, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,792 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(state), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,793 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(state), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,793 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(state), mappingColumn=addresses_KEY, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,794 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='addresses_KEY', referencedColumn='null', mappedBy='null'}
+2013-05-22 17:32:55,794 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='state'}
+2013-05-22 17:32:55,794 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='state'}
+2013-05-22 17:32:55,795 DEBUG CollectionBinder:400 - Collection role: com.glassbox.webinvoice.shared.entity.State.addresses
+2013-05-22 17:32:55,795 DEBUG PropertyBinder:260 - Building property addresses
+2013-05-22 17:32:55,796 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(state), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,796 DEBUG PropertyBinder:179 - MetadataSourceProcessor property name with lazy=false
+2013-05-22 17:32:55,797 DEBUG SimpleValueBinder:331 - building SimpleValue for name
+2013-05-22 17:32:55,797 DEBUG PropertyBinder:260 - Building property name
+2013-05-22 17:32:55,798 DEBUG AnnotationBinder:531 - Binding entity from annotated class: com.glassbox.webinvoice.shared.entity.Suburb
+2013-05-22 17:32:55,798 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2013-05-22 17:32:55,799 DEBUG AnnotationBinder:989 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2013-05-22 17:32:55,799 DEBUG EntityBinder:394 - Import with entity name Suburb
+2013-05-22 17:32:55,799 DEBUG EntityBinder:564 - Bind entity com.glassbox.webinvoice.shared.entity.Suburb on table suburb
+2013-05-22 17:32:55,801 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(suburb), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,802 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2013-05-22 17:32:55,802 DEBUG SimpleValueBinder:331 - building SimpleValue for id
+2013-05-22 17:32:55,802 DEBUG PropertyBinder:260 - Building property id
+2013-05-22 17:32:55,803 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='suburb'}
+2013-05-22 17:32:55,803 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(suburb), mappingColumn=addresses, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,804 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(suburb), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,804 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(suburb), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,805 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(suburb), mappingColumn=addresses_KEY, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,805 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='addresses_KEY', referencedColumn='null', mappedBy='null'}
+2013-05-22 17:32:55,806 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='suburb'}
+2013-05-22 17:32:55,806 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='suburb'}
+2013-05-22 17:32:55,806 DEBUG CollectionBinder:400 - Collection role: com.glassbox.webinvoice.shared.entity.Suburb.addresses
+2013-05-22 17:32:55,807 DEBUG PropertyBinder:260 - Building property addresses
+2013-05-22 17:32:55,807 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(suburb), mappingColumn=postcode, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,808 DEBUG PropertyBinder:179 - MetadataSourceProcessor property postcode with lazy=false
+2013-05-22 17:32:55,808 DEBUG SimpleValueBinder:331 - building SimpleValue for postcode
+2013-05-22 17:32:55,808 DEBUG PropertyBinder:260 - Building property postcode
+2013-05-22 17:32:55,809 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(suburb), mappingColumn=suburb, insertable=true, updatable=true, unique=false}
+2013-05-22 17:32:55,809 DEBUG PropertyBinder:179 - MetadataSourceProcessor property suburb with lazy=false
+2013-05-22 17:32:55,810 DEBUG SimpleValueBinder:331 - building SimpleValue for suburb
+2013-05-22 17:32:55,810 DEBUG PropertyBinder:260 - Building property suburb
+2013-05-22 17:32:55,811 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for id
+2013-05-22 17:32:55,812 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for id
+2013-05-22 17:32:55,812 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for number
+2013-05-22 17:32:55,812 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for prefix
+2013-05-22 17:32:55,813 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for suffix
+2013-05-22 17:32:55,813 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for id
+2013-05-22 17:32:55,814 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for emailAddress
+2013-05-22 17:32:55,814 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for id
+2013-05-22 17:32:55,815 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for firstname
+2013-05-22 17:32:55,815 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for lastname
+2013-05-22 17:32:55,816 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for logintime
+2013-05-22 17:32:55,816 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for password
+2013-05-22 17:32:55,816 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for id
+2013-05-22 17:32:55,822 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for name
+2013-05-22 17:32:55,822 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for id
+2013-05-22 17:32:55,823 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for name
+2013-05-22 17:32:55,823 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for id
+2013-05-22 17:32:55,823 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for postcode
+2013-05-22 17:32:55,824 DEBUG SimpleValueBinder:369 - Setting SimpleValue typeName for suburb
+2013-05-22 17:32:55,825 DEBUG Configuration:1406 - Processing fk mappings (*ToOne and JoinedSubclass)
+2013-05-22 17:32:55,831 DEBUG Configuration:1585 - Processing extends queue
+2013-05-22 17:32:55,831 DEBUG Configuration:1643 - Processing extends queue
+2013-05-22 17:32:55,832 DEBUG Configuration:1588 - Processing collection mappings
+2013-05-22 17:32:55,832 DEBUG CollectionSecondPass:64 - Second pass for collection: com.glassbox.webinvoice.shared.entity.Person.addresses
+2013-05-22 17:32:55,834 DEBUG CollectionBinder:759 - Binding a OneToMany: com.glassbox.webinvoice.shared.entity.Person.addresses through a foreign key
+2013-05-22 17:32:55,835 DEBUG CollectionBinder:788 - Mapping collection: com.glassbox.webinvoice.shared.entity.Person.addresses -> address
+2013-05-22 17:32:55,837 DEBUG TableBinder:332 - Retrieving property com.glassbox.webinvoice.shared.entity.Address.person
+2013-05-22 17:32:55,837 DEBUG CollectionSecondPass:80 - Mapped collection key: personID, one-to-many: com.glassbox.webinvoice.shared.entity.Address
+2013-05-22 17:32:55,838 DEBUG CollectionSecondPass:64 - Second pass for collection: com.glassbox.webinvoice.shared.entity.Person.emails
+2013-05-22 17:32:55,838 DEBUG CollectionBinder:759 - Binding a OneToMany: com.glassbox.webinvoice.shared.entity.Person.emails through a foreign key
+2013-05-22 17:32:55,838 DEBUG CollectionBinder:788 - Mapping collection: com.glassbox.webinvoice.shared.entity.Person.emails -> email
+2013-05-22 17:32:55,839 DEBUG TableBinder:332 - Retrieving property com.glassbox.webinvoice.shared.entity.Email.person
+2013-05-22 17:32:55,839 DEBUG CollectionSecondPass:80 - Mapped collection key: personID, one-to-many: com.glassbox.webinvoice.shared.entity.Email
+2013-05-22 17:32:55,840 DEBUG CollectionSecondPass:64 - Second pass for collection: com.glassbox.webinvoice.shared.entity.Person.userAutonums
+2013-05-22 17:32:55,840 DEBUG CollectionBinder:759 - Binding a OneToMany: com.glassbox.webinvoice.shared.entity.Person.userAutonums through a foreign key
+2013-05-22 17:32:55,840 DEBUG CollectionBinder:788 - Mapping collection: com.glassbox.webinvoice.shared.entity.Person.userAutonums -> autonum
+2013-05-22 17:32:55,841 DEBUG TableBinder:332 - Retrieving property com.glassbox.webinvoice.shared.entity.Autonum.user
+2013-05-22 17:32:55,841 DEBUG CollectionSecondPass:80 - Mapped collection key: userID, one-to-many: com.glassbox.webinvoice.shared.entity.Autonum
+2013-05-22 17:32:55,842 DEBUG CollectionSecondPass:64 - Second pass for collection: com.glassbox.webinvoice.shared.entity.Role.persons
+2013-05-22 17:32:55,842 DEBUG CollectionBinder:759 - Binding a OneToMany: com.glassbox.webinvoice.shared.entity.Role.persons through a foreign key
+2013-05-22 17:32:55,842 DEBUG CollectionBinder:788 - Mapping collection: com.glassbox.webinvoice.shared.entity.Role.persons -> person
+2013-05-22 17:32:55,843 DEBUG TableBinder:332 - Retrieving property com.glassbox.webinvoice.shared.entity.Person.role
+2013-05-22 17:32:55,843 DEBUG CollectionSecondPass:80 - Mapped collection key: roleID, one-to-many: com.glassbox.webinvoice.shared.entity.Person
+2013-05-22 17:32:55,843 DEBUG CollectionSecondPass:64 - Second pass for collection: com.glassbox.webinvoice.shared.entity.State.addresses
+2013-05-22 17:32:55,844 DEBUG CollectionBinder:759 - Binding a OneToMany: com.glassbox.webinvoice.shared.entity.State.addresses through a foreign key
+2013-05-22 17:32:55,844 DEBUG CollectionBinder:788 - Mapping collection: com.glassbox.webinvoice.shared.entity.State.addresses -> address
+2013-05-22 17:32:55,845 DEBUG TableBinder:332 - Retrieving property com.glassbox.webinvoice.shared.entity.Address.state
+2013-05-22 17:32:55,845 DEBUG CollectionSecondPass:80 - Mapped collection key: state, one-to-many: com.glassbox.webinvoice.shared.entity.Address
+2013-05-22 17:32:55,845 DEBUG CollectionSecondPass:64 - Second pass for collection: com.glassbox.webinvoice.shared.entity.Suburb.addresses
+2013-05-22 17:32:55,846 DEBUG CollectionBinder:759 - Binding a OneToMany: com.glassbox.webinvoice.shared.entity.Suburb.addresses through a foreign key
+2013-05-22 17:32:55,846 DEBUG CollectionBinder:788 - Mapping collection: com.glassbox.webinvoice.shared.entity.Suburb.addresses -> address
+2013-05-22 17:32:55,846 DEBUG TableBinder:332 - Retrieving property com.glassbox.webinvoice.shared.entity.Address.suburb
+2013-05-22 17:32:55,847 DEBUG CollectionSecondPass:80 - Mapped collection key: suburb, one-to-many: com.glassbox.webinvoice.shared.entity.Address
+2013-05-22 17:32:55,847 DEBUG Configuration:1598 - Processing native query and ResultSetMapping mappings
+2013-05-22 17:32:55,847 DEBUG Configuration:1606 - Processing association property references
+2013-05-22 17:32:55,847 DEBUG Configuration:1628 - Creating tables' unique integer identifiers
+2013-05-22 17:32:55,848 DEBUG Configuration:1629 - Processing foreign key constraints
+2013-05-22 17:32:55,848 DEBUG Configuration:1700 - Resolving reference to class: com.glassbox.webinvoice.shared.entity.Person
+2013-05-22 17:32:55,849 DEBUG Configuration:1700 - Resolving reference to class: com.glassbox.webinvoice.shared.entity.State
+2013-05-22 17:32:55,849 DEBUG Configuration:1700 - Resolving reference to class: com.glassbox.webinvoice.shared.entity.Suburb
+2013-05-22 17:32:55,849 DEBUG Configuration:1700 - Resolving reference to class: com.glassbox.webinvoice.shared.entity.Person
+2013-05-22 17:32:55,850 DEBUG Configuration:1700 - Resolving reference to class: com.glassbox.webinvoice.shared.entity.Person
+2013-05-22 17:32:55,850 DEBUG Configuration:1700 - Resolving reference to class: com.glassbox.webinvoice.shared.entity.Person
+2013-05-22 17:32:55,850 DEBUG Configuration:1700 - Resolving reference to class: com.glassbox.webinvoice.shared.entity.Role
+2013-05-22 17:32:55,944 DEBUG DriverManagerDataSource:162 - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/webinvoice?useUnicode=true&characterEncoding=UTF-8]
+2013-05-22 17:32:56,395 DEBUG JdbcServicesImpl:121 - Database ->
+       name : MySQL
+    version : 5.5.17
+      major : 5
+      minor : 5
+2013-05-22 17:32:56,395 DEBUG JdbcServicesImpl:127 - Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.20 ( Revision: tonci.grgin@oracle.com-20111003110438-qfydx066wsbydkbw )
+      major : 5
+      minor : 1
+2013-05-22 17:32:56,396 DEBUG JdbcServicesImpl:133 - JDBC version : 4.0
+2013-05-22 17:32:56,418 INFO Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2013-05-22 17:32:56,447 DEBUG SettingsFactory:114 - Automatic flush during beforeCompletion(): disabled
+2013-05-22 17:32:56,447 DEBUG SettingsFactory:120 - Automatic session close at end of transaction: disabled
+2013-05-22 17:32:56,447 DEBUG SettingsFactory:131 - JDBC batch size: 15
+2013-05-22 17:32:56,448 DEBUG SettingsFactory:137 - JDBC batch updates for versioned data: disabled
+2013-05-22 17:32:56,448 DEBUG SettingsFactory:147 - Scrollable result sets: enabled
+2013-05-22 17:32:56,448 DEBUG SettingsFactory:153 - Wrap result sets: disabled
+2013-05-22 17:32:56,449 DEBUG SettingsFactory:159 - JDBC3 getGeneratedKeys(): enabled
+2013-05-22 17:32:56,449 DEBUG SettingsFactory:171 - multi-tenancy strategy : NONE
+2013-05-22 17:32:56,449 DEBUG SettingsFactory:177 - Connection release mode: auto
+2013-05-22 17:32:56,449 INFO TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2013-05-22 17:32:56,453 DEBUG SettingsFactory:199 - Using BatchFetchStyle : LEGACY
+2013-05-22 17:32:56,453 DEBUG SettingsFactory:218 - Maximum outer join fetch depth: 2
+2013-05-22 17:32:56,453 DEBUG SettingsFactory:224 - Default batch fetch size: 1
+2013-05-22 17:32:56,454 DEBUG SettingsFactory:230 - Generate SQL with comments: disabled
+2013-05-22 17:32:56,454 DEBUG SettingsFactory:236 - Order SQL updates by primary key: disabled
+2013-05-22 17:32:56,454 DEBUG SettingsFactory:242 - Order SQL inserts for batching: disabled
+2013-05-22 17:32:56,454 DEBUG SettingsFactory:250 - Default null ordering: none
+2013-05-22 17:32:56,455 DEBUG SettingsFactory:541 - Query translator: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory
+2013-05-22 17:32:56,458 INFO ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2013-05-22 17:32:56,458 DEBUG SettingsFactory:260 - Query language substitutions: {}
+2013-05-22 17:32:56,458 DEBUG SettingsFactory:266 - JPA-QL strict compliance: disabled
+2013-05-22 17:32:56,458 DEBUG SettingsFactory:274 - Second-level cache: enabled
+2013-05-22 17:32:56,459 DEBUG SettingsFactory:280 - Query cache: disabled
+2013-05-22 17:32:56,459 DEBUG SettingsFactory:481 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2013-05-22 17:32:56,460 DEBUG SettingsFactory:491 - org.hibernate.cache.internal.NoCachingRegionFactory did not provide constructor accepting java.util.Properties; attempting no-arg constructor.
+2013-05-22 17:32:56,461 DEBUG SettingsFactory:295 - Optimize cache for minimal puts: disabled
+2013-05-22 17:32:56,461 DEBUG SettingsFactory:310 - Structured second-level cache entries: disabled
+2013-05-22 17:32:56,461 DEBUG SettingsFactory:320 - Second-level cache direct-reference entries: disabled
+2013-05-22 17:32:56,462 DEBUG SettingsFactory:328 - Statistics: disabled
+2013-05-22 17:32:56,462 DEBUG SettingsFactory:334 - Deleted entity synthetic identifier rollback: disabled
+2013-05-22 17:32:56,462 DEBUG SettingsFactory:358 - Default entity-mode: pojo
+2013-05-22 17:32:56,463 DEBUG SettingsFactory:364 - Named query checking : enabled
+2013-05-22 17:32:56,463 DEBUG SettingsFactory:370 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2013-05-22 17:32:56,464 DEBUG SettingsFactory:388 - Allow initialization of lazy state outside session : : disabled
+2013-05-22 17:32:56,464 DEBUG SettingsFactory:398 - JTA Track by Thread: enabled
+2013-05-22 17:32:56,479 DEBUG SessionFactoryImpl:225 - Building session factory
+2013-05-22 17:32:56,492 DEBUG SessionFactoryImpl:277 - Session factory constructed with filter configurations : {}
+2013-05-22 17:32:56,493 DEBUG SessionFactoryImpl:278 - Instantiating session factory with properties: {java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Java\jdk1.7.0\jre\bin, java.vm.version=21.0-b17, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, guice.disable.misplaced.annotation.check=true, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.script=, user.country=CN, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=Service Pack 1, java.vm.specification.name=Java Virtual Machine Specification, user.dir=D:\eclipse-projects\Test\webinvoice, java.runtime.version=1.7.0-b147, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, hibernate.current_session_context_class=org.springframework.orm.hibernate4.SpringSessionContext, java.endorsed.dirs=C:\Java\jdk1.7.0\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\YUFENG~1\AppData\Local\Temp\, webapp.root=D:\eclipse-projects\Test\webinvoice\src\main\webapp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, STOP.KEY=foo, os.name=Windows 7, classworlds.conf=D:\eclipse-projects\Test\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf8610196013051654473.tmp, sun.jnu.encoding=GBK, java.library.path=C:\Java\jdk1.7.0\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Java/jdk1.7.0/jre/bin/server;C:/Java/jdk1.7.0/jre/bin;C:/Java/jdk1.7.0/jre/lib/amd64;C:\Java\jdk1.7.0\jre\bin;C:\Java\jdk1.7.0\bin;C:\Windows\System32;D:\MySQL\bin;C:\Program Files (x86)\Common Files\Thunder Network\KanKan\Codecs;%JBOSS_HOME%\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\QuickTime\QTSystem\;D:\downloads\adt-bundle-windows-x86_64\adt-bundle-windows\sdk/platform-tools;D:\downloads\adt-bundle-windows-x86_64\adt-bundle-windows\sdk/tools;D:\downloads\apache-maven-3.0.5\bin;D:\Bazaar;D:\软件\Codec;D:\软件;D:\软件\storm\Codec;D:\软件\storm;"C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin\mysqld";D:\downloads\eclipse;;., hibernate.connection.datasource=org.springframework.jdbc.datasource.DriverManagerDataSource@7946c637, hibernate.autoReconnect=true, java.specification.name=Java Platform API Specification, java.class.version=51.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=6.1, user.home=C:\Users\yufeng wang, user.timezone=Australia/Sydney, java.awt.printerjob=sun.awt.windows.WPrinterJob, java.specification.version=1.7, file.encoding=GBK, user.name=yufeng wang, java.class.path=/D:/downloads/eclipse/plugins/org.maven.ide.eclipse.maven_embedder_0.12.1.20110112-1712/jars/plexus-classworlds-2.4.jar, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true, hibernate.classLoader.application=ContextLoader@null, java.vm.specification.version=1.7, sun.arch.data.model=64, java.home=C:\Java\jdk1.7.0\jre, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -B jetty:run, hibernate.dialect=org.hibernate.dialect.MySQLDialect, java.specification.vendor=Oracle Corporation, user.language=zh, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.7.0, java.ext.dirs=C:\Java\jdk1.7.0\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.boot.class.path=C:\Java\jdk1.7.0\jre\lib\resources.jar;C:\Java\jdk1.7.0\jre\lib\rt.jar;C:\Java\jdk1.7.0\jre\lib\sunrsasign.jar;C:\Java\jdk1.7.0\jre\lib\jsse.jar;C:\Java\jdk1.7.0\jre\lib\jce.jar;C:\Java\jdk1.7.0\jre\lib\charsets.jar;C:\Java\jdk1.7.0\jre\classes, java.vendor=Oracle Corporation, maven.home=D:\eclipse-projects\Test\webinvoice\EMBEDDED, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, STOP.PORT=9999, sun.cpu.endian=little, sun.io.unicode.encoding=UnicodeLittle, sun.desktop=windows, sun.cpu.isalist=amd64}
+2013-05-22 17:32:56,663 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2013-05-22 17:32:56,664 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2013-05-22 17:32:56,664 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2013-05-22 17:32:56,664 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2013-05-22 17:32:56,665 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2013-05-22 17:32:56,665 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2013-05-22 17:32:56,666 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2013-05-22 17:32:56,790 DEBUG AbstractEntityPersister:3582 - Static SQL for entity: com.glassbox.webinvoice.shared.entity.Address
+2013-05-22 17:32:56,791 DEBUG AbstractEntityPersister:3587 -  Version select: select id from address where id =?
+2013-05-22 17:32:56,791 DEBUG AbstractEntityPersister:3590 -  Snapshot select: select address_.id, address_.personID as personID2_0_, address_.state as state3_0_, address_.suburb as suburb4_0_ from address address_ where address_.id=?
+2013-05-22 17:32:56,791 DEBUG AbstractEntityPersister:3593 -  Insert 0: insert into address (personID, state, suburb, id) values (?, ?, ?, ?)
+2013-05-22 17:32:56,791 DEBUG AbstractEntityPersister:3594 -  Update 0: update address set personID=?, state=?, suburb=? where id=?
+2013-05-22 17:32:56,792 DEBUG AbstractEntityPersister:3595 -  Delete 0: delete from address where id=?
+2013-05-22 17:32:56,792 DEBUG AbstractEntityPersister:3598 -  Identity insert: insert into address (personID, state, suburb) values (?, ?, ?)
+2013-05-22 17:32:56,795 DEBUG AbstractEntityPersister:3582 - Static SQL for entity: com.glassbox.webinvoice.shared.entity.Email
+2013-05-22 17:32:56,795 DEBUG AbstractEntityPersister:3587 -  Version select: select id from email where id =?
+2013-05-22 17:32:56,795 DEBUG AbstractEntityPersister:3590 -  Snapshot select: select email_.id, email_.emailAddress as emailAdd2_2_, email_.personID as personID3_2_ from email email_ where email_.id=?
+2013-05-22 17:32:56,796 DEBUG AbstractEntityPersister:3593 -  Insert 0: insert into email (emailAddress, personID, id) values (?, ?, ?)
+2013-05-22 17:32:56,796 DEBUG AbstractEntityPersister:3594 -  Update 0: update email set emailAddress=?, personID=? where id=?
+2013-05-22 17:32:56,796 DEBUG AbstractEntityPersister:3595 -  Delete 0: delete from email where id=?
+2013-05-22 17:32:56,796 DEBUG AbstractEntityPersister:3598 -  Identity insert: insert into email (emailAddress, personID) values (?, ?)
+2013-05-22 17:32:56,801 DEBUG AbstractEntityPersister:3582 - Static SQL for entity: com.glassbox.webinvoice.shared.entity.Autonum
+2013-05-22 17:32:56,802 DEBUG AbstractEntityPersister:3587 -  Version select: select id from autonum where id =?
+2013-05-22 17:32:56,802 DEBUG AbstractEntityPersister:3590 -  Snapshot select: select autonum_.id, autonum_.clientID as clientID5_1_, autonum_.number as number2_1_, autonum_.prefix as prefix3_1_, autonum_.suffix as suffix4_1_, autonum_.userID as userID6_1_ from autonum autonum_ where autonum_.id=?
+2013-05-22 17:32:56,803 DEBUG AbstractEntityPersister:3593 -  Insert 0: insert into autonum (clientID, number, prefix, suffix, userID, id) values (?, ?, ?, ?, ?, ?)
+2013-05-22 17:32:56,803 DEBUG AbstractEntityPersister:3594 -  Update 0: update autonum set clientID=?, number=?, prefix=?, suffix=?, userID=? where id=?
+2013-05-22 17:32:56,803 DEBUG AbstractEntityPersister:3595 -  Delete 0: delete from autonum where id=?
+2013-05-22 17:32:56,804 DEBUG AbstractEntityPersister:3598 -  Identity insert: insert into autonum (clientID, number, prefix, suffix, userID) values (?, ?, ?, ?, ?)
+2013-05-22 17:32:56,814 DEBUG AbstractEntityPersister:3582 - Static SQL for entity: com.glassbox.webinvoice.shared.entity.Person
+2013-05-22 17:32:56,815 DEBUG AbstractEntityPersister:3587 -  Version select: select id from person where id =?
+2013-05-22 17:32:56,815 DEBUG AbstractEntityPersister:3590 -  Snapshot select: select person_.id, person_.firstname as firstnam2_3_, person_.lastname as lastname3_3_, person_.LOGINTIMESTAMP as LOGINTIM4_3_, person_.password as password5_3_, person_.roleID as roleID6_3_ from person person_ where person_.id=?
+2013-05-22 17:32:56,815 DEBUG AbstractEntityPersister:3593 -  Insert 0: insert into person (firstname, lastname, LOGINTIMESTAMP, password, roleID, id) values (?, ?, ?, ?, ?, ?)
+2013-05-22 17:32:56,815 DEBUG AbstractEntityPersister:3594 -  Update 0: update person set firstname=?, lastname=?, LOGINTIMESTAMP=?, password=?, roleID=? where id=?
+2013-05-22 17:32:56,816 DEBUG AbstractEntityPersister:3595 -  Delete 0: delete from person where id=?
+2013-05-22 17:32:56,816 DEBUG AbstractEntityPersister:3598 -  Identity insert: insert into person (firstname, lastname, LOGINTIMESTAMP, password, roleID) values (?, ?, ?, ?, ?)
+2013-05-22 17:32:56,819 DEBUG AbstractEntityPersister:3582 - Static SQL for entity: com.glassbox.webinvoice.shared.entity.State
+2013-05-22 17:32:56,819 DEBUG AbstractEntityPersister:3587 -  Version select: select id from state where id =?
+2013-05-22 17:32:56,820 DEBUG AbstractEntityPersister:3590 -  Snapshot select: select state_.id, state_.name as name2_5_ from state state_ where state_.id=?
+2013-05-22 17:32:56,820 DEBUG AbstractEntityPersister:3593 -  Insert 0: insert into state (name, id) values (?, ?)
+2013-05-22 17:32:56,820 DEBUG AbstractEntityPersister:3594 -  Update 0: update state set name=? where id=?
+2013-05-22 17:32:56,821 DEBUG AbstractEntityPersister:3595 -  Delete 0: delete from state where id=?
+2013-05-22 17:32:56,824 DEBUG AbstractEntityPersister:3582 - Static SQL for entity: com.glassbox.webinvoice.shared.entity.Suburb
+2013-05-22 17:32:56,824 DEBUG AbstractEntityPersister:3587 -  Version select: select id from suburb where id =?
+2013-05-22 17:32:56,825 DEBUG AbstractEntityPersister:3590 -  Snapshot select: select suburb_.id, suburb_.postcode as postcode2_6_, suburb_.suburb as suburb3_6_ from suburb suburb_ where suburb_.id=?
+2013-05-22 17:32:56,825 DEBUG AbstractEntityPersister:3593 -  Insert 0: insert into suburb (postcode, suburb, id) values (?, ?, ?)
+2013-05-22 17:32:56,825 DEBUG AbstractEntityPersister:3594 -  Update 0: update suburb set postcode=?, suburb=? where id=?
+2013-05-22 17:32:56,825 DEBUG AbstractEntityPersister:3595 -  Delete 0: delete from suburb where id=?
+2013-05-22 17:32:56,826 DEBUG AbstractEntityPersister:3598 -  Identity insert: insert into suburb (postcode, suburb) values (?, ?)
+2013-05-22 17:32:56,829 DEBUG AbstractEntityPersister:3582 - Static SQL for entity: com.glassbox.webinvoice.shared.entity.Role
+2013-05-22 17:32:56,829 DEBUG AbstractEntityPersister:3587 -  Version select: select id from role where id =?
+2013-05-22 17:32:56,829 DEBUG AbstractEntityPersister:3590 -  Snapshot select: select role_.id, role_.name as name2_4_ from role role_ where role_.id=?
+2013-05-22 17:32:56,830 DEBUG AbstractEntityPersister:3593 -  Insert 0: insert into role (name, id) values (?, ?)
+2013-05-22 17:32:56,830 DEBUG AbstractEntityPersister:3594 -  Update 0: update role set name=? where id=?
+2013-05-22 17:32:56,830 DEBUG AbstractEntityPersister:3595 -  Delete 0: delete from role where id=?
+2013-05-22 17:32:56,841 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: com.glassbox.webinvoice.shared.entity.Person.userAutonums
+2013-05-22 17:32:56,842 DEBUG AbstractCollectionPersister:666 -  Row insert: update autonum set userID=? where id=?
+2013-05-22 17:32:56,842 DEBUG AbstractCollectionPersister:667 -  Row update: update autonum set  where id=?
+2013-05-22 17:32:56,842 DEBUG AbstractCollectionPersister:668 -  Row delete: update autonum set userID=null where userID=? and id=?
+2013-05-22 17:32:56,843 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update autonum set userID=null where userID=?
+2013-05-22 17:32:56,843 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: com.glassbox.webinvoice.shared.entity.Role.persons
+2013-05-22 17:32:56,843 DEBUG AbstractCollectionPersister:666 -  Row insert: update person set roleID=? where id=?
+2013-05-22 17:32:56,844 DEBUG AbstractCollectionPersister:667 -  Row update: update person set  where id=?
+2013-05-22 17:32:56,844 DEBUG AbstractCollectionPersister:668 -  Row delete: update person set roleID=null where roleID=? and id=?
+2013-05-22 17:32:56,844 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update person set roleID=null where roleID=?
+2013-05-22 17:32:56,844 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: com.glassbox.webinvoice.shared.entity.Suburb.addresses
+2013-05-22 17:32:56,845 DEBUG AbstractCollectionPersister:666 -  Row insert: update address set suburb=? where id=?
+2013-05-22 17:32:56,845 DEBUG AbstractCollectionPersister:667 -  Row update: update address set  where id=?
+2013-05-22 17:32:56,845 DEBUG AbstractCollectionPersister:668 -  Row delete: update address set suburb=null where suburb=? and id=?
+2013-05-22 17:32:56,845 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update address set suburb=null where suburb=?
+2013-05-22 17:32:56,846 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: com.glassbox.webinvoice.shared.entity.Person.emails
+2013-05-22 17:32:56,846 DEBUG AbstractCollectionPersister:666 -  Row insert: update email set personID=? where id=?
+2013-05-22 17:32:56,847 DEBUG AbstractCollectionPersister:667 -  Row update: update email set  where id=?
+2013-05-22 17:32:56,847 DEBUG AbstractCollectionPersister:668 -  Row delete: update email set personID=null where personID=? and id=?
+2013-05-22 17:32:56,847 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update email set personID=null where personID=?
+2013-05-22 17:32:56,848 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: com.glassbox.webinvoice.shared.entity.State.addresses
+2013-05-22 17:32:56,848 DEBUG AbstractCollectionPersister:666 -  Row insert: update address set state=? where id=?
+2013-05-22 17:32:56,848 DEBUG AbstractCollectionPersister:667 -  Row update: update address set  where id=?
+2013-05-22 17:32:56,848 DEBUG AbstractCollectionPersister:668 -  Row delete: update address set state=null where state=? and id=?
+2013-05-22 17:32:56,849 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update address set state=null where state=?
+2013-05-22 17:32:56,849 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: com.glassbox.webinvoice.shared.entity.Person.addresses
+2013-05-22 17:32:56,850 DEBUG AbstractCollectionPersister:666 -  Row insert: update address set personID=? where id=?
+2013-05-22 17:32:56,850 DEBUG AbstractCollectionPersister:667 -  Row update: update address set  where id=?
+2013-05-22 17:32:56,850 DEBUG AbstractCollectionPersister:668 -  Row delete: update address set personID=null where personID=? and id=?
+2013-05-22 17:32:56,851 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update address set personID=null where personID=?
+2013-05-22 17:32:56,872 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [NONE]: select address0_.id as id1_0_2_, address0_.personID as personID2_0_2_, address0_.state as state3_0_2_, address0_.suburb as suburb4_0_2_, state1_.id as id1_5_0_, state1_.name as name2_5_0_, suburb2_.id as id1_6_1_, suburb2_.postcode as postcode2_6_1_, suburb2_.suburb as suburb3_6_1_ from address address0_ left outer join state state1_ on address0_.state=state1_.id left outer join suburb suburb2_ on address0_.suburb=suburb2_.id where address0_.id=?
+2013-05-22 17:32:56,873 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [READ]: select address0_.id as id1_0_2_, address0_.personID as personID2_0_2_, address0_.state as state3_0_2_, address0_.suburb as suburb4_0_2_, state1_.id as id1_5_0_, state1_.name as name2_5_0_, suburb2_.id as id1_6_1_, suburb2_.postcode as postcode2_6_1_, suburb2_.suburb as suburb3_6_1_ from address address0_ left outer join state state1_ on address0_.state=state1_.id left outer join suburb suburb2_ on address0_.suburb=suburb2_.id where address0_.id=?
+2013-05-22 17:32:56,873 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [UPGRADE]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=? for update
+2013-05-22 17:32:56,874 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [UPGRADE_NOWAIT]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=? for update
+2013-05-22 17:32:56,875 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [FORCE]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=? for update
+2013-05-22 17:32:56,875 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [PESSIMISTIC_READ]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=? lock in share mode
+2013-05-22 17:32:56,876 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [PESSIMISTIC_WRITE]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=? for update
+2013-05-22 17:32:56,876 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [PESSIMISTIC_FORCE_INCREMENT]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=? for update
+2013-05-22 17:32:56,877 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [OPTIMISTIC]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=?
+2013-05-22 17:32:56,877 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Address [OPTIMISTIC_FORCE_INCREMENT]: select address0_.id as id1_0_0_, address0_.personID as personID2_0_0_, address0_.state as state3_0_0_, address0_.suburb as suburb4_0_0_ from address address0_ where address0_.id=?
+2013-05-22 17:32:56,884 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.glassbox.webinvoice.shared.entity.Address: select address0_.id as id1_0_1_, address0_.personID as personID2_0_1_, address0_.state as state3_0_1_, address0_.suburb as suburb4_0_1_, suburb1_.id as id1_6_0_, suburb1_.postcode as postcode2_6_0_, suburb1_.suburb as suburb3_6_0_ from address address0_ left outer join suburb suburb1_ on address0_.suburb=suburb1_.id where address0_.id=?
+2013-05-22 17:32:56,885 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.glassbox.webinvoice.shared.entity.Address: select address0_.id as id1_0_1_, address0_.personID as personID2_0_1_, address0_.state as state3_0_1_, address0_.suburb as suburb4_0_1_, suburb1_.id as id1_6_0_, suburb1_.postcode as postcode2_6_0_, suburb1_.suburb as suburb3_6_0_ from address address0_ left outer join suburb suburb1_ on address0_.suburb=suburb1_.id where address0_.id=?
+2013-05-22 17:32:56,885 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [NONE]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=?
+2013-05-22 17:32:56,885 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [READ]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=?
+2013-05-22 17:32:56,886 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [UPGRADE]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=? for update
+2013-05-22 17:32:56,886 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [UPGRADE_NOWAIT]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=? for update
+2013-05-22 17:32:56,886 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [FORCE]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=? for update
+2013-05-22 17:32:56,887 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [PESSIMISTIC_READ]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=? lock in share mode
+2013-05-22 17:32:56,887 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [PESSIMISTIC_WRITE]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=? for update
+2013-05-22 17:32:56,888 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [PESSIMISTIC_FORCE_INCREMENT]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=? for update
+2013-05-22 17:32:56,888 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [OPTIMISTIC]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=?
+2013-05-22 17:32:56,889 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Email [OPTIMISTIC_FORCE_INCREMENT]: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=?
+2013-05-22 17:32:56,889 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.glassbox.webinvoice.shared.entity.Email: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=?
+2013-05-22 17:32:56,889 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.glassbox.webinvoice.shared.entity.Email: select email0_.id as id1_2_0_, email0_.emailAddress as emailAdd2_2_0_, email0_.personID as personID3_2_0_ from email email0_ where email0_.id=?
+2013-05-22 17:32:56,890 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [NONE]: select autonum0_.id as id1_1_2_, autonum0_.clientID as clientID5_1_2_, autonum0_.number as number2_1_2_, autonum0_.prefix as prefix3_1_2_, autonum0_.suffix as suffix4_1_2_, autonum0_.userID as userID6_1_2_, person1_.id as id1_3_0_, person1_.firstname as firstnam2_3_0_, person1_.lastname as lastname3_3_0_, person1_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person1_.password as password5_3_0_, person1_.roleID as roleID6_3_0_, person2_.id as id1_3_1_, person2_.firstname as firstnam2_3_1_, person2_.lastname as lastname3_3_1_, person2_.LOGINTIMESTAMP as LOGINTIM4_3_1_, person2_.password as password5_3_1_, person2_.roleID as roleID6_3_1_ from autonum autonum0_ left outer join person person1_ on autonum0_.clientID=person1_.id left outer join person person2_ on autonum0_.userID=person2_.id where autonum0_.id=?
+2013-05-22 17:32:56,891 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [READ]: select autonum0_.id as id1_1_2_, autonum0_.clientID as clientID5_1_2_, autonum0_.number as number2_1_2_, autonum0_.prefix as prefix3_1_2_, autonum0_.suffix as suffix4_1_2_, autonum0_.userID as userID6_1_2_, person1_.id as id1_3_0_, person1_.firstname as firstnam2_3_0_, person1_.lastname as lastname3_3_0_, person1_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person1_.password as password5_3_0_, person1_.roleID as roleID6_3_0_, person2_.id as id1_3_1_, person2_.firstname as firstnam2_3_1_, person2_.lastname as lastname3_3_1_, person2_.LOGINTIMESTAMP as LOGINTIM4_3_1_, person2_.password as password5_3_1_, person2_.roleID as roleID6_3_1_ from autonum autonum0_ left outer join person person1_ on autonum0_.clientID=person1_.id left outer join person person2_ on autonum0_.userID=person2_.id where autonum0_.id=?
+2013-05-22 17:32:56,891 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [UPGRADE]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=? for update
+2013-05-22 17:32:56,891 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [UPGRADE_NOWAIT]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=? for update
+2013-05-22 17:32:56,892 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [FORCE]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=? for update
+2013-05-22 17:32:56,892 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [PESSIMISTIC_READ]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=? lock in share mode
+2013-05-22 17:32:56,893 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [PESSIMISTIC_WRITE]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=? for update
+2013-05-22 17:32:56,893 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [PESSIMISTIC_FORCE_INCREMENT]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=? for update
+2013-05-22 17:32:56,893 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [OPTIMISTIC]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=?
+2013-05-22 17:32:56,894 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Autonum [OPTIMISTIC_FORCE_INCREMENT]: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=?
+2013-05-22 17:32:56,894 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.glassbox.webinvoice.shared.entity.Autonum: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=?
+2013-05-22 17:32:56,895 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.glassbox.webinvoice.shared.entity.Autonum: select autonum0_.id as id1_1_0_, autonum0_.clientID as clientID5_1_0_, autonum0_.number as number2_1_0_, autonum0_.prefix as prefix3_1_0_, autonum0_.suffix as suffix4_1_0_, autonum0_.userID as userID6_1_0_ from autonum autonum0_ where autonum0_.id=?
+2013-05-22 17:32:56,895 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [NONE]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=?
+2013-05-22 17:32:56,895 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [READ]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=?
+2013-05-22 17:32:56,896 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [UPGRADE]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=? for update
+2013-05-22 17:32:56,896 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [UPGRADE_NOWAIT]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=? for update
+2013-05-22 17:32:56,897 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [FORCE]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=? for update
+2013-05-22 17:32:56,897 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [PESSIMISTIC_READ]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=? lock in share mode
+2013-05-22 17:32:56,898 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [PESSIMISTIC_WRITE]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=? for update
+2013-05-22 17:32:56,898 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [PESSIMISTIC_FORCE_INCREMENT]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=? for update
+2013-05-22 17:32:56,899 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [OPTIMISTIC]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=?
+2013-05-22 17:32:56,899 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Person [OPTIMISTIC_FORCE_INCREMENT]: select person0_.id as id1_3_0_, person0_.firstname as firstnam2_3_0_, person0_.lastname as lastname3_3_0_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person0_.password as password5_3_0_, person0_.roleID as roleID6_3_0_ from person person0_ where person0_.id=?
+2013-05-22 17:32:56,901 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.glassbox.webinvoice.shared.entity.Person: select person0_.id as id1_3_2_, person0_.firstname as firstnam2_3_2_, person0_.lastname as lastname3_3_2_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_2_, person0_.password as password5_3_2_, person0_.roleID as roleID6_3_2_, addresses1_.personID as personID2_3_4_, addresses1_.id as id1_0_4_, addresses1_.id as id1_0_0_, addresses1_.personID as personID2_0_0_, addresses1_.state as state3_0_0_, addresses1_.suburb as suburb4_0_0_, suburb2_.id as id1_6_1_, suburb2_.postcode as postcode2_6_1_, suburb2_.suburb as suburb3_6_1_ from person person0_ left outer join address addresses1_ on person0_.id=addresses1_.personID left outer join suburb suburb2_ on addresses1_.suburb=suburb2_.id where person0_.id=?
+2013-05-22 17:32:56,902 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.glassbox.webinvoice.shared.entity.Person: select person0_.id as id1_3_2_, person0_.firstname as firstnam2_3_2_, person0_.lastname as lastname3_3_2_, person0_.LOGINTIMESTAMP as LOGINTIM4_3_2_, person0_.password as password5_3_2_, person0_.roleID as roleID6_3_2_, addresses1_.personID as personID2_3_4_, addresses1_.id as id1_0_4_, addresses1_.id as id1_0_0_, addresses1_.personID as personID2_0_0_, addresses1_.state as state3_0_0_, addresses1_.suburb as suburb4_0_0_, suburb2_.id as id1_6_1_, suburb2_.postcode as postcode2_6_1_, suburb2_.suburb as suburb3_6_1_ from person person0_ left outer join address addresses1_ on person0_.id=addresses1_.personID left outer join suburb suburb2_ on addresses1_.suburb=suburb2_.id where person0_.id=?
+2013-05-22 17:32:56,902 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [NONE]: select state0_.id as id1_5_2_, state0_.name as name2_5_2_, addresses1_.state as state3_5_4_, addresses1_.id as id1_0_4_, addresses1_.id as id1_0_0_, addresses1_.personID as personID2_0_0_, addresses1_.state as state3_0_0_, addresses1_.suburb as suburb4_0_0_, suburb2_.id as id1_6_1_, suburb2_.postcode as postcode2_6_1_, suburb2_.suburb as suburb3_6_1_ from state state0_ left outer join address addresses1_ on state0_.id=addresses1_.state left outer join suburb suburb2_ on addresses1_.suburb=suburb2_.id where state0_.id=?
+2013-05-22 17:32:56,903 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [READ]: select state0_.id as id1_5_2_, state0_.name as name2_5_2_, addresses1_.state as state3_5_4_, addresses1_.id as id1_0_4_, addresses1_.id as id1_0_0_, addresses1_.personID as personID2_0_0_, addresses1_.state as state3_0_0_, addresses1_.suburb as suburb4_0_0_, suburb2_.id as id1_6_1_, suburb2_.postcode as postcode2_6_1_, suburb2_.suburb as suburb3_6_1_ from state state0_ left outer join address addresses1_ on state0_.id=addresses1_.state left outer join suburb suburb2_ on addresses1_.suburb=suburb2_.id where state0_.id=?
+2013-05-22 17:32:56,903 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [UPGRADE]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=? for update
+2013-05-22 17:32:56,904 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [UPGRADE_NOWAIT]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=? for update
+2013-05-22 17:32:56,905 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [FORCE]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=? for update
+2013-05-22 17:32:56,906 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [PESSIMISTIC_READ]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=? lock in share mode
+2013-05-22 17:32:56,906 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [PESSIMISTIC_WRITE]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=? for update
+2013-05-22 17:32:56,907 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [PESSIMISTIC_FORCE_INCREMENT]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=? for update
+2013-05-22 17:32:56,907 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [OPTIMISTIC]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=?
+2013-05-22 17:32:56,908 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.State [OPTIMISTIC_FORCE_INCREMENT]: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=?
+2013-05-22 17:32:56,908 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.glassbox.webinvoice.shared.entity.State: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=?
+2013-05-22 17:32:56,909 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.glassbox.webinvoice.shared.entity.State: select state0_.id as id1_5_0_, state0_.name as name2_5_0_ from state state0_ where state0_.id=?
+2013-05-22 17:32:56,909 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [NONE]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=?
+2013-05-22 17:32:56,909 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [READ]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=?
+2013-05-22 17:32:56,910 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [UPGRADE]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=? for update
+2013-05-22 17:32:56,910 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [UPGRADE_NOWAIT]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=? for update
+2013-05-22 17:32:56,911 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [FORCE]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=? for update
+2013-05-22 17:32:56,911 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [PESSIMISTIC_READ]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=? lock in share mode
+2013-05-22 17:32:56,912 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [PESSIMISTIC_WRITE]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=? for update
+2013-05-22 17:32:56,912 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [PESSIMISTIC_FORCE_INCREMENT]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=? for update
+2013-05-22 17:32:56,912 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [OPTIMISTIC]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=?
+2013-05-22 17:32:56,913 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Role [OPTIMISTIC_FORCE_INCREMENT]: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=?
+2013-05-22 17:32:56,913 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.glassbox.webinvoice.shared.entity.Role: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=?
+2013-05-22 17:32:56,914 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.glassbox.webinvoice.shared.entity.Role: select role0_.id as id1_4_0_, role0_.name as name2_4_0_ from role role0_ where role0_.id=?
+2013-05-22 17:32:56,914 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [NONE]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=?
+2013-05-22 17:32:56,915 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [READ]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=?
+2013-05-22 17:32:56,915 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [UPGRADE]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=? for update
+2013-05-22 17:32:56,916 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [UPGRADE_NOWAIT]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=? for update
+2013-05-22 17:32:56,916 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [FORCE]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=? for update
+2013-05-22 17:32:56,917 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [PESSIMISTIC_READ]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=? lock in share mode
+2013-05-22 17:32:56,917 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [PESSIMISTIC_WRITE]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=? for update
+2013-05-22 17:32:56,917 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [PESSIMISTIC_FORCE_INCREMENT]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=? for update
+2013-05-22 17:32:56,918 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [OPTIMISTIC]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=?
+2013-05-22 17:32:56,918 DEBUG Loader:123 - Static select for entity com.glassbox.webinvoice.shared.entity.Suburb [OPTIMISTIC_FORCE_INCREMENT]: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=?
+2013-05-22 17:32:56,919 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity com.glassbox.webinvoice.shared.entity.Suburb: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=?
+2013-05-22 17:32:56,919 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity com.glassbox.webinvoice.shared.entity.Suburb: select suburb0_.id as id1_6_0_, suburb0_.postcode as postcode2_6_0_, suburb0_.suburb as suburb3_6_0_ from suburb suburb0_ where suburb0_.id=?
+2013-05-22 17:32:56,924 DEBUG OneToManyLoader:82 - Static select for one-to-many com.glassbox.webinvoice.shared.entity.Person.userAutonums: select userautonu0_.userID as userID6_3_2_, userautonu0_.id as id1_1_2_, userautonu0_.id as id1_1_1_, userautonu0_.clientID as clientID5_1_1_, userautonu0_.number as number2_1_1_, userautonu0_.prefix as prefix3_1_1_, userautonu0_.suffix as suffix4_1_1_, userautonu0_.userID as userID6_1_1_, person1_.id as id1_3_0_, person1_.firstname as firstnam2_3_0_, person1_.lastname as lastname3_3_0_, person1_.LOGINTIMESTAMP as LOGINTIM4_3_0_, person1_.password as password5_3_0_, person1_.roleID as roleID6_3_0_ from autonum userautonu0_ left outer join person person1_ on userautonu0_.clientID=person1_.id where userautonu0_.userID=?
+2013-05-22 17:32:56,924 DEBUG OneToManyLoader:82 - Static select for one-to-many com.glassbox.webinvoice.shared.entity.Role.persons: select persons0_.roleID as roleID6_4_1_, persons0_.id as id1_3_1_, persons0_.id as id1_3_0_, persons0_.firstname as firstnam2_3_0_, persons0_.lastname as lastname3_3_0_, persons0_.LOGINTIMESTAMP as LOGINTIM4_3_0_, persons0_.password as password5_3_0_, persons0_.roleID as roleID6_3_0_ from person persons0_ where persons0_.roleID=?
+2013-05-22 17:32:56,925 DEBUG OneToManyLoader:82 - Static select for one-to-many com.glassbox.webinvoice.shared.entity.Person.emails: select emails0_.personID as personID3_3_1_, emails0_.id as id1_2_1_, emails0_.id as id1_2_0_, emails0_.emailAddress as emailAdd2_2_0_, emails0_.personID as personID3_2_0_ from email emails0_ where emails0_.personID=?
+2013-05-22 17:32:56,925 DEBUG OneToManyLoader:82 - Static select for one-to-many com.glassbox.webinvoice.shared.entity.Suburb.addresses: select addresses0_.suburb as suburb4_6_2_, addresses0_.id as id1_0_2_, addresses0_.id as id1_0_1_, addresses0_.personID as personID2_0_1_, addresses0_.state as state3_0_1_, addresses0_.suburb as suburb4_0_1_, state1_.id as id1_5_0_, state1_.name as name2_5_0_ from address addresses0_ left outer join state state1_ on addresses0_.state=state1_.id where addresses0_.suburb=?
+2013-05-22 17:32:56,926 DEBUG OneToManyLoader:82 - Static select for one-to-many com.glassbox.webinvoice.shared.entity.Person.addresses: select addresses0_.personID as personID2_3_3_, addresses0_.id as id1_0_3_, addresses0_.id as id1_0_2_, addresses0_.personID as personID2_0_2_, addresses0_.state as state3_0_2_, addresses0_.suburb as suburb4_0_2_, state1_.id as id1_5_0_, state1_.name as name2_5_0_, suburb2_.id as id1_6_1_, suburb2_.postcode as postcode2_6_1_, suburb2_.suburb as suburb3_6_1_ from address addresses0_ left outer join state state1_ on addresses0_.state=state1_.id left outer join suburb suburb2_ on addresses0_.suburb=suburb2_.id where addresses0_.personID=?
+2013-05-22 17:32:56,926 DEBUG OneToManyLoader:82 - Static select for one-to-many com.glassbox.webinvoice.shared.entity.State.addresses: select addresses0_.state as state3_5_2_, addresses0_.id as id1_0_2_, addresses0_.id as id1_0_1_, addresses0_.personID as personID2_0_1_, addresses0_.state as state3_0_1_, addresses0_.suburb as suburb4_0_1_, suburb1_.id as id1_6_0_, suburb1_.postcode as postcode2_6_0_, suburb1_.suburb as suburb3_6_0_ from address addresses0_ left outer join suburb suburb1_ on addresses0_.suburb=suburb1_.id where addresses0_.state=?
+2013-05-22 17:32:56,928 DEBUG SessionFactoryRegistry:62 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@4206e03d
+2013-05-22 17:32:56,929 DEBUG SessionFactoryRegistry:75 - Registering SessionFactory: 61d203d6-1506-49a9-ad60-04c7045ae4f7 (<unnamed>)
+2013-05-22 17:32:56,929 DEBUG SessionFactoryRegistry:82 - Not binding SessionFactory to JNDI, no JNDI name configured
+2013-05-22 17:32:56,929 DEBUG SessionFactoryImpl:488 - Instantiated session factory
+2013-05-22 17:32:56,931 DEBUG SessionFactoryImpl:1060 - Checking 0 named HQL queries
+2013-05-22 17:32:56,932 DEBUG SessionFactoryImpl:1083 - Checking 0 named SQL queries
+2013-05-22 17:32:56,941 DEBUG StatisticsInitiator:110 - Statistics initialized [enabled=false]
+2013-05-22 17:32:56,941 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:56,942 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:56,959 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'sessionFactory'
+2013-05-22 17:32:56,960 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'txManager'
+2013-05-22 17:32:56,960 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'txManager'
+2013-05-22 17:32:56,960 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:56,969 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'txManager' to allow for resolving potential circular references
+2013-05-22 17:32:56,978 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2013-05-22 17:32:56,978 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:56,979 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,056 DEBUG DefaultListableBeanFactory:1529 - Invoking afterPropertiesSet() on bean with name 'txManager'
+2013-05-22 17:32:57,063 INFO HibernateTransactionManager:256 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@7946c637] of Hibernate SessionFactory for HibernateTransactionManager
+2013-05-22 17:32:57,065 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,065 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,085 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'txManager'
+2013-05-22 17:32:57,085 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2013-05-22 17:32:57,085 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2013-05-22 17:32:57,086 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2013-05-22 17:32:57,086 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2013-05-22 17:32:57,088 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+2013-05-22 17:32:57,095 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2013-05-22 17:32:57,096 DEBUG DefaultListableBeanFactory:1529 - Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2013-05-22 17:32:57,096 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2013-05-22 17:32:57,097 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,097 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'userDAOImpl'
+2013-05-22 17:32:57,097 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'userDAOImpl'
+2013-05-22 17:32:57,097 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,101 DEBUG InjectionMetadata:71 - Registered injected element on class [com.glassbox.webinvoice.dataaccess.UserDAOImpl]: AutowiredFieldElement for protected org.hibernate.SessionFactory com.glassbox.webinvoice.dataaccess.BaseDAO.sf
+2013-05-22 17:32:57,101 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'userDAOImpl' to allow for resolving potential circular references
+2013-05-22 17:32:57,108 DEBUG InjectionMetadata:85 - Processing injected method of bean 'userDAOImpl': AutowiredFieldElement for protected org.hibernate.SessionFactory com.glassbox.webinvoice.dataaccess.BaseDAO.sf
+2013-05-22 17:32:57,110 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2013-05-22 17:32:57,110 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'userDAOImpl' to bean named 'sessionFactory'
+2013-05-22 17:32:57,111 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,111 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,123 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'userDAOImpl'
+2013-05-22 17:32:57,123 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'DTOFactory'
+2013-05-22 17:32:57,124 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'DTOFactory'
+2013-05-22 17:32:57,124 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,128 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'DTOFactory' to allow for resolving potential circular references
+2013-05-22 17:32:57,132 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,132 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,148 DEBUG AnnotationAwareAspectJAutoProxyCreator:534 - Creating implicit proxy for bean 'DTOFactory' with 0 common interceptors and 3 specific interceptors
+2013-05-22 17:32:57,156 DEBUG CglibAopProxy:155 - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.glassbox.webinvoice.server.DTOFactory@410b660e]
+2013-05-22 17:32:57,241 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public com.glassbox.webinvoice.shared.DTOentity.SuburbDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(com.glassbox.webinvoice.shared.entity.Suburb)
+2013-05-22 17:32:57,242 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public com.glassbox.webinvoice.shared.DTOentity.StateDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(com.glassbox.webinvoice.shared.entity.State)
+2013-05-22 17:32:57,243 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public com.glassbox.webinvoice.shared.DTOentity.RoleDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(com.glassbox.webinvoice.shared.entity.Role)
+2013-05-22 17:32:57,244 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public com.glassbox.webinvoice.shared.DTOentity.EmailDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(com.glassbox.webinvoice.shared.entity.Email)
+2013-05-22 17:32:57,245 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public com.glassbox.webinvoice.shared.DTOentity.AutonumDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(com.glassbox.webinvoice.shared.entity.Autonum,com.glassbox.webinvoice.shared.DTOentity.PersonDTO,com.glassbox.webinvoice.shared.DTOentity.PersonDTO)
+2013-05-22 17:32:57,246 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public com.glassbox.webinvoice.shared.DTOentity.AddressDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(com.glassbox.webinvoice.shared.entity.Address,com.glassbox.webinvoice.shared.DTOentity.PersonDTO)
+2013-05-22 17:32:57,246 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public com.glassbox.webinvoice.shared.DTOentity.PersonDTO com.glassbox.webinvoice.server.DTOFactory.toDTO(com.glassbox.webinvoice.shared.entity.Person)
+2013-05-22 17:32:57,246 DEBUG CglibAopProxy:759 - Found finalize() method - using NO_OVERRIDE
+2013-05-22 17:32:57,247 DEBUG CglibAopProxy:771 - Found 'equals' method: public boolean java.lang.Object.equals(java.lang.Object)
+2013-05-22 17:32:57,247 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: public java.lang.String java.lang.Object.toString()
+2013-05-22 17:32:57,247 DEBUG CglibAopProxy:776 - Found 'hashCode' method: public native int java.lang.Object.hashCode()
+2013-05-22 17:32:57,248 DEBUG CglibAopProxy:808 - Unable to apply any optimisations to advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+2013-05-22 17:32:57,248 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+2013-05-22 17:32:57,249 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+2013-05-22 17:32:57,249 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+2013-05-22 17:32:57,249 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+2013-05-22 17:32:57,250 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+2013-05-22 17:32:57,250 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+2013-05-22 17:32:57,250 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+2013-05-22 17:32:57,250 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+2013-05-22 17:32:57,251 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+2013-05-22 17:32:57,251 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+2013-05-22 17:32:57,251 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+2013-05-22 17:32:57,252 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+2013-05-22 17:32:57,252 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+2013-05-22 17:32:57,252 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+2013-05-22 17:32:57,252 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+2013-05-22 17:32:57,253 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+2013-05-22 17:32:57,253 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+2013-05-22 17:32:57,253 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+2013-05-22 17:32:57,254 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+2013-05-22 17:32:57,254 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+2013-05-22 17:32:57,254 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+2013-05-22 17:32:57,255 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+2013-05-22 17:32:57,255 DEBUG CglibAopProxy:765 - Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+2013-05-22 17:32:57,287 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'DTOFactory'
+2013-05-22 17:32:57,287 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'systemSupervisor'
+2013-05-22 17:32:57,288 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'systemSupervisor'
+2013-05-22 17:32:57,300 DEBUG InjectionMetadata:71 - Registered injected element on class [com.glassbox.webinvoice.server.SystemSupervisor]: AutowiredFieldElement for private javax.servlet.http.HttpServletRequest com.glassbox.webinvoice.server.SystemSupervisor.request
+2013-05-22 17:32:57,300 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'systemSupervisor' to allow for resolving potential circular references
+2013-05-22 17:32:57,316 DEBUG InjectionMetadata:85 - Processing injected method of bean 'systemSupervisor': AutowiredFieldElement for private javax.servlet.http.HttpServletRequest com.glassbox.webinvoice.server.SystemSupervisor.request
+2013-05-22 17:32:57,328 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'systemSupervisor' to bean named '$Proxy34@5d31f1c5'
+2013-05-22 17:32:57,329 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'systemSupervisor'
+2013-05-22 17:32:57,329 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'userService'
+2013-05-22 17:32:57,329 DEBUG DefaultListableBeanFactory:435 - Creating instance of bean 'userService'
+2013-05-22 17:32:57,329 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,333 DEBUG InjectionMetadata:71 - Registered injected element on class [com.glassbox.webinvoice.server.UserServiceImpl]: AutowiredFieldElement for private com.glassbox.webinvoice.dataaccess.UserDAO com.glassbox.webinvoice.server.UserServiceImpl.userDAO
+2013-05-22 17:32:57,334 DEBUG InjectionMetadata:71 - Registered injected element on class [com.glassbox.webinvoice.server.UserServiceImpl]: AutowiredFieldElement for private javax.servlet.http.HttpServletRequest com.glassbox.webinvoice.server.UserServiceImpl.request
+2013-05-22 17:32:57,334 DEBUG InjectionMetadata:71 - Registered injected element on class [com.glassbox.webinvoice.server.UserServiceImpl]: AutowiredFieldElement for private com.glassbox.webinvoice.server.DTOFactory com.glassbox.webinvoice.server.UserServiceImpl.dtf
+2013-05-22 17:32:57,334 DEBUG DefaultListableBeanFactory:509 - Eagerly caching bean 'userService' to allow for resolving potential circular references
+2013-05-22 17:32:57,352 DEBUG InjectionMetadata:85 - Processing injected method of bean 'userService': AutowiredFieldElement for private com.glassbox.webinvoice.dataaccess.UserDAO com.glassbox.webinvoice.server.UserServiceImpl.userDAO
+2013-05-22 17:32:57,353 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'userDAOImpl'
+2013-05-22 17:32:57,354 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'userService' to bean named 'userDAOImpl'
+2013-05-22 17:32:57,354 DEBUG InjectionMetadata:85 - Processing injected method of bean 'userService': AutowiredFieldElement for private javax.servlet.http.HttpServletRequest com.glassbox.webinvoice.server.UserServiceImpl.request
+2013-05-22 17:32:57,355 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'userService' to bean named '$Proxy34@6b8b1f87'
+2013-05-22 17:32:57,355 DEBUG InjectionMetadata:85 - Processing injected method of bean 'userService': AutowiredFieldElement for private com.glassbox.webinvoice.server.DTOFactory com.glassbox.webinvoice.server.UserServiceImpl.dtf
+2013-05-22 17:32:57,356 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'DTOFactory'
+2013-05-22 17:32:57,356 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'userService' to bean named 'DTOFactory'
+2013-05-22 17:32:57,357 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,357 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-05-22 17:32:57,362 DEBUG AnnotationTransactionAttributeSource:106 - Adding transactional method 'findUser' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.RuntimeException
+2013-05-22 17:32:57,376 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2013-05-22 17:32:57,377 DEBUG AnnotationAwareAspectJAutoProxyCreator:534 - Creating implicit proxy for bean 'userService' with 0 common interceptors and 4 specific interceptors
+2013-05-22 17:32:57,379 DEBUG JdkDynamicAopProxy:115 - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [com.glassbox.webinvoice.server.UserServiceImpl@42f4aaa]
+2013-05-22 17:32:57,388 DEBUG DefaultListableBeanFactory:463 - Finished creating instance of bean 'userService'
+2013-05-22 17:32:57,389 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2013-05-22 17:32:57,389 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2013-05-22 17:32:57,390 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2013-05-22 17:32:57,390 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2013-05-22 17:32:57,390 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2013-05-22 17:32:57,390 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'propertyConfigurer'
+2013-05-22 17:32:57,391 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2013-05-22 17:32:57,394 DEBUG XmlWebApplicationContext:858 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@14dfefe1]
+2013-05-22 17:32:57,394 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-05-22 17:32:57,397 DEBUG PropertySourcesPropertyResolver:70 - Searching for key 'spring.liveBeansView.mbeanDomain' in [servletConfigInitParams]
+2013-05-22 17:32:57,398 DEBUG PropertySourcesPropertyResolver:70 - Searching for key 'spring.liveBeansView.mbeanDomain' in [servletContextInitParams]
+2013-05-22 17:32:57,398 DEBUG PropertySourcesPropertyResolver:70 - Searching for key 'spring.liveBeansView.mbeanDomain' in [jndiProperties]
+2013-05-22 17:32:57,398 DEBUG JndiTemplate:150 - Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+2013-05-22 17:32:57,399 DEBUG JndiLocatorDelegate:101 - Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException; remaining name 'spring.liveBeansView.mbeanDomain'
+2013-05-22 17:32:57,400 DEBUG JndiTemplate:150 - Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+2013-05-22 17:32:57,400 DEBUG JndiPropertySource:87 - JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: null. Returning null.
+2013-05-22 17:32:57,400 DEBUG PropertySourcesPropertyResolver:70 - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+2013-05-22 17:32:57,401 DEBUG PropertySourcesPropertyResolver:70 - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+2013-05-22 17:32:57,401 DEBUG PropertySourcesPropertyResolver:93 - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+2013-05-22 17:32:57,402 DEBUG ContextLoader:296 - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2013-05-22 17:32:57,402 INFO ContextLoader:301 - Root WebApplicationContext: initialization completed in 3937 ms
+2013-05-22 17:32:57,404 DEBUG StandardServletEnvironment:112 - Initializing new StandardServletEnvironment
+2013-05-22 17:32:57,405 DEBUG StandardServletEnvironment:107 - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+2013-05-22 17:32:57,405 DEBUG StandardServletEnvironment:107 - Adding [servletContextInitParams] PropertySource with lowest search precedence
+2013-05-22 17:32:57,405 DEBUG StandardServletEnvironment:107 - Adding [jndiProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:57,406 DEBUG StandardServletEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2013-05-22 17:32:57,406 DEBUG StandardServletEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2013-05-22 17:32:57,407 DEBUG StandardServletEnvironment:116 - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+2013-05-22 17:32:57,408 DEBUG RequestContextFilter:172 - Initializing filter 'springRequestFilter'
+2013-05-22 17:32:57,410 DEBUG RequestContextFilter:197 - Filter 'springRequestFilter' configured successfully
+2013-05-22 17:33:46,742 DEBUG RequestContextFilter:114 - Bound request context to thread: GET /webinvoice/webinvoice/webinvoice.nocache.js HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31
+Referer: http://localhost:8080/webinvoice/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+2013-05-22 17:33:46,748 DEBUG RequestContextFilter:104 - Cleared thread-bound request context: GET /webinvoice/webinvoice/webinvoice.nocache.js HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31
+Referer: http://localhost:8080/webinvoice/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+2013-05-22 17:34:32,652 DEBUG RequestContextFilter:114 - Bound request context to thread: GET /webinvoice/webinvoice/webinvoice.nocache.js HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31
+Referer: http://localhost:8080/webinvoice/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+2013-05-22 17:34:32,658 DEBUG RequestContextFilter:104 - Cleared thread-bound request context: GET /webinvoice/webinvoice/webinvoice.nocache.js HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31
+Referer: http://localhost:8080/webinvoice/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
