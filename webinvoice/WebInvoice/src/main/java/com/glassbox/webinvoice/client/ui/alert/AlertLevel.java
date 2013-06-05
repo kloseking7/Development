@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.client.ui;
+package com.glassbox.webinvoice.client.ui.alert;
 
 public enum AlertLevel {
 	ERROR("alert-error", "btn-danger"), INFO("alert-info", "btn-info"), MSG(

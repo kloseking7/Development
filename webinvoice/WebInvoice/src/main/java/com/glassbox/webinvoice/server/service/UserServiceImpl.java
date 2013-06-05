@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.server;
+package com.glassbox.webinvoice.server.service;
 
 import java.util.Date;
 
@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.glassbox.webinvoice.client.UserService;
+import com.glassbox.webinvoice.client.service.UserService;
+import com.glassbox.webinvoice.server.DTOFactory;
 import com.glassbox.webinvoice.server.dataaccess.UserDAO;
 import com.glassbox.webinvoice.shared.DTOentity.PersonDTO;
 import com.glassbox.webinvoice.shared.entity.Address;

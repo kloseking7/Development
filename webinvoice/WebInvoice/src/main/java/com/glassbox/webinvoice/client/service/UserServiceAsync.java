@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.client;
+package com.glassbox.webinvoice.client.service;
 
 import com.glassbox.webinvoice.shared.DTOentity.PersonDTO;
 import com.glassbox.webinvoice.shared.entity.AuState;

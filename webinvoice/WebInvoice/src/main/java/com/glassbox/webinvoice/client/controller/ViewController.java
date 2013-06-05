@@ -1,5 +1,6 @@
-package com.glassbox.webinvoice.client.ui;
+package com.glassbox.webinvoice.client.controller;
 
+import com.glassbox.webinvoice.client.ui.installation.SignUp;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.Event;
@@ -52,14 +53,11 @@ public class ViewController {
 	public static void showView(Views v) {
 		validateUser();
 		switch (v) {
-		case SignIn:
-			showView(new SignIn());
-			break;
 		case SignUp:
 			showView(new SignUp());
 			break;
 		default:
-			showView(new SignIn());
+			showView(new SignUp());
 
 		}
 	}

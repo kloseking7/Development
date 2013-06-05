@@ -1,8 +1,8 @@
-﻿DROP procedure IF EXISTS `webinvoice`.`get_authenticateUser`;
+﻿DROP procedure IF EXISTS `webinvoice`.`get_generateAutonum`;
 
 DELIMITER $$
 
-CREATE PROCEDURE `webinvoice`.`get_authenticateUser` (
+CREATE PROCEDURE `webinvoice`.`get_generateAutonum` (
 	IN in_login VARCHAR(64),
 	IN in_password VARCHAR(45),
 	OUT out_username VARCHAR(32),

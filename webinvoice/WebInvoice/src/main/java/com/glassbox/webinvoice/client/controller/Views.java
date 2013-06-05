@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.client.ui;
+package com.glassbox.webinvoice.client.controller;
 
 public enum Views {
 	Home("Home"), SignIn("Sign In"), SignUp("Sign Up"), CheckClient(

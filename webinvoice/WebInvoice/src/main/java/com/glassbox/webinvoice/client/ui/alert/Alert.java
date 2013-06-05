@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.client.ui;
+package com.glassbox.webinvoice.client.ui.alert;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

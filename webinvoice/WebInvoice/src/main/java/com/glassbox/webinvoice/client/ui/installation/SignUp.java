@@ -1,7 +1,11 @@
-package com.glassbox.webinvoice.client.ui;
+package com.glassbox.webinvoice.client.ui.installation;
 
-import com.glassbox.webinvoice.client.UserService;
-import com.glassbox.webinvoice.client.UserServiceAsync;
+import com.glassbox.webinvoice.client.ui.alert.AlertLevel;
+import com.glassbox.webinvoice.client.ui.alert.Alert;
+import com.glassbox.webinvoice.client.service.UserService;
+import com.glassbox.webinvoice.client.service.UserServiceAsync;
+import com.glassbox.webinvoice.client.controller.ViewController;
+import com.glassbox.webinvoice.client.controller.Views;
 import com.glassbox.webinvoice.shared.entity.AuState;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
