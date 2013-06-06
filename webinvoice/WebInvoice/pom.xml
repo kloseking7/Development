@@ -139,6 +139,13 @@
             <artifactId>jaxen</artifactId>
             <version>1.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.google</groupId>
+            <artifactId>spring4gwt</artifactId>
+            <version>0.0.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/spring4gwt-0.0.1.jar</systemPath>
+        </dependency>
     </dependencies>
     <build>
         <!-- Generate compiled stuff in the folder used for developing mode -->
