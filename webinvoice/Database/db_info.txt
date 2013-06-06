@@ -5,3 +5,6 @@ this file is for information only.
 sch = schema
 tb = table
 sp = stored procedure
+
+06/06/2013 - currently the stored procedures will not be used with hibernate since hibernate does not support ececution of complex stored procedures since the hibernate db calls do not return out parameters.
+
