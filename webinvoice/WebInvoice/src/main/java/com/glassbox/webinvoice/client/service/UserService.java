@@ -8,7 +8,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("services/userService")
 public interface UserService extends RemoteService {
 
-	String rigesterUser(String firstName, String lastName, String[] emails,
+	String registerUser(String firstName, String lastName, String[] emails,
 			String password, AuState state, int postCode, String suburb)
 			throws RuntimeException;
 

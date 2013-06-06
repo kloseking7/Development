@@ -9,6 +9,25 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/webinvoice/services/login</url-pattern>
     </servlet-mapping>
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml
+        </param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4jRefreshInterval</param-name>
+        <param-value>3000</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>/WEB-INF/logging.properties</param-value>
+    </context-param>
     <!-- Default page to serve -->
     <welcome-file-list>
         <welcome-file>WebInvoice.html</welcome-file>

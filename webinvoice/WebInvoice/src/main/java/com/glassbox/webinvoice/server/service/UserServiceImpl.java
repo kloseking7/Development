@@ -20,6 +20,7 @@ import com.glassbox.webinvoice.shared.entity.Person;
 import com.glassbox.webinvoice.shared.entity.RoleType;
 import com.glassbox.webinvoice.shared.entity.State;
 import com.glassbox.webinvoice.shared.entity.Suburb;
+import com.glassbox.webinvoice.shared.entity.User;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -41,7 +42,7 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 	private DTOFactory dtf;
 
 
-	public String rigesterUser(String firstName, String lastName,
+	public String registerUser(String firstName, String lastName,
 			String[] emails, String password, AuState auState, int postCode,
 			String suburbName) throws RuntimeException {
 
@@ -72,14 +73,15 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 		address.setSuburb(suburb);
 		p.addAddress(address);
 
-		return (String) userDAO.saveEntity(p);
+		//return (String) userDAO.saveEntity(p);
+                return null;
 	}
 
 
 	public PersonDTO findUser(String email, String password)
 			throws RuntimeException {
 		System.out.println(request.getSession().getAttribute("currentUser"));
-		Person person = userDAO.findUser(email);
+		User person = userDAO.findUser(email);
 
 		if (person == null)
 			throw new NullPointerException("Unable to find user");
@@ -87,10 +89,10 @@ public class UserServiceImpl extends RemoteServiceServlet implements
 		else if (!person.getPassword().equals(password))
 			throw new NullPointerException("Incorrect Password");
 		
-		person.setLogintime(new Date());
+		//person.setLogintime(new Date());
 		request.getSession().setAttribute("currentUser", person);
 		
-		return dtf.toDTO(person);
+		return null;
 	}
 
 	
