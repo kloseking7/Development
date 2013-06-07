@@ -7,11 +7,14 @@ import com.glassbox.webinvoice.shared.entity.User;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * The server side implementation of the RPC service.
  */
-@Service("services/login")
+@SuppressWarnings("serial")
+@Transactional(rollbackFor = RuntimeException.class)
+@Service("login")
 public class LoginServiceImpl extends RemoteServiceServlet implements
         LoginService {
     	@Autowired

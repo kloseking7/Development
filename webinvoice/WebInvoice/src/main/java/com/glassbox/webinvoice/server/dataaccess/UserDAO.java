@@ -33,7 +33,7 @@ public class UserDAO extends BaseDAO<User> {
 		User user = null;
 
 		try {
-			user = (User) super.getSessionFactory().getCurrentSession()
+			user = (User) sf.getCurrentSession()
 					.createQuery("from User u where u.username=:username")
 					.setString("username", login).uniqueResult();
 		} catch (Exception e) {

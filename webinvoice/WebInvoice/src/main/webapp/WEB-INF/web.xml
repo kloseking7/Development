@@ -9,6 +9,14 @@
         <servlet-name>springGwtRemoteServiceServlet</servlet-name>
         <url-pattern>/webinvoice/services/*</url-pattern>
     </servlet-mapping>
+    <servlet> 
+        <servlet-name>jUnitHostImpl</servlet-name> 
+        <servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class> 
+    </servlet> 
+    <servlet-mapping> 
+        <servlet-name>jUnitHostImpl</servlet-name> 
+        <url-pattern>/webinvoice/junithost/*</url-pattern> 
+    </servlet-mapping>
     <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
@@ -28,6 +36,14 @@
         <param-name>log4jConfigLocation</param-name>
         <param-value>/WEB-INF/logging.properties</param-value>
     </context-param>
+    <filter>
+        <filter-name>springRequestFilter</filter-name>
+        <filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springRequestFilter</filter-name>
+        <url-pattern>/webinvoice/*</url-pattern>
+    </filter-mapping> 
     <!-- Default page to serve -->
     <welcome-file-list>
         <welcome-file>WebInvoice.html</welcome-file>
