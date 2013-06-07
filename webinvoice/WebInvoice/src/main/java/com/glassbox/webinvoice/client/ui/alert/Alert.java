@@ -44,7 +44,7 @@ public class Alert {
 		});
 	}
 
-	public static void alert(String msg, AlertLevel level) {
+	public static void show(String msg, AlertLevel level) {
 		clean();
 		infoText.setText(msg);
 		closeButton.addStyleName(level.getBtnCss());

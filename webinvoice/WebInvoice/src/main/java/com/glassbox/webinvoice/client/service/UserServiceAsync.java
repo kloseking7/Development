@@ -6,7 +6,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface UserServiceAsync {
 
-	void rigesterUser(String firstName, String lastName, String[] emails,
+	void registerUser(String firstName, String lastName, String[] emails,
 			String password, AuState state, int postCode, String suburb,
 			AsyncCallback<String> callback) throws RuntimeException;
 

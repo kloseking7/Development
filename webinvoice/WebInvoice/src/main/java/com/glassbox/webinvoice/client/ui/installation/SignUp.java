@@ -4,8 +4,6 @@ import com.glassbox.webinvoice.client.ui.alert.AlertLevel;
 import com.glassbox.webinvoice.client.ui.alert.Alert;
 import com.glassbox.webinvoice.client.service.UserService;
 import com.glassbox.webinvoice.client.service.UserServiceAsync;
-import com.glassbox.webinvoice.client.controller.ViewController;
-import com.glassbox.webinvoice.client.controller.Views;
 import com.glassbox.webinvoice.shared.entity.AuState;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -64,7 +62,7 @@ public class SignUp extends Composite {
 		try {
 			Integer.parseInt(postcode.getText());
 		} catch (Exception e) {
-			Alert.alert("Postcode can only be a number", AlertLevel.ERROR);
+			Alert.show("Postcode can only be a number", AlertLevel.ERROR);
 			return false;
 		}
 		return true;
@@ -72,20 +70,20 @@ public class SignUp extends Composite {
 
 	private void signUpUser() {
 		if (checkField())
-			userService.rigesterUser(firstName.getText(), lastName.getText(),
+			userService.registerUser(firstName.getText(), lastName.getText(),
 					new String[] { email.getText() }, password.getText(),
 					AuState.values()[state.getSelectedIndex()],
 					Integer.parseInt(postcode.getText()), suburb.getText(),
 					new AsyncCallback<String>() {
 
 						public void onSuccess(String result) {
-							Alert.alert("Registration Succeeded!",
+							Alert.show("Registration Succeeded!",
 									AlertLevel.MSG);
-							ViewController.showView(Views.SignIn);
+							//ViewController.showView(Views.SignIn);
 						}
 
 						public void onFailure(Throwable caught) {
-							Alert.alert(caught.getMessage(), AlertLevel.ERROR);
+							Alert.show(caught.getMessage(), AlertLevel.ERROR);
 
 						}
 					});

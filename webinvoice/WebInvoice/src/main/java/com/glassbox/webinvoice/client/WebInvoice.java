@@ -1,6 +1,6 @@
 package com.glassbox.webinvoice.client;
 
-import com.glassbox.webinvoice.client.ui.Main;
+import com.glassbox.webinvoice.client.ui.controller.Main;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.Window;

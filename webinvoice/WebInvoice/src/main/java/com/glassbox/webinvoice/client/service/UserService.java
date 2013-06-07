@@ -5,7 +5,7 @@ import com.glassbox.webinvoice.shared.entity.AuState;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
-@RemoteServiceRelativePath("services/userService")
+@RemoteServiceRelativePath("/webinvoice/services/user")
 public interface UserService extends RemoteService {
 
 	String registerUser(String firstName, String lastName, String[] emails,

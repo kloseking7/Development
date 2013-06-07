@@ -17,18 +17,28 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("login")
 public class LoginServiceImpl extends RemoteServiceServlet implements
         LoginService {
-    	@Autowired
-	private UserDAO userDAO;
-      
+    @Autowired
+    private UserDAO userDAO;
+    
     public AuthenticationResult authenticateUser(String login, String password) {
-        AuthenticationResult result;
+        AuthenticationResult result = new AuthenticationResult();
         User user;
         
         user = userDAO.authenticateUser(login, password);
         
-        result = new AuthenticationResult();
-        result.setUsername(user.getUsername());
-        result.setAuthenticated(true);
+        if (user != null) {
+            result.setUsername(user.getUsername());
+            result.setAuthenticated(true);
+        }
+        else {
+            result.setAuthenticated(false);
+            result.setMessage("Invalid login/password combination.");
+        }
+        
+        
+        
+        
+        
         
         return result;
     }

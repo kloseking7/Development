@@ -2,6 +2,7 @@ package com.glassbox.webinvoice.client.ui.container.pages;
 
 import com.glassbox.webinvoice.client.model.AuthenticationResult;
 import com.glassbox.webinvoice.client.service.LoginServiceClientImpl;
+import com.glassbox.webinvoice.client.ui.controller.Main;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -28,8 +29,8 @@ public class LoginBox extends DialogBox {
         @UiField Label message;
         private LoginServiceClientImpl loginservice;
         
-	public LoginBox(){
-            this.loginservice = new LoginServiceClientImpl(GWT.getModuleBaseURL() + "services/login", this);
+	public LoginBox(Object main){
+            this.loginservice = new LoginServiceClientImpl(GWT.getModuleBaseURL() + "services/login", (Main)main);
             this.setSize("500px", "300px");
             this.add(uiBinder.createAndBindUi(this));
             this.setModal(true);
@@ -42,6 +43,7 @@ public class LoginBox extends DialogBox {
             CancelButton.getElement().setId("cancelbutton");
             CancelButton.addClickHandler(new CancelClickHandler(this));
             message.getElement().setId("message");
+            this.hide();
         }
         
     public void UpdateLoginDialog (AuthenticationResult result) {

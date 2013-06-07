@@ -5,10 +5,11 @@
 package com.glassbox.webinvoice.client.service;
 
 import com.glassbox.webinvoice.client.model.AuthenticationResult;
-import com.glassbox.webinvoice.client.ui.container.pages.LoginBox;
+import com.glassbox.webinvoice.client.ui.controller.Main;
+import com.glassbox.webinvoice.client.ui.alert.Alert;
+import com.glassbox.webinvoice.client.ui.alert.AlertLevel;
 import com.glassbox.webinvoice.shared.FieldVerifier;
 import com.google.gwt.core.shared.GWT;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.rpc.ServiceDefTarget;
 
@@ -18,14 +19,14 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
  */
 public class LoginServiceClientImpl implements LoginServiceClientInt {
     private LoginServiceAsync service;
-    private LoginBox loginui;
+    private Main mainui;
     
-    public LoginServiceClientImpl(String url, LoginBox loginui) {
+    public LoginServiceClientImpl(String url, Main mainui) {
         System.out.print(url);
         this.service = GWT.create(LoginService.class);
         ServiceDefTarget endpoint = (ServiceDefTarget) this.service;
         endpoint.setServiceEntryPoint(url);
-        this.loginui = loginui;
+        this.mainui = mainui;
     }
     
     public void authenticateUser(String name, String password) {
@@ -38,7 +39,7 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
             result.setUsername(null);
             result.setMessage("Username cannot be blank.");
             result.setTagname("login");
-            loginui.UpdateLoginDialog((AuthenticationResult)result);
+            mainui.UpdateLoginDialog((AuthenticationResult)result);
             return;
         }
                 
@@ -48,7 +49,7 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
             result.setUsername(null);
             result.setMessage("Password cannot be blank.");
             result.setTagname("password");
-            loginui.UpdateLoginDialog((AuthenticationResult)result);
+            mainui.UpdateLoginDialog((AuthenticationResult)result);
             return;
         }
        
@@ -58,7 +59,7 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
             result.setUsername(null);
             result.setMessage("Username should be atleast 3 characters.");
             result.setTagname("login");
-            loginui.UpdateLoginDialog((AuthenticationResult)result);
+            mainui.UpdateLoginDialog((AuthenticationResult)result);
             return;
         }
        
@@ -67,10 +68,10 @@ public class LoginServiceClientImpl implements LoginServiceClientInt {
     
     private class LoginCallback implements AsyncCallback {
         public void onFailure(Throwable caught) {
-            Window.alert("failure");
+            Alert.show(caught.getMessage(), AlertLevel.ERROR);
         }
         public void onSuccess(Object result) {
-            loginui.UpdateLoginDialog((AuthenticationResult)result);
+            mainui.UpdateLoginDialog((AuthenticationResult)result);
         }
     }
 }
