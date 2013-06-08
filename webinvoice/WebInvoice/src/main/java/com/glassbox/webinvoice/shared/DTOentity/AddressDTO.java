@@ -7,7 +7,6 @@ public class AddressDTO implements IsSerializable {
 
 	private String id;
 
-	private StateDTO state;
 
 	private SuburbDTO suburb;
 
@@ -27,14 +26,6 @@ public class AddressDTO implements IsSerializable {
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	public StateDTO getState() {
-		return state;
-	}
-
-	public void setState(StateDTO state) {
-		this.state = state;
 	}
 
 	public SuburbDTO getSuburb() {

@@ -1,8 +1,9 @@
 package com.glassbox.webinvoice.shared.entity;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.util.List;
 
 /**
  * The persistent class for the address database table.
@@ -10,21 +11,16 @@ import com.google.gwt.user.client.rpc.IsSerializable;
  */
 @Entity
 @Table(name = "address")
-public class Address implements IsSerializable {
+public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
-
-	// bi-directional many-to-one association to Person
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "personID")
-	private Person person;
+	private long id;
 
 	// bi-directional many-to-one association to State
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "state")
+	@Column(name = "STATE")
+	@Enumerated(value = EnumType.STRING)
 	private State state;
 
 	// bi-directional many-to-one association to Suburb
@@ -35,20 +31,12 @@ public class Address implements IsSerializable {
 	public Address() {
 	}
 
-	public String getId() {
-		return this.id;
+	public long getId() {
+		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
-	}
-
-	public Person getPerson() {
-		return this.person;
-	}
-
-	public void setPerson(Person person) {
-		this.person = person;
 	}
 
 	public State getState() {

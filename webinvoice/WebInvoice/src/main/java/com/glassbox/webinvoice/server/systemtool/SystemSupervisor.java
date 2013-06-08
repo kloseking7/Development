@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.server;
+package com.glassbox.webinvoice.server.systemtool;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,9 +11,8 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.glassbox.webinvoice.client.AccessDeniedException;
+import com.glassbox.webinvoice.shared.exception.AccessDeniedException;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-
 
 @SuppressWarnings("serial")
 @Service
@@ -21,30 +20,30 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 public class SystemSupervisor extends RemoteServiceServlet {
 	private static Logger logger = Logger.getLogger(SystemSupervisor.class);
 
-	@Autowired
+	@Autowired(required=false)
 	private HttpServletRequest request;
 
 	private static final String POINTCUT = "execution(* com.glassbox.webinvoice.server..*.*(..))";
 
 	@Before(POINTCUT)
 	public void checkUser(JoinPoint joinPoint) throws AccessDeniedException {
-		// if (request.getSession().getAttribute("currentUser") == null)
+		// if (request.getSession().getAttribute("currentStaff") == null)
 		// throw new AccessDeniedException();
 
 	}
 
 	@AfterThrowing(pointcut = POINTCUT, throwing = "ex")
 	public void logAfterTrowing(JoinPoint jp, Exception ex) {
-		String args = "parameter passed in are:\n";
+		String excetionInfo = "parameter passed in are: \n";
 		if (jp.getSignature() instanceof MethodSignature) {
 			final MethodSignature ms = (MethodSignature) jp.getSignature();
 			final Class<?>[] parameterTypes = ms.getParameterTypes();
 			for (final Class<?> pt : parameterTypes) {
-				args += pt;
+				excetionInfo += pt + ", ";
 			}
 		}
-		logger.error("Exception is" + ex + " happened in  "
-				+ jp.getSignature() + "\n" + args);
+		logger.error("Exception is " + ex + " happened in  " + jp.getSignature()
+				+ "\n" + excetionInfo);
 	}
 
 }

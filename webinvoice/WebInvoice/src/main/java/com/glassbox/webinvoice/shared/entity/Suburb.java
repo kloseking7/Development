@@ -1,9 +1,7 @@
 package com.glassbox.webinvoice.shared.entity;
 
+import java.io.Serializable;
 import javax.persistence.*;
-
-import com.google.gwt.user.client.rpc.IsSerializable;
-
 import java.util.List;
 
 /**
@@ -12,29 +10,25 @@ import java.util.List;
  */
 @Entity
 @Table(name = "suburb")
-public class Suburb implements IsSerializable {
+public class Suburb implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
+	private long id;
 
 	private int postcode;
 
 	private String suburb;
 
-	// bi-directional many-to-one association to Address
-	@OneToMany(mappedBy = "suburb")
-	private List<Address> addresses;
-
 	public Suburb() {
 	}
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -54,12 +48,4 @@ public class Suburb implements IsSerializable {
 		this.suburb = suburb;
 	}
 
-	public List<Address> getAddresses() {
-		return this.addresses;
-	}
-
-	public void setAddresses(List<Address> addresses) {
-		this.addresses = addresses;
-	}
-
-    }
+}

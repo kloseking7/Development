@@ -1,4 +1,4 @@
-package com.glassbox.webinvoice.client;
+package com.glassbox.webinvoice.shared.exception;
 
 import java.io.Serializable;
 
