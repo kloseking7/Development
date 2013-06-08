@@ -29,11 +29,6 @@ public class Item implements Serializable {
 	@ManyToMany(mappedBy = "items")
 	private List<Invoice> invoices = new ArrayList<Invoice>();
 
-	// bi-directional many-to-many association to Tax
-	@ManyToMany
-	@JoinTable(name = "item_tax", joinColumns = { @JoinColumn(name = "itemID") }, inverseJoinColumns = { @JoinColumn(name = "taxID") })
-	private List<Tax> taxs = new ArrayList<Tax>();
-
 	public Item() {
 	}
 
@@ -76,13 +71,4 @@ public class Item implements Serializable {
 	public void setInvoices(List<Invoice> invoices) {
 		this.invoices = invoices;
 	}
-
-	public List<Tax> getTaxs() {
-		return this.taxs;
-	}
-
-	public void setTaxs(List<Tax> taxs) {
-		this.taxs = taxs;
-	}
-
 }
