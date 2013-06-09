@@ -15,16 +15,16 @@ public class WebinvoiceTest {
 	public void test() {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
-		//loginService = (LoginService) context.getBean("/webinvoice/services/login");
+		loginService = (LoginService) context.getBean("login");
 		System.out.println("testing");
 		AuthenticationResult result;
 		
-		//result = loginService.authenticateUser("asdasd", "asdasd");
-		//print(result.isAuthenticated());
-		//result = loginService.authenticateUser("123456@", "asdasd");
-		//print(result.isAuthenticated());
-		//result = loginService.authenticateUser("123@", "3SMeYpi6");
-		//print(result.isAuthenticated());
+		result = loginService.authenticateUser("asdasd", "asdasd");
+		print(result.isAuthenticated());
+		result = loginService.authenticateUser("123456@", "asdasd");
+		print(result.isAuthenticated());
+		result = loginService.authenticateUser("123@", "3SMeYpi6");
+		print(result.isAuthenticated());
 	}
 
 

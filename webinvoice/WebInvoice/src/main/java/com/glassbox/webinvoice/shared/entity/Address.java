@@ -3,14 +3,13 @@ package com.glassbox.webinvoice.shared.entity;
 import java.io.Serializable;
 import javax.persistence.*;
 
-import java.util.List;
 
 /**
  * The persistent class for the address database table.
  * 
  */
 @Entity
-@Table(name = "address")
+@Table(name = "Address")
 public class Address implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -19,13 +18,13 @@ public class Address implements Serializable {
 	private long id;
 
 	// bi-directional many-to-one association to State
-	@Column(name = "STATE")
+	@Column(name = "State")
 	@Enumerated(value = EnumType.STRING)
 	private State state;
 
 	// bi-directional many-to-one association to Suburb
 	@ManyToOne(fetch = FetchType.EAGER, cascade = { CascadeType.ALL })
-	@JoinColumn(name = "suburb")
+	@JoinColumn(name = "Suburb")
 	private Suburb suburb;
 
 	public Address() {
