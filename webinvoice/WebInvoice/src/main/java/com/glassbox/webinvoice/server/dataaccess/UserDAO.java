@@ -30,11 +30,29 @@ public class UserDAO extends BaseDAO<User,Long> {
 		User user = null;
 
 		try {
-			user = (User) super.getSessionFactory().getCurrentSession()
-					.createQuery("from User u where u.username=:username")
-					.setString("username", login).uniqueResult();
-		} catch (Exception e) {
+                        //authenticate with username, password
+			user = (User) sf.getCurrentSession()
+					.createQuery("from User u where u.username=:username and u.password=:password")
+					.setString("username", login).setString("password", password).uniqueResult();
+                        
+                        //check if authentication successful
+                        if (user != null) {
+                            return user;
+                        }
 
+                        //authenticate with email, password
+                        user = (User) sf.getCurrentSession()
+                                        .createQuery("from User u inner join Email e where e.userID = u.id and e.emailAddress=:username and " +
+                                                     "e.isPrimary=1 and u.password=:password")
+                                        .setString("username", login).setString("password", password).uniqueResult();
+                        
+
+                        //check if authentication successful
+                        if (user != null) {
+                            return user;
+                        }
+		} catch (Exception e) {
+                    //exception logging.
 		}
 
 		return user;
