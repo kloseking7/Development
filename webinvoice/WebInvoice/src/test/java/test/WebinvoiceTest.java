@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.glassbox.webinvoice.client.model.AuthenticationResult;
+import com.glassbox.webinvoice.shared.model.AuthenticationResult;
 import com.glassbox.webinvoice.client.service.LoginService;
 import com.glassbox.webinvoice.shared.entity.State;
 

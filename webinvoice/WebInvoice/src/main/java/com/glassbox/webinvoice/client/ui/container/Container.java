@@ -1,6 +1,6 @@
 package com.glassbox.webinvoice.client.ui.container;
 
-import com.glassbox.webinvoice.client.model.AuthenticationResult;
+import com.glassbox.webinvoice.shared.model.AuthenticationResult;
 import com.glassbox.webinvoice.client.ui.container.pages.AboutUs;
 import com.glassbox.webinvoice.client.ui.container.pages.Clients;
 import com.glassbox.webinvoice.client.ui.container.pages.ContactUs;
