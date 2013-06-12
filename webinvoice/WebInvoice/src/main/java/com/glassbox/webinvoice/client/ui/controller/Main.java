@@ -20,7 +20,7 @@ public class Main extends Composite {
     private Header hdr;
     private Menu mnu;
     private Container container;
-    private Footer footer = new Footer();
+    private Footer footer;
     
     interface MainUiBinder extends UiBinder<Widget, Main> {
     }
@@ -31,9 +31,10 @@ public class Main extends Composite {
     public Main() {
         initWidget(uiBinder.createAndBindUi(this));
         hdr = new Header();
-        mnu = new Menu(this);
-        container = new Container(this);
+        mnu = new Menu(this, MenuType.StandardMenu);
+        container = new Container(this, ContainerType.StandardContainer);
         footer = new Footer();
+        
         this.MainPanel.add(hdr);
         this.MainPanel.add(mnu);
         this.MainPanel.add(container);
@@ -54,8 +55,8 @@ public class Main extends Composite {
     // <editor-fold defaultstate="collapsed" desc="Context switching based on authentication">
     public void ChangeContextToAuthenticatedUser() {
         this.MainPanel.clear();
-        mnu = new Menu(this, MenuType.AuthenticatedMenu);
-        container = new Container(this, ContainerType.AuthenticatedContainer);
+        mnu.setMenuType(MenuType.AuthenticatedMenu);
+        container.setContainerType(ContainerType.AuthenticatedContainer);
         this.MainPanel.add(mnu);
         this.MainPanel.add(container);
         this.MainPanel.add(footer);
@@ -63,8 +64,8 @@ public class Main extends Composite {
     
     public void ChangeContextToNonAuthenticatedUser() {
         this.MainPanel.clear();
-        mnu = new Menu(this, MenuType.StandardMenu);
-        container = new Container(this, ContainerType.StandardContainer);
+        mnu.setMenuType(MenuType.AuthenticatedMenu);
+        container.setContainerType(ContainerType.AuthenticatedContainer);
         this.MainPanel.add(hdr);
         this.MainPanel.add(mnu);
         this.MainPanel.add(container);
@@ -94,7 +95,15 @@ public class Main extends Composite {
     }
 
     public void ShowClients() {
+        //temporary workaround until we implement session management.
+        this.container.setContainerType(ContainerType.AuthenticatedContainer);
         this.container.ShowClients();
+    }
+
+    public void ShowDashboard() {
+        //temporary workaround until we implement session management.
+        this.container.setContainerType(ContainerType.AuthenticatedContainer);
+        this.container.ShowDashboard();
     }
     // </editor-fold>
 }

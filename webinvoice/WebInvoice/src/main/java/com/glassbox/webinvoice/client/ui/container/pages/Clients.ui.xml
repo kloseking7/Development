@@ -13,23 +13,37 @@ Uncomment this for XHTML entities
         }
     </ui:style>
     <g:HTMLPanel>
-        <table cellspacing='0' cellpadding='0' style='width:100%;'>
-            <tr>
-                <td
-                    valign='top'>
-                    <c:CellTable
-                        addStyleNames='{style.cellTable}'
-                        pageSize='15'
-                        ui:field='cellTable' />
-                </td>
-            </tr>
-            <tr>
-                <td
-                    align='center'>
-                    <c:SimplePager
-                        ui:field='pager' />
-                </td>
-            </tr>
-        </table>
+        <p>This is the clients page</p>
+        <g:SplitLayoutPanel>
+            <g:west size="200">
+                <g:VerticalPanel>
+                    <g:Button></g:Button>
+                </g:VerticalPanel>
+            </g:west>
+            <g:center>
+                <g:VerticalPanel>
+                    <g:HTMLPanel>
+                        <table cellspacing='0' cellpadding='0' style='width:100%;'>
+                            <tr>
+                                <td
+                                    valign='top'>
+                                    <c:CellTable
+                                        addStyleNames='{style.cellTable}'
+                                        pageSize='15'
+                                        ui:field='cellTable' />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    align='center'>
+                                    <c:SimplePager
+                                        ui:field='pager' />
+                                </td>
+                            </tr>
+                        </table>
+                    </g:HTMLPanel>
+                </g:VerticalPanel>
+            </g:center>
+        </g:SplitLayoutPanel>
     </g:HTMLPanel>
 </ui:UiBinder>

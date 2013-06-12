@@ -23,7 +23,8 @@ public class Menu extends Composite {
     
     interface MenuUiBinder extends UiBinder<Widget, Menu> {
     }
-    
+
+    @UiField HTMLPanel MenuPanel;
     @UiField DivElement Menu;
     @UiField DivElement AuthMenu;
     @UiField HTMLPanel Home;
@@ -38,30 +39,26 @@ public class Menu extends Composite {
     @UiField HTMLPanel Products;
     @UiField HTMLPanel Logout;    
     
-    public Menu(Object panel) {
-        initWidget(uiBinder.createAndBindUi(this));
-        initializeFields(panel);        
-        CreateMenu();
-    }
-    
     public Menu(Object panel, MenuType type) {
         initWidget(uiBinder.createAndBindUi(this));
-        initializeFields(panel);  
+        this.mainPanel = panel;
+        this.Menu.setId("menu");
+        this.AuthMenu.setId("authmenu"); 
         if (type == MenuType.StandardMenu) {
             CreateMenu();
         }
         else if (type == MenuType.AuthenticatedMenu) {
             CreateMenuForAuthenticatedUser();
         }
-        else {
-            CreateMenu();
-        }
     }
     
-    private void initializeFields(Object panel) {
-        this.mainPanel = panel;
-        this.Menu.setId("menu");
-        this.AuthMenu.setId("authmenu");
+    public void setMenuType(MenuType type){
+        if (type == MenuType.StandardMenu) {
+            CreateMenu();
+        }
+        else if (type == MenuType.AuthenticatedMenu) {
+            CreateMenuForAuthenticatedUser();
+        }        
     }
     
     private void CreateMenu() {
@@ -119,7 +116,7 @@ public class Menu extends Composite {
         Logout.add(AnchorLogout);
         
         AnchorDashboard.addClickHandler(new DashboardClickHandler());
-        AnchorClients.addClickHandler(new HomeClickHandler());
+        AnchorClients.addClickHandler(new ClientsClickHandler());
         AnchorInvoices.addClickHandler(new ServicesClickHandler());
         AnchorReciepts.addClickHandler(new AboutUsClickHandler());
         AnchorProducts.addClickHandler(new ContactUsClickHandler());
@@ -161,7 +158,7 @@ public class Menu extends Composite {
 
     private class DashboardClickHandler implements ClickHandler {
         public void onClick(ClickEvent event) {
-            ((Main)mainPanel).ChangeContextToNonAuthenticatedUser();
+            ((Main)mainPanel).ShowDashboard();
         }
     }
 

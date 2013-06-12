@@ -135,7 +135,7 @@ public class Clients extends Composite {
                 return o1.getFirstName().compareTo(o2.getFirstName());
             }
         });
-        cellTable.addColumn(firstNameColumn, constants.cwCellTableColumnFirstName());
+        /*cellTable.addColumn(firstNameColumn, constants.cwCellTableColumnFirstName());
         firstNameColumn.setFieldUpdater(new FieldUpdater<ClientInfo, String>() {
             @Override
             public void update(int index, ClientInfo object, String value) {
@@ -144,6 +144,7 @@ public class Clients extends Composite {
                 //ContactDatabase.get().refreshDisplays();
             }
         });
+        */
         cellTable.setColumnWidth(firstNameColumn, 20, Unit.PCT);
         
         // Last name.
@@ -161,6 +162,7 @@ public class Clients extends Composite {
                 return o1.getLastName().compareTo(o2.getLastName());
             }
         });
+        /*
         cellTable.addColumn(lastNameColumn, constants.cwCellTableColumnLastName());
         lastNameColumn.setFieldUpdater(new FieldUpdater<ClientInfo, String>() {
             @Override
@@ -170,6 +172,7 @@ public class Clients extends Composite {
                 //ContactDatabase.get().refreshDisplays();
             }
         });
+        */
         cellTable.setColumnWidth(lastNameColumn, 20, Unit.PCT);
         
         // Address.
@@ -188,7 +191,7 @@ public class Clients extends Composite {
                 return o1.getAddress().compareTo(o2.getAddress());
             }
         });
-        cellTable.addColumn(addressColumn, constants.cwCellTableColumnAddress());
+        //cellTable.addColumn(addressColumn, constants.cwCellTableColumnAddress());
         cellTable.setColumnWidth(addressColumn, 60, Unit.PCT);
     }
     

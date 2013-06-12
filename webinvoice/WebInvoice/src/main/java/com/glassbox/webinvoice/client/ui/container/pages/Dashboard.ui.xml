@@ -8,5 +8,6 @@ Uncomment this for XHTML entities
 
     </ui:style>
     <g:HTMLPanel>
+        <p>This is the dashboard page</p>
     </g:HTMLPanel>
 </ui:UiBinder>

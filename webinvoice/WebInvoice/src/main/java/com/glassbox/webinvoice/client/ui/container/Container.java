@@ -40,14 +40,6 @@ public class Container extends Composite {
     @UiField
             HTMLPanel ContainerPanel;
     
-    
-    public Container(Object mainPanel) {
-        this.mainPanel = mainPanel;
-        home = new HomePage();        
-        initWidget(uiBinder.createAndBindUi(this));
-        ContainerPanel.add(home);
-    }
-    
     public Container(Object mainPanel, ContainerType type) {
         this.mainPanel = mainPanel;
         
@@ -61,11 +53,19 @@ public class Container extends Composite {
             initWidget(uiBinder.createAndBindUi(this));
             ContainerPanel.add(dashboard);
         }
-        else {
+    }
+    
+    public void setContainerType(ContainerType type) {
+        if (type == ContainerType.StandardContainer) {
             home = new HomePage();
-            initWidget(uiBinder.createAndBindUi(this));
-            ContainerPanel.add(home);
+            this.ContainerPanel.clear();
+            this.ContainerPanel.add(home);
         }
+        else if (type == ContainerType.AuthenticatedContainer) {
+            dashboard = new Dashboard();
+            this.ContainerPanel.clear();
+            this.ContainerPanel.add(dashboard);
+        }        
     }
     
     public void ShowHome() {
@@ -105,5 +105,11 @@ public class Container extends Composite {
         this.ContainerPanel.clear();
         this.clients = new Clients();
         this.ContainerPanel.add(clients);
+    }
+
+    public void ShowDashboard() {
+        this.ContainerPanel.clear();
+        this.dashboard = new Dashboard();
+        this.ContainerPanel.add(dashboard);
     }
 }

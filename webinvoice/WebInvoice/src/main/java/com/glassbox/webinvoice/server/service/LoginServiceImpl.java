@@ -29,6 +29,8 @@ public class LoginServiceImpl extends RemoteServiceServlet implements
         user = userDAO.authenticateUser(login, password);
         
         if (user != null) {
+            //TODO
+            //store user token in session for session management.
             result.setUsername(user.getUsername());
             result.setAuthenticated(true);
         }

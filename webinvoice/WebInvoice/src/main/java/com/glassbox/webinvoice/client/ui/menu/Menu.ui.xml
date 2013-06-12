@@ -91,7 +91,7 @@
         #authmenu .current_page_item a {
         }
     </ui:style>
-    <g:HTMLPanel>
+    <g:HTMLPanel ui:field="MenuPanel">
         <div id="menu-wrapper">
             <div ui:field="Menu" class="container">
                 <ul>
