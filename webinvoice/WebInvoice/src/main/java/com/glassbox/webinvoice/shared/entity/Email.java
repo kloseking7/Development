@@ -18,11 +18,6 @@ public class Email implements Serializable {
 
 	private String emailAddress;
 
-	// bi-directional many-to-one association to Staff
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "staffID")
-	private Staff staff;
-
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customerID")
 	private Client customer;
@@ -52,14 +47,6 @@ public class Email implements Serializable {
 
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
-	}
-
-	public Staff getStaff() {
-		return this.staff;
-	}
-
-	public void setStaff(Staff staff) {
-		this.staff = staff;
 	}
 
 }

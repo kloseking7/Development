@@ -1,6 +1,6 @@
 package com.glassbox.webinvoice.client.service;
 
-import com.glassbox.webinvoice.client.model.AuthenticationResult;
+import com.glassbox.webinvoice.shared.model.AuthenticationResult;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 

@@ -1,5 +1,5 @@
 package com.glassbox.webinvoice.shared.entity;
 
-public enum InvoiceType {
+public enum DocumentType {
 	Invoice, Receipt, Quote, Estimate
 }

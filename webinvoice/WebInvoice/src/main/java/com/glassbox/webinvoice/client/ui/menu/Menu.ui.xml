@@ -52,7 +52,7 @@
 	</ui:style>
 	<g:HTMLPanel>
 		<div id="menu-wrapper">
-			<div id="menu" class="container">
+			<div ui:Field="Menu" class="container">
 				<ul>
 					<li class="current_page_item">
                                             <g:HTMLPanel ui:field="Home"></g:HTMLPanel>
@@ -71,6 +71,25 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+			<div ui:Field="AuthMenu" class="container">
+				<ul>
+					<li class="current_page_item">
+                                            <g:HTMLPanel ui:field="Clients"></g:HTMLPanel>
+					</li>
+					<li>
+                                            <g:HTMLPanel ui:field="Invoices"></g:HTMLPanel>
+					</li>
+					<li>
+                                            <g:HTMLPanel ui:field="Reciepts"></g:HTMLPanel>
+					</li>
+					<li>
+                                            <g:HTMLPanel ui:field="Products"></g:HTMLPanel>
+					</li>
+					<li>
+                                            <g:HTMLPanel ui:field="Logout"></g:HTMLPanel>
+					</li>
+				</ul>
+			</div>
+                </div>
 	</g:HTMLPanel>
 </ui:UiBinder> 

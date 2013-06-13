@@ -11,7 +11,7 @@ import java.util.List;
  * 
  */
 @Entity
-@Table(name = "customer")
+@Table(name = "Client")
 public class Client implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -32,10 +32,6 @@ public class Client implements Serializable {
 	@OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
 	private List<Invoice> invoices = new ArrayList<Invoice>();
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "companyID")
-	private Company company;
-
 	@OneToMany(mappedBy = "customer", cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 	private List<Email> emails = new ArrayList<Email>();
 
@@ -45,14 +41,6 @@ public class Client implements Serializable {
 
 	public void setEmails(List<Email> emails) {
 		this.emails = emails;
-	}
-
-	public Company getCompany() {
-		return company;
-	}
-
-	public void setCompany(Company company) {
-		this.company = company;
 	}
 
 	public Client() {

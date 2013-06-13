@@ -2,6 +2,8 @@ package com.glassbox.webinvoice.client.ui.menu;
 
 import com.glassbox.webinvoice.client.ui.controller.Main;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.DivElement;
+import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -22,6 +24,8 @@ public class Menu extends Composite {
     interface MenuUiBinder extends UiBinder<Widget, Menu> {
     }
     
+    @UiField DivElement Menu;
+    @UiField DivElement AuthMenu;
     @UiField HTMLPanel Home;
     @UiField HTMLPanel Services;
     @UiField HTMLPanel AboutUs;
@@ -31,13 +35,13 @@ public class Menu extends Composite {
     
     public Menu(Object panel) {
         initWidget(uiBinder.createAndBindUi(this));
-        this.mainPanel = panel;
+        initializeFields(panel);        
         CreateMenu();
     }
     
     public Menu(Object panel, MenuType type) {
         initWidget(uiBinder.createAndBindUi(this));
-        this.mainPanel = panel;
+        initializeFields(panel);  
         if (type == MenuType.StandardMenu) {
             CreateMenu();
         }
@@ -49,12 +53,21 @@ public class Menu extends Composite {
         }
     }
     
+    private void initializeFields(Object panel) {
+        this.mainPanel = panel;
+        this.Menu.setId("menu");
+        this.AuthMenu.setId("authmenu");
+    }
+    
     private void CreateMenu() {
         Anchor AnchorHome = new Anchor();
         Anchor AnchorServices = new Anchor();
         Anchor AnchorAboutUs = new Anchor();
         Anchor AnchorContactUs = new Anchor();
         Anchor AnchorLogin = new Anchor();
+        
+        Menu.getStyle().setDisplay(Display.BLOCK);
+        AuthMenu.getStyle().setDisplay(Display.NONE);
         
         AnchorHome.setHTML("<a href=\"#\">Home</a>");
         AnchorServices.setHTML("<a href=\"#\">Services</a>");
@@ -80,6 +93,9 @@ public class Menu extends Composite {
         Anchor AnchorInvoices = new Anchor();
         Anchor AnchorReciepts = new Anchor();
         Anchor AnchorProducts = new Anchor();
+        
+        Menu.getStyle().setDisplay(Display.NONE);
+        AuthMenu.getStyle().setDisplay(Display.BLOCK);
         
         AnchorClients.setHTML("<a href=\"#\">Clients</a>");
         AnchorInvoices.setHTML("<a href=\"#\">Invoices</a>");

@@ -9,5 +9,20 @@ package com.glassbox.webinvoice.shared;
  * @author mon2
  */
 public class Constants {
-    public static final String EMPTY_STRING = "";    
+    public static final String EMPTY_STRING = "";
+    public static interface CwConstants {
+        String cwCellTableColumnAddress();
+        
+        String cwCellTableColumnCategory();
+        
+        String cwCellTableColumnFirstName();
+        
+        String cwCellTableColumnLastName();
+        
+        String cwCellTableDescription();
+        
+        String cwCellTableName();
+    }
 }
+
+

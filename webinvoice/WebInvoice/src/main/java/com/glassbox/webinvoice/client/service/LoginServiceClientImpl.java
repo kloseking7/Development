@@ -4,7 +4,7 @@
  */
 package com.glassbox.webinvoice.client.service;
 
-import com.glassbox.webinvoice.client.model.AuthenticationResult;
+import com.glassbox.webinvoice.shared.model.AuthenticationResult;
 import com.glassbox.webinvoice.client.ui.controller.Main;
 import com.glassbox.webinvoice.client.ui.alert.Alert;
 import com.glassbox.webinvoice.client.ui.alert.AlertLevel;

@@ -19,7 +19,7 @@ import com.glassbox.webinvoice.shared.DTOentity.RealEmail;
 
 
 @Service("mailService")
-public class MailService {
+public class MailServiceImpl {
 
 	public void sendEmail(RealEmail email, String host, String user,
 			String fromEmail, String password) throws Exception {
