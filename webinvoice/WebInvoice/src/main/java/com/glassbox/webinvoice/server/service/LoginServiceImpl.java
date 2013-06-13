@@ -5,6 +5,8 @@ import com.glassbox.webinvoice.shared.model.AuthenticationResult;
 import com.glassbox.webinvoice.server.dataaccess.UserDAO;
 import com.glassbox.webinvoice.shared.entity.User;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +29,8 @@ public class LoginServiceImpl extends RemoteServiceServlet implements
         user = userDAO.authenticateUser(login, password);
         
         if (user != null) {
+            //TODO
+            //store user token in session for session management.
             result.setUsername(user.getUsername());
             result.setAuthenticated(true);
         }
@@ -37,4 +41,17 @@ public class LoginServiceImpl extends RemoteServiceServlet implements
         
         return result;
     }
+    
+    private User getAuthenticatedUserFromSession() {
+        User user = null;
+        HttpServletRequest httpServletRequest = this.getThreadLocalRequest();
+        HttpSession session = httpServletRequest.getSession();
+        Object userObj = session.getAttribute("user");
+        if (userObj != null && userObj instanceof User)
+        {
+            user = (User) userObj;
+        }
+        
+        return user;
+    }   
 }

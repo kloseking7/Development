@@ -4,6 +4,7 @@ import com.glassbox.webinvoice.shared.model.AuthenticationResult;
 import com.glassbox.webinvoice.client.ui.container.pages.AboutUs;
 import com.glassbox.webinvoice.client.ui.container.pages.Clients;
 import com.glassbox.webinvoice.client.ui.container.pages.ContactUs;
+import com.glassbox.webinvoice.client.ui.container.pages.Dashboard;
 import com.glassbox.webinvoice.client.ui.container.pages.HomePage;
 import com.glassbox.webinvoice.client.ui.container.pages.LoginBox;
 import com.glassbox.webinvoice.client.ui.container.pages.Services;
@@ -23,7 +24,10 @@ public class Container extends Composite {
     private ContactUs contactus;
     private Services services;
     private LoginBox login;
+    private Dashboard dashboard;
     private Clients clients;
+    
+    private Object mainPanel;
     
     public enum ContainerType {
         StandardContainer, AuthenticatedContainer
@@ -36,42 +40,32 @@ public class Container extends Composite {
     @UiField
             HTMLPanel ContainerPanel;
     
-    
-    public Container(Object mainPanel) {
-        home = new HomePage();
-        aboutus = new AboutUs();
-        login = new LoginBox(mainPanel);
-        contactus = new ContactUs();
-        services = new Services();
-        
-        initWidget(uiBinder.createAndBindUi(this));
-        ContainerPanel.add(home);
-    }
-    
     public Container(Object mainPanel, ContainerType type) {
+        this.mainPanel = mainPanel;
+        
         if (type == ContainerType.StandardContainer) {
             home = new HomePage();
-            aboutus = new AboutUs();
-            login = new LoginBox(mainPanel);
-            contactus = new ContactUs();
-            services = new Services();
             initWidget(uiBinder.createAndBindUi(this));
             ContainerPanel.add(home);
         }
         else if (type == ContainerType.AuthenticatedContainer) {
-            clients = new Clients();            
+            dashboard = new Dashboard();
             initWidget(uiBinder.createAndBindUi(this));
-            ContainerPanel.add(clients);
+            ContainerPanel.add(dashboard);
         }
-        else {
+    }
+    
+    public void setContainerType(ContainerType type) {
+        if (type == ContainerType.StandardContainer) {
             home = new HomePage();
-            aboutus = new AboutUs();
-            login = new LoginBox(mainPanel);
-            contactus = new ContactUs();
-            services = new Services();
-            initWidget(uiBinder.createAndBindUi(this));
-            ContainerPanel.add(home);
+            this.ContainerPanel.clear();
+            this.ContainerPanel.add(home);
         }
+        else if (type == ContainerType.AuthenticatedContainer) {
+            dashboard = new Dashboard();
+            this.ContainerPanel.clear();
+            this.ContainerPanel.add(dashboard);
+        }        
     }
     
     public void ShowHome() {
@@ -95,6 +89,7 @@ public class Container extends Composite {
     }
     
     public void ShowLoginDialog() {
+        login = new LoginBox(mainPanel);
         this.login.show();
     }
     
@@ -104,5 +99,17 @@ public class Container extends Composite {
     
     public void UpdateLoginDialog(AuthenticationResult result) {
         this.login.UpdateLoginDialog(result);
+    }
+
+    public void ShowClients() {
+        this.ContainerPanel.clear();
+        this.clients = new Clients();
+        this.ContainerPanel.add(clients);
+    }
+
+    public void ShowDashboard() {
+        this.ContainerPanel.clear();
+        this.dashboard = new Dashboard();
+        this.ContainerPanel.add(dashboard);
     }
 }
