@@ -21,9 +21,9 @@ public class WebinvoiceTest {
 		
 		result = loginService.authenticateUser("asdasd", "asdasd");
 		print(result.isAuthenticated());
-		result = loginService.authenticateUser("123456@", "asdasd");
+		result = loginService.authenticateUser("wayf128@hotmail.com", "passwd");
 		print(result.isAuthenticated());
-		result = loginService.authenticateUser("123@", "3SMeYpi6");
+		result = loginService.authenticateUser("alex", "passwd");
 		print(result.isAuthenticated());
 	}
 

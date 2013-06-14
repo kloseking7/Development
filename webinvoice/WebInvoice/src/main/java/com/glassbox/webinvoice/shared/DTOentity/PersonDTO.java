@@ -24,7 +24,6 @@ public class PersonDTO implements IsSerializable {
 
 	private String password;
 
-	private RoleDTO role;
 
 	private List<EmailDTO> emails = new ArrayList<EmailDTO>();
 
@@ -101,12 +100,6 @@ public class PersonDTO implements IsSerializable {
 		this.password = password;
 	}
 
-	public RoleDTO getRole() {
-		return role;
-	}
 
-	public void setRole(RoleDTO role) {
-		this.role = role;
-	}
 
 }

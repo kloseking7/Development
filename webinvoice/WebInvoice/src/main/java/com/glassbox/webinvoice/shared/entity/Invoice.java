@@ -29,13 +29,24 @@ public class Invoice implements Serializable {
 
 	// bi-directional many-to-one association to Customer
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "customerID")
-	private Client customer;
+	@JoinColumn(name = "userID")
+	private User user;
 
 	// bi-directional many-to-many association to Item
 	@ManyToMany
 	@JoinTable(name = "invoice_item", joinColumns = { @JoinColumn(name = "invoice_id") }, inverseJoinColumns = { @JoinColumn(name = "item_id") })
 	private List<Item> items = new ArrayList<Item>();
+
+	@Enumerated(EnumType.STRING)
+	private DocumentType documentType;
+
+	public DocumentType getDocumentType() {
+		return documentType;
+	}
+
+	public void setDocumentType(DocumentType documentType) {
+		this.documentType = documentType;
+	}
 
 	public Invoice() {
 	}
@@ -72,12 +83,12 @@ public class Invoice implements Serializable {
 		this.type = type;
 	}
 
-	public Client getClient() {
-		return this.customer;
+	public User getUser() {
+		return user;
 	}
 
-	public void setClient(Client customer) {
-		this.customer = customer;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public List<Item> getItems() {
